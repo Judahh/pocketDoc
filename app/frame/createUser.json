@@ -1,0 +1,2991 @@
+{
+    "background": {
+        "image": {
+            "element": {
+                "style": {
+                    "background-color": "rgba(225, 223, 221,1)",
+                    "opacity": 1,
+                    "visibility": "visible",
+                    "position": "fixed",
+                    "filter": "brightness(100%) grayscale(0%) blur(0px)",
+                    "zIndex": -1000,
+                    "max-width": "inherit",
+                    "max-height": "inherit",
+                    "width": "100%",
+                    "height": "100%"
+                }
+            },
+            "img": {
+                "element": {
+                    "style": {
+                        "width": "100%",
+                        "opacity": 0.1,
+                        "height": "100%"
+                    },
+                    "src": "images/pocketDoc.svg"
+                }
+            }
+        }
+    },
+    "arrayDivisor": [
+        {  
+            "arrayAuthorization": [
+                {
+                    "code": "UserManegement",
+                    "runFunction": "goToLogin()"
+                }
+            ],
+            "arrayDivisor": [
+                {
+                    "element": {
+                        "style": {
+                            "height": "10px",
+                            "width": "100%",
+                            "display": "block",
+                            "opacity": 1,
+                            "color": "transparent",
+                            "padding": [
+                                5
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "arrayDivisor": [
+                {
+                    "element": {
+                        "style": {
+                            "opacity": 1,
+                            "width": "100%",
+                            "display": "block",
+                            "color": "transparent",
+                            "margin-top": "20px",
+                            "margin-left": "15px",
+                            "padding": [
+                                5
+                            ]
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "arrayItem": [
+                                {
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "float": "left",
+                                            "width": "100%",
+                                            "text-align": "center",
+                                            "margin": "1px 0px"
+                                        }
+                                    },
+                                    "colorEffect": {
+                                        "element": {
+                                            "style": {
+                                                "color": "black"
+                                            }
+                                        },
+                                        "font": {
+                                            "element": {
+                                                "className": "ClassOpenSans",
+                                                "style": {
+                                                    "width": "100%",
+                                                    "font-size": "2vw",
+                                                    "text-align": "center",
+                                                    "padding": [
+                                                        0
+                                                    ]
+                                                }
+                                            },
+                                            "animationEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "display": "block"
+                                                    }
+                                                },
+                                                "animationSubEffect": {
+                                                    "arrayAnimationSubEffectHolder": [
+                                                        {
+                                                            "information": {
+                                                                "information": "title",
+                                                                "element": {
+                                                                    "style": {
+                                                                        "vertical-align": "sub"
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "__comment": "Inicio 1 divisor",
+            "element": {
+                "style": {
+                    "display": "inline-block",
+                    "width": "90%",
+                    "height": "350px",
+                    "float": "none",
+                    "background-color": "rgba(255, 255, 255, 0.3)",
+                    "margin": "5px 5% 5px 5%",
+                    "padding": "0px 5px 0px 5px",
+                    "opacity": 1,
+                    "border-style": "groove"
+                }
+            },
+            "arrayDivisor": [
+                {
+                    "__comment": "Inicio 2 divisor",
+                    "element": {
+                        "style": {
+                            "display": "block",
+                            "width": "60%",
+                            "height": "100%",
+                            "float": "left",
+                            "background-color": "rgba(255, 255, 255, 0.3)",
+                            "margin": "2px 0px",
+                            "padding": "0px 5px 0px 5px",
+                            "opacity": 0.9
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "name",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "70%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "nickname",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "70%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "nmother",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "70%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "nfather",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "70%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "CPF*:",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "20%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "none"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "RG*:",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "padding": "0px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "20%",
+                                                            "padding-left": "20px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "15%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "Emissor:",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "10%",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20px"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "UF:",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "10px",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayComboBox": [
+                                                        {
+                                                            "arrayOption": [
+                                                                {
+                                                                    "information": "CE"
+                                                                },
+                                                                {
+                                                                    "information": "DF"
+                                                                },
+                                                                {
+                                                                    "information": "AM"
+                                                                },
+                                                                {
+                                                                    "information": "RS"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "none"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "birth",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "padding": "0px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "20%",
+                                                            "padding-left": "20px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "100px"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "UF (Nasc.):",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "10px",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayComboBox": [
+                                                        {
+                                                            "arrayOption": [
+                                                                {
+                                                                    "information": "CE"
+                                                                },
+                                                                {
+                                                                    "information": "DF"
+                                                                },
+                                                                {
+                                                                    "information": "AM"
+                                                                },
+                                                                {
+                                                                    "information": "RS"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "nationality",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "40%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "post",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "margin": "0px 25px 0px 25px",
+                                                    "width": "40%",
+                                                    "padding-left": "2px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        }
+                    ],
+                    "__comment__": "Fim 2 divisor"
+                },
+                {
+                    "__comment": "Inicio 2 divisor",
+                    "element": {
+                        "style": {
+                            "display": "block",
+                            "width": "400px",
+                            "height": "100%",
+                            "float": "left",
+                            "background-color": "rgba(255, 255, 255, 0.3)",
+                            "margin": "2px 0px",
+                            "padding": "2.0%",
+                            "opacity": 0.9
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "left",
+                                            "padding": "2.5%"
+                                        }
+                                    },
+                                    "arrayImage": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "opacity": 1,
+                                                    "visibility": "visible",
+                                                    "max-width": "inherit",
+                                                    "max-height": "inherit",
+                                                    "width": "90%",
+                                                    "height": "100%"
+                                                }
+                                            },
+                                            "img": {
+                                                "element": {
+                                                    "style": {
+                                                        "width": "200px",
+                                                        "height": "200px",
+                                                        "padding-left": "10%",
+                                                        "opacity": 0.8
+                                                    },
+                                                    "src": "images/foto_pessoa.png"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "left",
+                                            "padding": "2.5%"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding": "2.5%",
+                                                            "padding-top": "6px",
+                                                            "display": "block",
+                                                            "float": "left",
+                                                            "width": "100px",
+                                                            "border-style": "groove"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "capture",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding": "2.5%",
+                                                            "padding-top": "6px",
+                                                            "display": "block",
+                                                            "float": "left",
+                                                            "width": "100px",
+                                                            "border-style": "groove"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "update",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        }
+                    ],
+                    "__comment__": "Fim 2 divisor"
+                }
+            ],
+            "__comment__": "Fim 1 divisor"
+        },
+        {
+            "__comment": "Inicio 1 divisor",
+            "element": {
+                "style": {
+                    "display": "inline-block",
+                    "width": "90%",
+                    "float": "none",
+                    "background-color": "rgba(255, 255, 255, 0.3)",
+                    "margin": "5px 5% 5px 5%",
+                    "padding": "0px 5px 0px 5px",
+                    "opacity": 1,
+                    "border-style": "groove"
+                }
+            },
+            "arrayDivisor": [
+                {
+                    "__comment": "Inicio 2 divisor",
+                    "element": {
+                        "style": {
+                            "display": "block",
+                            "width": "100%",
+                            "height": "100%",
+                            "float": "left",
+                            "background-color": "rgba(255, 255, 255, 0.3)",
+                            "margin": "2px 0px",
+                            "padding": "0px 5px 0px 5px",
+                            "opacity": 0.9
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "typeAddress",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "25%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayComboBox": [
+                                                {
+                                                    "arrayOption": [
+                                                        {
+                                                            "information": "Residencial"
+                                                        },
+                                                        {
+                                                            "information": "Comercial"
+                                                        },
+                                                        {
+                                                            "information": "Correspondência"
+                                                        },
+                                                        {
+                                                            "information": "Cobrança"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "typeStreet",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "25%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayComboBox": [
+                                                {
+                                                    "arrayOption": [
+                                                        {
+                                                            "information": "Avenida"
+                                                        },
+                                                        {
+                                                            "information": "Rua"
+                                                        },
+                                                        {
+                                                            "information": "Fazenda"
+                                                        },
+                                                        {
+                                                            "information": "Vila"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "none"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "address",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "padding": "0px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "50%",
+                                                            "padding-left": "20px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "10%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "addressNumber",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "width": "8%",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "complement",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "70%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "none"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "district",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "padding": "0px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "20%",
+                                                            "padding-left": "20px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "60px"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "city",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "width": "20%",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20px"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "UF:",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "20px",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayComboBox": [
+                                                        {
+                                                            "arrayOption": [
+                                                                {
+                                                                    "information": "CE"
+                                                                },
+                                                                {
+                                                                    "information": "RG"
+                                                                },
+                                                                {
+                                                                    "information": "SP"
+                                                                },
+                                                                {
+                                                                    "information": "RJ"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "postalCode",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "20%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {}
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        }
+                    ],
+                    "__comment__": "Fim 2 divisor"
+                }
+            ],
+            "__comment__": "Fim 1 divisor"
+        },
+        {
+            "__comment": "Inicio 1 divisor",
+            "element": {
+                "style": {
+                    "display": "inline-block",
+                    "width": "90%",
+                    "float": "none",
+                    "background-color": "rgba(255, 255, 255, 0.3)",
+                    "margin": "5px 5% 5px 5%",
+                    "padding": "0px 5px 0px 5px",
+                    "opacity": 1,
+                    "border-style": "groove"
+                }
+            },
+            "arrayDivisor": [
+                {
+                    "__comment": "Inicio 2 divisor",
+                    "element": {
+                        "style": {
+                            "display": "block",
+                            "width": "100%",
+                            "height": "100%",
+                            "float": "left",
+                            "background-color": "rgba(255, 255, 255, 0.3)",
+                            "margin": "2px 0px",
+                            "padding": "0px 5px 0px 5px",
+                            "opacity": 0.9
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "arrayDivisor": [
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "none"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "typePhone",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "15%",
+                                                            "padding-left": "20px"
+                                                        }
+                                                    },
+                                                    "arrayComboBox": [
+                                                        {
+                                                            "arrayOption": [
+                                                                {
+                                                                    "information": "Residencial"
+                                                                },
+                                                                {
+                                                                    "information": "Comercial"
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "60px"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "phoneNumber",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "width": "20%",
+                                                            "padding-left": "2px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "__comment": "Inicio 4 divisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "block",
+                                            "width": "100%",
+                                            "float": "none"
+                                        }
+                                    },
+                                    "arrayDivisor": [
+                                        {
+                                            "arrayItem": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "padding-left": "10px",
+                                                            "padding-top": "6px",
+                                                            "display": "inline-block",
+                                                            "float": "none",
+                                                            "width": "20%"
+                                                        }
+                                                    },
+                                                    "colorEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "color": "black"
+                                                            }
+                                                        },
+                                                        "font": {
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "width": "100%",
+                                                                    "height": "100%",
+                                                                    "font-size": "16px",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "animationEffect": {
+                                                                "element": {
+                                                                    "style": {
+                                                                        "display": "inline-block"
+                                                                    }
+                                                                },
+                                                                "animationSubEffect": {
+                                                                    "arrayAnimationSubEffectHolder": [
+                                                                        {
+                                                                            "information": {
+                                                                                "information": "Email",
+                                                                                "element": {}
+                                                                            }
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            ],
+                                            "arrayDataInput": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "display": "inline-block",
+                                                            "color": "black",
+                                                            "opacity": 0.8,
+                                                            "font-size": "25px",
+                                                            "padding": "0px",
+                                                            "margin": "0px 5px 0px 5px",
+                                                            "width": "40%",
+                                                            "padding-left": "20px"
+                                                        }
+                                                    },
+                                                    "arrayTextField": [
+                                                        {}
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        }
+                    ],
+                    "__comment__": "Fim 2 divisor"
+                }
+            ],
+            "__comment__": "Fim 1 divisor"
+        },
+        {
+            "__comment": "Inicio 1 divisor",
+            "element": {
+                "style": {
+                    "display": "inline-block",
+                    "width": "90%",
+                    "float": "none",
+                    "background-color": "rgba(255, 255, 255, 0.3)",
+                    "margin": "5px 5% 5px 5%",
+                    "padding": "0px 5px 0px 5px",
+                    "opacity": 1,
+                    "border-style": "groove"
+                }
+            },
+            "arrayDivisor": [
+                {
+                    "__comment": "Inicio 2 divisor",
+                    "element": {
+                        "style": {
+                            "display": "block",
+                            "width": "100%",
+                            "height": "100%",
+                            "float": "left",
+                            "background-color": "rgba(255, 255, 255, 0.3)",
+                            "margin": "2px 0px",
+                            "padding": "0px 5px 0px 5px",
+                            "opacity": 0.9
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "user",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "20%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {
+                                                    "code": "UserManegement",
+                                                    "runFunction": "getUsername(this)",
+                                                    "runOnBuild": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "password",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "20%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {
+                                                    "code": "UserManegement",
+                                                    "runFunction": "getPassword(this)",
+                                                    "runOnBuild": true,
+                                                    "element": {
+                                                        "type": "password"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "password2",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "padding": "0px",
+                                                    "margin": "0px 5px 0px 5px",
+                                                    "width": "20%",
+                                                    "padding-left": "20px"
+                                                }
+                                            },
+                                            "arrayTextField": [
+                                                {
+                                                    "element": {
+                                                        "type": "password"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        },
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding-left": "10px",
+                                                    "padding-top": "6px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "20%"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "group",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "arrayDataInput": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-block",
+                                                    "color": "black",
+                                                    "opacity": 0.8,
+                                                    "font-size": "25px",
+                                                    "margin": "0px 25px 0px 25px",
+                                                    "width": "25%",
+                                                    "padding-left": "2px"
+                                                }
+                                            },
+                                            "arrayComboBox": [
+                                                {
+                                                    "code": "UserManegement",
+                                                    "runFunction": "getPermission(this)",
+                                                    "runOnBuild": true,
+                                                    "arrayOption": []
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        }
+                    ],
+                    "__comment__": "Fim 2 divisor"
+                }
+            ],
+            "__comment__": "Fim 1 divisor"
+        },
+        {
+            "__comment": "Inicio 1 divisor",
+            "element": {
+                "style": {
+                    "display": "inline-block",
+                    "width": "90%",
+                    "float": "none",
+                    "background-color": "rgba(255, 255, 255, 0.1)",
+                    "margin": "5px 5% 5px 5%",
+                    "padding": "0px 5px 0px 5px",
+                    "opacity": 1
+                }
+            },
+            "arrayDivisor": [
+                {
+                    "__comment": "Inicio 2 divisor",
+                    "element": {
+                        "style": {
+                            "display": "block",
+                            "width": "100%",
+                            "height": "100%",
+                            "float": "left",
+                            "margin": "2px 0px",
+                            "padding": "5px",
+                            "opacity": 0.9
+                        }
+                    },
+                    "arrayDivisor": [
+                        {
+                            "__comment": "Inicio 3 divisor",
+                            "element": {
+                                "style": {
+                                    "display": "block",
+                                    "width": "100%",
+                                    "float": "none"
+                                }
+                            },
+                            "arrayDivisor": [
+                                {
+                                    "arrayItem": [
+                                        {
+                                            "arrayElementEvent": [
+                                                {
+                                                    "name": "click",
+                                                    "appObject": {},
+                                                    "runFunction": "createUser(this)",
+                                                    "code": "UserManegement"
+                                                }
+                                            ],
+                                            "element": {
+                                                "style": {
+                                                    "padding": "10px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "100px",
+                                                    "border-style": "groove"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "save",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "padding": "10px",
+                                                    "display": "inline-block",
+                                                    "float": "none",
+                                                    "width": "100px",
+                                                    "border-style": "groove"
+                                                }
+                                            },
+                                            "colorEffect": {
+                                                "element": {
+                                                    "style": {
+                                                        "color": "black"
+                                                    }
+                                                },
+                                                "font": {
+                                                    "element": {
+                                                        "className": "ClassOpenSans",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "height": "100%",
+                                                            "font-size": "16px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "animationEffect": {
+                                                        "element": {
+                                                            "style": {
+                                                                "display": "inline-block"
+                                                            }
+                                                        },
+                                                        "animationSubEffect": {
+                                                            "arrayAnimationSubEffectHolder": [
+                                                                {
+                                                                    "information": {
+                                                                        "information": "cancel",
+                                                                        "element": {}
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "__comment__": "Fim 3 divisor"
+                        }
+                    ],
+                    "__comment__": "Fim 2 divisor"
+                }
+            ],
+            "__comment__": "Fim 1 divisor"
+        }
+    ]
+}
