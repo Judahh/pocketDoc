@@ -2,11 +2,9 @@ import { path, BasicApi, BasicExternalHandler, BasicSocket } from 'backapijh';
 import { HardwareHandler } from '../hardwareHandler/hardwareHandler';
 
 export class ExternalHandler extends BasicExternalHandler {
-    private hardwareHandler: HardwareHandler;
 
     constructor(hardwareHandler: HardwareHandler) {
-        super();
-        this.hardwareHandler = hardwareHandler;
+        super(hardwareHandler);
     }
 
     public uploadVideo(video) {

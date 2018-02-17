@@ -2,13 +2,12 @@ import { Router, Request, Response, NextFunction, Electron, ApiConfiguration, ex
 import { HardwareHandler } from '../hardwareHandler/hardwareHandler';
 
 export class AppHandler extends BasicAppHandler {
-    private hardwareHandler: HardwareHandler
 
     constructor(hardwareHandler) {
-        super();
-        this.hardwareHandler = hardwareHandler;
+        super(hardwareHandler);
     }
 
+    // tslint:disable-next-line:no-empty
     public init() {
 
     }
