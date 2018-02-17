@@ -3,21 +3,24 @@ import { Handler, Event, Operation } from "flexiblepersistence";
 import { User } from '../user/user';
 import { Authentication } from '../user/authentication';
 import { Permission } from '../user/permission';
+import { BasicHardwareHandler } from 'backapijh';
 // let packageJson = require('./../package.json');
 
-export class HardwareHandler {
+export class HardwareHandler extends BasicHardwareHandler{
     private disk: Disk;
     private externalSubscribers: any;
     private externalSubscribersOldData: any;
     private handler: Handler;
 
     constructor() {
+        super();
         this.disk = new Disk();
         this.externalSubscribers = {};
         this.externalSubscribersOldData = {};
         this.handler = new Handler(process.env.POCKET_DOC_DB, process.env.POCKET_DOC_DB_HOST, parseInt(process.env.POCKET_DOC_DB_PORT, 10));
     }
 
+    // tslint:disable-next-line:no-empty
     public init() {
 
     }
