@@ -6,7 +6,7 @@ import { Permission } from '../user/permission';
 import { BasicHardwareHandler } from 'backapijh';
 // let packageJson = require('./../package.json');
 
-export class HardwareHandler extends BasicHardwareHandler{
+export class HardwareHandler extends BasicHardwareHandler {
     private disk: Disk;
     private externalSubscribers: any;
     private externalSubscribersOldData: any;
@@ -25,11 +25,11 @@ export class HardwareHandler extends BasicHardwareHandler{
 
     }
 
-    private isOperator(socket){
+    private isOperator(socket) {
         return (socket.identification.user.authentication.permission >= Permission.Operator);
     }
 
-    private isAdministator(socket){
+    private isAdministator(socket) {
         return (socket.identification.user.authentication.permission >= Permission.Administrator);
     }
 
@@ -38,7 +38,7 @@ export class HardwareHandler extends BasicHardwareHandler{
             if (user.authentication.permission > socket.identification.user.authentication.permission) {
                 user.authentication.permission = socket.identification.user.authentication.permission
             }
-        }else{
+        } else {
             user.authentication.permission = Permission.User;
         }
 
