@@ -12,16 +12,6 @@
                         {
                             "arrayItem": [
                                 {
-                                    "arrayRouter": [
-                                        {
-                                            "link": "ativos",
-                                            "runFunction": "isLogged",
-                                            "code": "UserManegement"
-                                        },
-                                        {
-                                            "link": "login"
-                                        }
-                                    ],
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
@@ -58,7 +48,132 @@
                                                 }
                                             }
                                         }
-                                    }
+                                    },
+                                    "arrayMenuVertical": [
+                                        {
+                                            "element": {
+                                                "style": {
+                                                    "top": "25px",
+                                                    "float": "left",
+                                                    "left": "0px",
+                                                    "background-color": "#cac8c6",
+                                                    "width": "max-content",
+                                                    "position": "absolute"
+                                                }
+                                            },
+                                            "class": "",
+                                            "arrayDivisor": [
+                                                {
+                                                    "element": {
+                                                        "style": {
+                                                            "height": "fit-content",
+                                                            "width": "max-content"
+                                                        }
+                                                    },
+                                                    "arrayItem": [
+                                                        {
+                                                            "arrayRouter": [
+                                                                {
+                                                                    "link": "ativos",
+                                                                    "runFunction": "isLogged",
+                                                                    "code": "UserManegement"
+                                                                },
+                                                                {
+                                                                    "link": "login"
+                                                                }
+                                                            ],
+                                                            "element": {
+                                                                "style": {
+                                                                    "vertical-align": "-webkit-baseline-middle",
+                                                                    "color": "black",
+                                                                    "opacity": "0.9",
+                                                                    "padding": "5px",
+                                                                    "display": "block",
+                                                                    "font-size": "16px"
+                                                                }
+                                                            },
+                                                            "colorEffect": {
+                                                                "element": {
+                                                                    "className": "ClassNeon"
+                                                                },
+                                                                "colorEffect": "test",
+                                                                "font": {
+                                                                    "element": {
+                                                                        "className": "ClassOpenSans"
+                                                                    },
+                                                                    "animationEffect": {
+                                                                        "element": {
+                                                                            "className": "ClassPulse"
+                                                                        },
+                                                                        "animationSubEffect": {
+                                                                            "arrayAnimationSubEffectHolder": [
+                                                                                {
+                                                                                    "information": {
+                                                                                        "information": "active",
+                                                                                        "link": "link0",
+                                                                                        "opacity": 1
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        {
+                                                            "arrayRouter": [
+                                                                {
+                                                                    "link": "devices",
+                                                                    "runFunction": "isLogged",
+                                                                    "code": "UserManegement"
+                                                                },
+                                                                {
+                                                                    "link": "login"
+                                                                }
+                                                            ],
+                                                            "element": {
+                                                                "style": {
+                                                                    "vertical-align": "-webkit-baseline-middle",
+                                                                    "color": "black",
+                                                                    "opacity": "0.9",
+                                                                    "padding": "5px",
+                                                                    "display": "block",
+                                                                    "font-size": "16px"
+                                                                }
+                                                            },
+                                                            "colorEffect": {
+                                                                "element": {
+                                                                    "className": "ClassNeon"
+                                                                },
+                                                                "colorEffect": "test",
+                                                                "font": {
+                                                                    "element": {
+                                                                        "className": "ClassOpenSans"
+                                                                    },
+                                                                    "animationEffect": {
+                                                                        "element": {
+                                                                            "className": "ClassPulse"
+                                                                        },
+                                                                        "animationSubEffect": {
+                                                                            "arrayAnimationSubEffectHolder": [
+                                                                                {
+                                                                                    "information": {
+                                                                                        "information": "devices",
+                                                                                        "link": "link0",
+                                                                                        "opacity": 1
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -471,7 +586,7 @@
                                                         {
                                                             "arrayRouter": [
                                                                 {
-                                                                    "link": "createGroup",
+                                                                    "link": "createRole",
                                                                     "runFunction": "isLogged",
                                                                     "code": "UserManegement"
                                                                 },
@@ -506,7 +621,7 @@
                                                                             "arrayAnimationSubEffectHolder": [
                                                                                 {
                                                                                     "information": {
-                                                                                        "information": "groups",
+                                                                                        "information": "role",
                                                                                         "link": "link0",
                                                                                         "opacity": 1
                                                                                     }
@@ -786,7 +901,7 @@
                                                         {
                                                             "arrayRouter": [
                                                                 {
-                                                                    "link": "searchGroups",
+                                                                    "link": "searchRole",
                                                                     "runFunction": "isLogged",
                                                                     "code": "UserManegement"
                                                                 },
@@ -821,7 +936,7 @@
                                                                             "arrayAnimationSubEffectHolder": [
                                                                                 {
                                                                                     "information": {
-                                                                                        "information": "searchGroups",
+                                                                                        "information": "searchRole",
                                                                                         "link": "link0",
                                                                                         "opacity": 1
                                                                                     }
@@ -1282,7 +1397,7 @@
                                                                                                     "arrayAnimationSubEffectHolder": [
                                                                                                         {
                                                                                                             "information": {
-                                                                                                                "information": "group",
+                                                                                                                "information": "role",
                                                                                                                 "element": {}
                                                                                                             }
                                                                                                         }

@@ -1,14 +1,10 @@
-import { AppObject, Component, ComponentPageBody, ComponentInformation, Observer, Socket } from 'backappjh';
+import { AppObject, Component, ComponentPageBody, ComponentInformation, Observer } from 'backappjh';
+import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class GPS extends AppObject implements Observer {
-    private socketIo;
     private static instance: GPS;
+    private socketIo: BasicSocket;
     private subscribers: Array<any>;
-
-    constructor(father?: Component) {
-        super(father);
-        this.init();
-    }
 
     public static getInstance(father?: Component): GPS {
         if (!GPS.instance) {
@@ -17,16 +13,13 @@ export class GPS extends AppObject implements Observer {
         return GPS.instance;
     }
 
-    private init() {
-        let _self = this;
-        _self.subscribers = new Array<any>();
-        _self.socketIo = Socket.getInstance();
-        _self.socketIo.emit('subscribeGPS', {});
-        _self.socketIo.on('gPS', (data) => { _self.publish(data); });
+    constructor(father?: Component) {
+        super(father);
+        this.init();
     }
 
     public subscribe(callback) {
-        //we could check to see if it is already subscribed
+        // we could check to see if it is already subscribed
         this.subscribers.push(callback);
         console.log(callback.name, 'has been subscribed to GPS');
     }
@@ -56,5 +49,13 @@ export class GPS extends AppObject implements Observer {
         } else {
             (<ComponentInformation>component).getElement().innerHTML = '';
         }
+    }
+
+    private init() {
+        let _self = this;
+        _self.subscribers = new Array<any>();
+        _self.socketIo = UniqueSocket.getInstance().getBasicSocket();
+        _self.socketIo.emit('subscribeGPS', {});
+        _self.socketIo.on('gPS', (data) => { _self.publish(data); });
     }
 }

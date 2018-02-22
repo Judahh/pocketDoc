@@ -1,45 +1,41 @@
 [
     {
         "language":"pt",
-        "title":"Cadastro de grupo de Usuários",
+        "title":"Cadastro de Cargo",
         "back":"Home",
         "name":"Nome*:",
         "situation":"Situação*:",
         "description":"Descrição:",
-        "listOfPermission":"Lista de Permissões",
         "save":"Salvar",
         "cancel":"Cancelar"
     },
     {
         "language":"pt-BR",
-        "title":"Cadastro de grupo de Usuários",
+        "title":"Cadastro de Cargo",
         "back":"Home",
         "name":"Nome*:",
         "situation":"Situação*:",
         "description":"Descrição:",
-        "listOfPermission":"Lista de Permissões",
         "save":"Salvar",
         "cancel":"Cancelar"
     },
     {
         "language":"en",
-        "title":"User Group Registration",
+        "title":"Role Registration",
         "back":"Home",
         "name":"Name*:",
         "situation":"Situation*:",
         "description":"Desciption:",
-        "listOfPermission":"List of Permission*",
         "save":"Save",
         "cancel":"Cancel"
     },
     {
         "language":"en-US",
-        "title":"User Group Registration",
+        "title":"Role Registration",
         "back":"Home",
         "name":"Name*:",
         "situation":"Situation*:",
         "description":"Desciption:",
-        "listOfPermission":"List of Permission*",
         "save":"Save",
         "cancel":"Cancel"
     }

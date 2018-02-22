@@ -8,13 +8,16 @@
         "closeOperation": "Close Operation",
         "users": "Users",
         "searchUsers": "Search Users",
-        "searchGroups": "Search Groups",
+        "searchRole": "Search Role",
         "searchVehicle": "Search Vehicle",
         "searchOperation": "Search Operation",
         "regiments": "Regiments",
         "vehicle": "Vehicle",
         "User": "User",
-        "logout": "Logout"
+        "logout": "Logout",
+        "active":"Active",
+        "devices":"Devices",
+        "role":"Role"
     },
     {
         "language": "en-US",
@@ -25,13 +28,16 @@
         "closeOperation": "Close Operation",
         "users": "Users",
         "searchUsers": "Search Users",
-        "searchGroups": "Search Groups",
+        "searchRole": "Search Role",
         "searchVehicle": "Search Vehicle",
         "searchOperation": "Search Operation",
         "regiments": "Regiments",
         "vehicle": "Vehicle",
         "User": "User",
-        "logout": "Logout"
+        "logout": "Logout",
+        "active":"Active",
+        "devices":"Devices",
+        "role":"Role"
     },
     {
         "language": "pt",
@@ -42,13 +48,16 @@
         "closeOperation": "Fechamento de Operações",
         "users": "Usuários",
         "searchUsers": "Procurar Usuários",
-        "searchGroups": "Procurar Grupos",
+        "searchRole": "Procurar Cargo",
         "searchVehicle": "Procurar Viatura",
         "searchOperation": "Procurar Operações",
         "regiments": "Regimentos",
         "vehicle": "Viatura",
         "User": "Usuário",
-        "logout": "Sair"
+        "logout": "Sair",
+        "active":"Ativos",
+        "devices":"Dispositivos",
+        "role":"Cargo"
     },
     {
         "language": "pt-BR",
@@ -59,12 +68,15 @@
         "closeOperation": "Fechamento de Operações",
         "users": "Usuários",
         "searchUsers": "Procurar Usuários",
-        "searchGroups": "Procurar Grupos",
+        "searchRole": "Procurar Cargo",
         "searchVehicle": "Procurar Viatura",
         "searchOperation": "Procurar Operações",
         "regiments": "Regimentos",
         "vehicle": "Viatura",
         "User": "Usuário",
-        "logout": "Sair"
+        "logout": "Sair",
+        "active":"Ativos",
+        "devices":"Dispositivos",
+        "role":"Cargo"
     }
 ]

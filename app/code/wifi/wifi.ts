@@ -1,20 +1,21 @@
-import { AppObject, Component, ComponentDataInput, ComponentOption, ComponentDivisor, ComponentInformation, ComponentPageBody, Observer, Socket } from 'backappjh';
+import { AppObject, Component, ComponentDataInput, ComponentOption, ComponentDivisor, ComponentInformation, ComponentPageBody, Observer } from 'backappjh';
+import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class Wifi extends AppObject implements Observer {
-    private socketIo;
     private static instance: Wifi;
+    private socketIo: BasicSocket;
     private subscribers: Array<any>;
-
-    constructor(father?: Component) {
-        super(father);
-        this.init();
-    }
 
     public static getInstance(father?: Component): Wifi {
         if (!Wifi.instance) {
             Wifi.instance = new Wifi(father);
         }
         return Wifi.instance;
+    }
+
+    constructor(father?: Component) {
+        super(father);
+        this.init();
     }
 
     public getWifiConnections(data) {
@@ -32,16 +33,8 @@ export class Wifi extends AppObject implements Observer {
         _self.socketIo.emit('setWifiConnection', data);
     }
 
-    private init(){
-        let _self = this;
-        _self.subscribers=new Array<any>();
-        _self.socketIo = Socket.getInstance();
-        _self.socketIo.emit('subscribeWifi', {});
-        _self.socketIo.on('wifi', (data) => { _self.publish(data); });
-    }
-
     public subscribe(callback) {
-        //we could check to see if it is already subscribed
+        // we could check to see if it is already subscribed
         this.subscribers.push(callback);
         console.log(callback.name, 'has been subscribed to Wifi');
     }
@@ -88,7 +81,7 @@ export class Wifi extends AppObject implements Observer {
                 // console.log(highestStrength);
                 // highestStrength=6;
                 if (highestStrength > 75) {
-                    (<ComponentInformation>component).getElement().innerHTML = '\u{F162}';//'';
+                    (<ComponentInformation>component).getElement().innerHTML = '\u{F162}'; // '';
                 } else if (highestStrength > 50) {
                     (<ComponentInformation>component).getElement().innerHTML = '\u{F161}';
                 } else if (highestStrength > 25) {
@@ -169,5 +162,13 @@ export class Wifi extends AppObject implements Observer {
 
             // component.destroyElement();
         }
+    }
+
+    private init() {
+        let _self = this;
+        _self.subscribers = new Array<any>();
+        _self.socketIo = UniqueSocket.getInstance().getBasicSocket();
+        _self.socketIo.emit('subscribeWifi', {});
+        _self.socketIo.on('wifi', (data) => { _self.publish(data); });
     }
 }

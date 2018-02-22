@@ -13,13 +13,13 @@ import { Operations } from './../operations/operations';
 import * as loader from './../onLoad/loader';
 
 export {
-    loader, 
+    loader,
     SVG,
     GPS, GPSData,
     GSM,
-    Time, 
+    Time,
     Wifi,
-    Disk, 
+    Disk,
     Stream,
     Keyboard,
     Operations,

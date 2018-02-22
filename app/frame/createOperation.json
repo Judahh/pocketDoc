@@ -937,7 +937,8 @@
                                                                             },
                                                                             "src": "images/people-01.png"
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    "draggable": true
                                                                 }
                                                             ]
                                                         }
@@ -978,7 +979,8 @@
                                                                             },
                                                                             "src": "images/people-02.png"
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    "draggable": true
                                                                 }
                                                             ]
                                                         }
@@ -1019,7 +1021,8 @@
                                                                             },
                                                                             "src": "images/people-03.png"
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    "draggable": true
                                                                 }
                                                             ]
                                                         }
@@ -1060,7 +1063,8 @@
                                                                             },
                                                                             "src": "images/people-04.png"
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    "draggable": true
                                                                 }
                                                             ]
                                                         }
@@ -1101,7 +1105,8 @@
                                                                             },
                                                                             "src": "images/people-05.png"
                                                                         }
-                                                                    }
+                                                                    },
+                                                                    "draggable": true
                                                                 }
                                                             ]
                                                         }

@@ -1,16 +1,11 @@
-import { AppObject, Component, ComponentPageBody, Socket } from 'backappjh';
+import { AppObject, Component, ComponentPageBody } from 'backappjh';
+import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class Keyboard extends AppObject {
-    private socketIo;
     private static instance: Keyboard;
+    private socketIo: BasicSocket;
     private lastTabindex: number;
     private arrayElementTag;
-
-    constructor(father?: Component) {
-        super(father);
-        this.lastTabindex = 0;
-        this.arrayElementTag = ['item', 'divisor', 'leftholder', 'rightholder', 'centerholder', 'combobox', 'select', 'datainput', 'input', 'textfield', 'label', 'box'];
-    }
 
     public static getInstance(father?: Component): Keyboard {
         if (!Keyboard.instance) {
@@ -19,22 +14,28 @@ export class Keyboard extends AppObject {
         return Keyboard.instance;
     }
 
+    constructor(father?: Component) {
+        super(father);
+        this.lastTabindex = 0;
+        this.arrayElementTag = ['item', 'divisor', 'leftholder', 'rightholder', 'centerholder', 'combobox', 'select', 'datainput', 'input', 'textfield', 'label', 'box'];
+    }
+
     public run() {
         let _self = this;
-        _self.socketIo = Socket.getInstance();
+        _self.socketIo = UniqueSocket.getInstance().getBasicSocket();
         document.onkeydown = (event) => {
             _self.keyPressed(event);
         };
     }
 
     private keyPressed(event) {
-        // console.log("KEY:", event);
+        // console.log('KEY:', event);
         let key = event.key;
         let stringTabindex: string;
         let tempTabindex: number;
         switch (key) {
-            case "ArrowRight":
-                console.log("RIGHT");
+            case 'ArrowRight':
+                console.log('RIGHT');
                 tempTabindex = this.lastTabindex + 1;
                 stringTabindex = this.toStringTabindex(tempTabindex);
                 if (this.check(stringTabindex)) {
@@ -46,8 +47,8 @@ export class Keyboard extends AppObject {
                 this.seek(stringTabindex).focus();
 
                 break;
-            case "ArrowLeft":
-                console.log("LEFT");
+            case 'ArrowLeft':
+                console.log('LEFT');
                 tempTabindex = this.lastTabindex - 1;
                 stringTabindex = this.toStringTabindex(tempTabindex);
                 if (this.check(stringTabindex)) {
@@ -59,8 +60,8 @@ export class Keyboard extends AppObject {
                 this.seek(stringTabindex).focus();
 
                 break;
-            case "ArrowUp":
-                console.log("UP");
+            case 'ArrowUp':
+                console.log('UP');
                 tempTabindex = this.lastTabindex - 10;
                 stringTabindex = this.toStringTabindex(tempTabindex);
                 if (this.check(stringTabindex)) {
@@ -72,8 +73,8 @@ export class Keyboard extends AppObject {
                 this.seek(stringTabindex).focus();
 
                 break;
-            case "ArrowDown":
-                console.log("DOWN");
+            case 'ArrowDown':
+                console.log('DOWN');
                 tempTabindex = this.lastTabindex + 10;
                 stringTabindex = this.toStringTabindex(tempTabindex);
                 if (this.check(stringTabindex)) {
@@ -85,22 +86,22 @@ export class Keyboard extends AppObject {
                 this.seek(stringTabindex).focus();
 
                 break;
-            case "Clear":
-            case "Enter":
-                console.log("Enter");
+            case 'Clear':
+            case 'Enter':
+                console.log('Enter');
                 stringTabindex = this.toStringTabindex(this.lastTabindex);
                 let element = this.seek(stringTabindex);
-                if (element.tagName == "datainput".toLocaleUpperCase()) {
+                if (element.tagName === 'datainput'.toLocaleUpperCase()) {
                     // console.log(element.firstElementChild.tagName);
-                    if (document.activeElement == element.firstElementChild) {
+                    if (document.activeElement === element.firstElementChild) {
                         this.seek(stringTabindex).focus();
-                    } else if (document.activeElement == element.lastElementChild) {
+                    } else if (document.activeElement === element.lastElementChild) {
                         this.seek(stringTabindex).focus();
                     } else {
                         element.firstElementChild.focus();
                     }
 
-                    if (element.lastElementChild.tagName == "label".toLocaleUpperCase()) {
+                    if (element.lastElementChild.tagName === 'label'.toLocaleUpperCase()) {
                         element.firstElementChild.checked = !element.firstElementChild.checked;
                     }
                     // this.eventFire(element.firstElementChild, 'click');
@@ -109,24 +110,24 @@ export class Keyboard extends AppObject {
                 }
 
                 break;
-            case "Home":
-                console.log("back");
-                this.eventFire(this.seek("back"), 'click');
+            case 'Home':
+                console.log('back');
+                this.eventFire(this.seek('back'), 'click');
 
                 break;
-            case "PageUp":
-                console.log("home");
-                this.eventFire(this.seek("home"), 'click');
+            case 'PageUp':
+                console.log('home');
+                this.eventFire(this.seek('home'), 'click');
 
                 break;
-            case "End":
-                console.log("menu");
-                this.eventFire(this.seek("menu"), 'click');
+            case 'End':
+                console.log('menu');
+                this.eventFire(this.seek('menu'), 'click');
 
                 break;
-            case "PageDown":
-                console.log("camera");
-                this.eventFire(this.seek("camera"), 'click');
+            case 'PageDown':
+                console.log('camera');
+                this.eventFire(this.seek('camera'), 'click');
 
                 break;
 
@@ -137,7 +138,7 @@ export class Keyboard extends AppObject {
 
     private eventFire(element, type) {
         if (element == null) {
-            console.log("null");
+            console.log('null');
         }
         if (element.fireEvent) {
             element.fireEvent('on' + type);
@@ -154,9 +155,9 @@ export class Keyboard extends AppObject {
         this.lastTabindex = tabindex;
 
         if (tabindex < 10) {
-            stringTabindex = "0" + tabindex;
+            stringTabindex = '0' + tabindex;
         } else {
-            stringTabindex = "" + tabindex;
+            stringTabindex = '' + tabindex;
         }
 
         return stringTabindex;
@@ -171,8 +172,8 @@ export class Keyboard extends AppObject {
             for (let index2 = 0; index2 < arrayElement.length; index2++) {
                 let element = arrayElement[index2];
                 let currentTabindex = element.getAttribute('tabindex');
-                if (currentTabindex == stringTabindex) {
-                    // console.log("FOUND:", element);
+                if (currentTabindex === stringTabindex) {
+                    // console.log('FOUND:', element);
                     found = element;
                     return found;
                 }
@@ -184,7 +185,7 @@ export class Keyboard extends AppObject {
         //     arrayElement.forEach(element => {
         //         let currentTabindex = element.getAttribute('tabindex');
         //         if (currentTabindex == stringTabindex) {
-        //             // console.log("FOUND:", element);
+        //             // console.log('FOUND:', element);
         //             found = element;
         //             return found;
         //         }

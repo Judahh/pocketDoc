@@ -3,14 +3,12 @@ import { HardwareHandler } from '../hardwareHandler/hardwareHandler';
 
 export class AppHandler extends BasicAppHandler {
 
-    constructor(hardwareHandler) {
+    constructor(hardwareHandler: HardwareHandler) {
         super(hardwareHandler);
     }
 
     // tslint:disable-next-line:no-empty
-    public init() {
-
-    }
+    public init() { }
 
     public subscribeGPS(socket) {
         this.hardwareHandler.subscribeGPS((data) => {
@@ -36,6 +34,18 @@ export class AppHandler extends BasicAppHandler {
         });
     }
 
+    public subscribeNewDevice(socket) {
+        this.hardwareHandler.subscribeNewDevice((data) => {
+            socket.emit('newDevice', data);
+        });
+    }
+
+    public subscribeDevices(socket) {
+        this.hardwareHandler.subscribeDevices((data) => {
+            socket.emit('devices', data);
+        });
+    }
+
     public getVideos() {
         this.hardwareHandler.getVideos();
     }
@@ -46,6 +56,16 @@ export class AppHandler extends BasicAppHandler {
 
     public externalSubscribe(subscribers, socket) {
         this.hardwareHandler.externalSubscribe(subscribers, (data) => {
+            socket.emit(subscribers, data);
+        });
+    }
+
+    public devicePublish(device, subscribers, data) {
+        this.hardwareHandler.devicePublish(device, subscribers, data);
+    }
+
+    public deviceSubscribe(device, subscribers, socket) {
+        this.hardwareHandler.deviceSubscribe(device, subscribers, (data) => {
             socket.emit(subscribers, data);
         });
     }
@@ -72,6 +92,15 @@ export class AppHandler extends BasicAppHandler {
         socketBasic.on('stream', (stream) => { _self.externalPublish('streamIn', stream); });
 
         socketBasic.on('subscribeDisk', () => { _self.subscribeDisk(socketBasic); });
+
+        socketBasic.on('subscribeNewDevice', () => { _self.subscribeNewDevice(socketBasic); });
+        socketBasic.on('getUsers', () => { _self.hardwareHandler.getUsers(socketBasic); });
+
+        socketBasic.on('setUsers', (data) => { _self.hardwareHandler.setUsers(data.device, data.users); });
+        socketBasic.on('addUser', (data) => { _self.hardwareHandler.addUser(data.device, data.user); });
+        socketBasic.on('removeUser', (data) => { _self.hardwareHandler.removeUser(data.device, data.user); });
+
+        socketBasic.on('getDevices', () => { _self.hardwareHandler.getDevices(); });
     }
 
 }

@@ -1,17 +1,13 @@
-import { AppObject, Component, ComponentPageBody, ComponentInformation, Observer, Socket } from 'backappjh';
+import { AppObject, Component, ComponentPageBody, ComponentInformation, Observer } from 'backappjh';
+import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class GSM extends AppObject implements Observer {
-    private socketIo;
     private static instance: GSM;
+    private socketIo;
     private subscribers: Array<any>;
     private stringStrength: string;
     private stringType: string;
     private stringError: string;
-
-    constructor(father?: Component) {
-        super(father);
-        this.init();
-    }
 
     public static getInstance(father?: Component): GSM {
         if (!GSM.instance) {
@@ -20,19 +16,13 @@ export class GSM extends AppObject implements Observer {
         return GSM.instance;
     }
 
-    private init() {
-        let _self = this;
-        _self.subscribers = new Array<any>();
-        _self.socketIo = Socket.getInstance();
-        _self.socketIo.emit('subscribeGSM', {});
-        _self.socketIo.on('gSM', (data) => { _self.publish(data); });
-        _self.stringStrength = '';
-        _self.stringType = '';
-        _self.stringError = '';
+    constructor(father?: Component) {
+        super(father);
+        this.init();
     }
 
     public subscribe(callback) {
-        //we could check to see if it is already subscribed
+        // we could check to see if it is already subscribed
         this.subscribers.push(callback);
         console.log(callback.name, 'has been subscribed to GSM');
     }
@@ -63,7 +53,7 @@ export class GSM extends AppObject implements Observer {
 
             console.log('GSM%:', strength);
             if (strength > 75) {
-                gSM.stringStrength = '\u{F155}';//'';
+                gSM.stringStrength = '\u{F155}'; // '';
             } else if (strength > 50) {
                 gSM.stringStrength = '\u{F154}';
             } else if (strength > 25) {
@@ -85,5 +75,16 @@ export class GSM extends AppObject implements Observer {
         }
 
         (<ComponentInformation>component).getElement().innerHTML = gSM.stringStrength + gSM.stringType;
+    }
+
+    private init() {
+        let _self = this;
+        _self.subscribers = new Array<any>();
+        _self.socketIo = UniqueSocket.getInstance().getBasicSocket();
+        _self.socketIo.emit('subscribeGSM', {});
+        _self.socketIo.on('gSM', (data) => { _self.publish(data); });
+        _self.stringStrength = '';
+        _self.stringType = '';
+        _self.stringError = '';
     }
 }

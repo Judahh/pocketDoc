@@ -1,14 +1,10 @@
-import { AppObject, Component, ComponentPageBody, ComponentDivisor, ComponentDataInput, ComponentOption, Observer, Socket } from 'backappjh';
+import { AppObject, Component, ComponentPageBody, ComponentDivisor, ComponentDataInput, ComponentOption, Observer } from 'backappjh';
+import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class Disk extends AppObject implements Observer {
-    private socketIo;
     private static instance: Disk;
+    private socketIo: BasicSocket;
     private subscribers: Array<any>;
-
-    constructor(father?: Component) {
-        super(father);
-        this.init();
-    }
 
     public static getInstance(father?: Component): Disk {
         if (!Disk.instance) {
@@ -17,12 +13,9 @@ export class Disk extends AppObject implements Observer {
         return Disk.instance;
     }
 
-    private init() {
-        let _self = this;
-        _self.subscribers = new Array<any>();
-        _self.socketIo = Socket.getInstance();
-        _self.socketIo.emit('subscribeDisk', {});
-        _self.socketIo.on('disk', (data) => { _self.publish(data); });
+    constructor(father?: Component) {
+        super(father);
+        this.init();
     }
 
     public getVideos(data) {
@@ -41,7 +34,7 @@ export class Disk extends AppObject implements Observer {
     }
 
     public subscribe(callback) {
-        //we could check to see if it is already subscribed
+        // we could check to see if it is already subscribed
         this.subscribers.push(callback);
         console.log(callback.name, 'has been subscribed to Disk');
     }
@@ -118,7 +111,15 @@ export class Disk extends AppObject implements Observer {
             (<ComponentDivisor>component).arrayChart[0].arrayData[2][1] = data.space.total - data.space.free;
             (<ComponentDivisor>component).arrayChart[0].arrayData[3][1] = data.space.free - data.space.available;
 
-            //let t = setTimeout(() => { _self.response(text); }, 5000);
+            // let t = setTimeout(() => { _self.response(text); }, 5000);
         }
+    }
+
+    private init() {
+        let _self = this;
+        _self.subscribers = new Array<any>();
+        _self.socketIo = UniqueSocket.getInstance().getBasicSocket();
+        _self.socketIo.emit('subscribeDisk', {});
+        _self.socketIo.on('disk', (data) => { _self.publish(data); });
     }
 }
