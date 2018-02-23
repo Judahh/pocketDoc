@@ -27,10 +27,12 @@
             }
         }
     },
-    "arrayDivisor": [
+    "arrayAppObject": [
         {
-            "arrayComponent": [
+            "type": "ComponentDivisor",
+            "arrayAppObject": [
                 {
+                    "type": "ComponentDivisor",
                     "element": {
                         "style": {
                             "opacity": 1,
@@ -40,36 +42,12 @@
                             ]
                         }
                     },
-                    "type":"ComponentDivisor"
-                },
-                {
-                    "element": {
-                        "style": {
-                            "opacity": 1,
-                            "color": "transparent",
-                            "padding": [
-                                5
-                            ]
-                        }
-                    },
-                    "type":"ComponentDivisor"
-                }
-            ],
-            "arrayDivisor": [
-                {
-                    "element": {
-                        "style": {
-                            "opacity": 1,
-                            "color": "transparent",
-                            "padding": [
-                                5
-                            ]
-                        }
-                    },
-                    "arrayDivisor": [
+                    "arrayAppObject": [
                         {
-                            "arrayItem": [
+                            "type": "ComponentDivisor",
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "padding": "5px",
@@ -82,43 +60,59 @@
                                             "align-items": "center"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "style": {
-                                                "color": "white",
-                                                "mix-blend-mode": "difference"
-                                            }
-                                        },
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentColorEffect",
                                             "element": {
-                                                "className": "ClassFuturisticI",
                                                 "style": {
-                                                    "width": "100%",
-                                                    "font-size": "40px",
-                                                    "padding": [
-                                                        0
-                                                    ]
+                                                    "color": "white",
+                                                    "mix-blend-mode": "difference"
                                                 }
                                             },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "style": {
-                                                        "display": "block"
-                                                    }
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentFont",
+                                                    "element": {
+                                                        "className": "ClassFuturisticI",
+                                                        "style": {
+                                                            "width": "100%",
+                                                            "font-size": "40px",
+                                                            "padding": [
+                                                                0
+                                                            ]
+                                                        }
+                                                    },
+                                                    "arrayAppObject": [
                                                         {
-                                                            "information": {
-                                                                "information": "title",
-                                                                "element": {}
-                                                            }
+                                                            "type": "ComponentAnimationEffect",
+                                                            "element": {
+                                                                "style": {
+                                                                    "display": "block"
+                                                                }
+                                                            },
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentAnimationSubEffect",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentAnimationSubEffectHolder",
+                                                                            "arrayAppObject": [
+                                                                                {
+                                                                                    "type": "ComponentInformation",
+                                                                                    "information": "title",
+                                                                                    "element": {}
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 }
-                                            }
+                                            ]
                                         }
-                                    }
+                                    ]
                                 }
                             ]
                         }

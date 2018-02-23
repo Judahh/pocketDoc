@@ -4,14 +4,18 @@
             "background-color": "rgba(255, 255, 255, 0.1)"
         }
     },
-    "arrayMenuHorizontal": [
+    "arrayAppObject": [
         {
-            "arrayLeftHolder": [
+            "type": "ComponentMenuHorizontal",
+            "arrayAppObject": [
                 {
-                    "arrayDivisor": [
+                    "type": "ComponentLeftHolder",
+                    "arrayAppObject": [
                         {
-                            "arrayItem": [
+                            "type": "ComponentDivisor",
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
@@ -22,35 +26,50 @@
                                             "font-size": "30px"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "className": "ClassNeon"
-                                        },
-                                        "colorEffect": "test",
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentColorEffect",
                                             "element": {
-                                                "className": "ClassMaterialDesign"
+                                                "className": "ClassNeon"
                                             },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "className": "ClassPulse"
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
+                                            "colorEffect": "test",
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentFont",
+                                                    "element": {
+                                                        "className": "ClassMaterialDesign"
+                                                    },
+                                                    "arrayAppObject": [
                                                         {
-                                                            "information": {
-                                                                "information": "",
-                                                                "link": "link0",
-                                                                "opacity": 1
-                                                            }
+                                                            "type": "ComponentAnimationEffect",
+                                                            "element": {
+                                                                "className": "ClassPulse"
+                                                            },
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentAnimationSubEffect",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentAnimationSubEffectHolder",
+                                                                            "arrayAppObject": [
+                                                                                {
+                                                                                    "type": "ComponentInformation",
+                                                                                    "information": "",
+                                                                                    "link": "link0",
+                                                                                    "opacity": 1
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 }
-                                            }
-                                        }
-                                    },
-                                    "arrayMenuVertical": [
+                                            ]
+                                        },
                                         {
+                                            "type": "ComponentMenuVertical",
                                             "element": {
                                                 "style": {
                                                     "top": "25px",
@@ -178,6 +197,7 @@
                             ]
                         },
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -473,6 +493,7 @@
                             ]
                         },
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -788,6 +809,7 @@
                             ]
                         },
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -1054,6 +1076,7 @@
                             ]
                         },
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -1102,6 +1125,7 @@
                             ]
                         },
                         {
+                            "type": "ComponentDivisor",
                             "arrayItem": [
                                 {
                                     "element": {
@@ -1155,17 +1179,18 @@
                             ]
                         }
                     ]
-                }
-            ],
-            "arrayCenterHolder": [
-                {}
-            ],
-            "arrayRightHolder": [
+                },
                 {
-                    "arrayDivisor": [
+                    "type": "ComponentCenterHolder"
+                },
+                {
+                    "type": "ComponentRightHolder",
+                    "arrayAppObject": [
                         {
-                            "arrayItem": [
+                            "type": "ComponentDivisor",
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentItem",
                                     "arrayAppObjectEvent": [
                                         {
                                             "name": "click",
