@@ -261,7 +261,7 @@
                                                     "runFunction": "getUsers(this)",
                                                     "runOnBuild": true,
                                                     "appObject": {},
-                                                    "arrayElementEvent": [
+                                                    "arrayAppObjectEvent": [
                                                         {
                                                             "element": {
                                                                 "style": {
@@ -396,7 +396,7 @@
                                                     "runFunction": "getNewDevice(this)",
                                                     "runOnBuild": true,
                                                     "appObject": {},
-                                                    "arrayElementEvent": [
+                                                    "arrayAppObjectEvent": [
                                                         {
                                                             "element": {
                                                                 "style": {
@@ -639,7 +639,7 @@
                                                                                             "opacity": 1
                                                                                         }
                                                                                     },
-                                                                                    "arrayElementEvent": [
+                                                                                    "arrayAppObjectEvent": [
                                                                                         {
                                                                                             "element": {
                                                                                                 "style": {

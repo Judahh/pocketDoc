@@ -29,6 +29,32 @@
     },
     "arrayDivisor": [
         {
+            "arrayComponent": [
+                {
+                    "element": {
+                        "style": {
+                            "opacity": 1,
+                            "color": "transparent",
+                            "padding": [
+                                5
+                            ]
+                        }
+                    },
+                    "type":"ComponentDivisor"
+                },
+                {
+                    "element": {
+                        "style": {
+                            "opacity": 1,
+                            "color": "transparent",
+                            "padding": [
+                                5
+                            ]
+                        }
+                    },
+                    "type":"ComponentDivisor"
+                }
+            ],
             "arrayDivisor": [
                 {
                     "element": {

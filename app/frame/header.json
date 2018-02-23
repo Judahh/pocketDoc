@@ -1166,7 +1166,7 @@
                         {
                             "arrayItem": [
                                 {
-                                    "arrayElementEvent": [
+                                    "arrayAppObjectEvent": [
                                         {
                                             "name": "click",
                                             "appObject": {},
@@ -1417,7 +1417,7 @@
                                                         },
                                                         {
                                                             "__comment": "Inicio 3 divisor",
-                                                            "arrayElementEvent": [
+                                                            "arrayAppObjectEvent": [
                                                                 {
                                                                     "name": "click",
                                                                     "appObject": {},

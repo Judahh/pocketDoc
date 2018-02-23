@@ -227,7 +227,7 @@
                                             "arrayOption": []
                                         }
                                     ],
-                                    "arrayElementEvent": [
+                                    "arrayAppObjectEvent": [
                                         {
                                             "name": "change",
                                             "appObject": {},

@@ -1,4 +1,4 @@
-import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentDivisor, ComponentPageBody, ComponentView, ComponentMenuVertical, ComponentHeader, ComponentComboBox, ComponentColorEffect, ComponentFont, ComponentAnimationEffect, ComponentAnimationSubEffect, ComponentAnimationSubEffectHolder, ComponentInformation, ComponentElementEvent } from 'backappjh';
+import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentDivisor, ComponentPageBody, ComponentView, ComponentMenuVertical, ComponentHeader, ComponentComboBox, ComponentColorEffect, ComponentFont, ComponentAnimationEffect, ComponentAnimationSubEffect, ComponentAnimationSubEffectHolder, ComponentInformation, AppObjectEvent } from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 import { User } from './user';
 import { Authentication } from './authentication';
@@ -460,14 +460,13 @@ export class UserManegement extends AppObject {
         let line = new ComponentTableLine(fatherTable);
         line.getElement().setAttribute('style', 'border-style: groove;border-width: 1px;box-sizing: border-box;display: inline-block;width: 100%;');
         line.getElement().setAttribute('draggable', 'true');
-        let event = new ComponentElementEvent(line);
+        let event = new AppObjectEvent(line);
         let currentType = type.pop();
-        event.getElement().setAttribute('style', 'float: left;');
         event.name = 'dragstart';
         event.code = 'UserManegement';
         event.runFunction = 'drag(this,event,"" + currentType + "")';
         console.log('new line:', currentType);
-        line.arrayElementEvent.push(event);
+        line.arrayAppObjectEvent.push(event);
         line.renderAfterUpdateJSON();
         let cell = new ComponentTableCell(line);
         cell.getElement().setAttribute('style', 'width: 100%;height: 100%;display: block;float: left;box-sizing: border-box;');
@@ -494,22 +493,19 @@ export class UserManegement extends AppObject {
     private newTable(fatherCell: ComponentTableCell, type: Array<string>) {
         let fatherDivisor = new ComponentDivisor(fatherCell);
         fatherDivisor.getElement().setAttribute('style', 'border-style: groove;border-width: 1px;box-sizing: border-box;display: inline-block;width: 100%;overflow: auto;height: 100px;');
-
         let table = new ComponentTable(fatherDivisor);
-        let event1 = new ComponentElementEvent(table);
+        let event1 = new AppObjectEvent(table);
         let currentType = type.pop();
-        event1.getElement().setAttribute('style', 'float: left;');
         event1.name = 'dragover';
         event1.code = 'UserManegement';
         event1.runFunction = 'allowDrop(this,event,"" + currentType + "")';
-        let event2 = new ComponentElementEvent(table);
-        event2.getElement().setAttribute('style', 'float: left;');
+        let event2 = new AppObjectEvent(table);
         event2.name = 'drop';
         event2.code = 'UserManegement';
         event2.runFunction = 'drop(this,event,"" + currentType + "")';
         console.log('new table:', currentType);
-        table.arrayElementEvent.push(event1);
-        table.arrayElementEvent.push(event2);
+        table.arrayAppObjectEvent.push(event1);
+        table.arrayAppObjectEvent.push(event2);
         table.renderAfterUpdateJSON();
         table.getElement().setAttribute('style', 'width: 100%;height: 100%;');
 

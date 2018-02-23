@@ -2873,7 +2873,7 @@
                                 {
                                     "arrayItem": [
                                         {
-                                            "arrayElementEvent": [
+                                            "arrayAppObjectEvent": [
                                                 {
                                                     "name": "click",
                                                     "appObject": {},

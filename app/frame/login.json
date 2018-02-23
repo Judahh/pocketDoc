@@ -185,7 +185,7 @@
                         {
                             "arrayItem": [
                                 {
-                                    "arrayElementEvent": [
+                                    "arrayAppObjectEvent": [
                                         {
                                             "name": "click",
                                             "appObject": {},
@@ -243,7 +243,7 @@
                                     }
                                 },
                                 {
-                                    "arrayElementEvent": [
+                                    "arrayAppObjectEvent": [
                                         {
                                             "name": "click",
                                             "appObject": {},
