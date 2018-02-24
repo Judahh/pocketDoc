@@ -81,17 +81,19 @@
                                                 }
                                             },
                                             "class": "",
-                                            "arrayDivisor": [
+                                            "arrayAppObject": [
                                                 {
+                                                    "type": "ComponentDivisor",
                                                     "element": {
                                                         "style": {
                                                             "height": "fit-content",
                                                             "width": "max-content"
                                                         }
                                                     },
-                                                    "arrayItem": [
+                                                    "arrayAppObject": [
                                                         {
-                                                            "arrayRouter": [
+                                                            "type": "ComponentItem",
+                                                            "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "ativos",
                                                                     "runFunction": "isLogged",
@@ -1332,7 +1334,7 @@
                                                                             },
                                                                             "arrayAppObject": [
                                                                                 {
-                                                                                    "type": "ComponentDivisor",
+                                                                                    "type": "ComponentImg",
                                                                                     "element": {
                                                                                         "style": {
                                                                                             "width": "100px",
@@ -1367,42 +1369,58 @@
                                                                                     "padding": "0.5%"
                                                                                 }
                                                                             },
-                                                                            "colorEffect": {
-                                                                                "element": {
-                                                                                    "style": {
-                                                                                        "color": "black"
-                                                                                    }
-                                                                                },
-                                                                                "font": {
+                                                                            "arrayAppObject": [
+                                                                                {
+                                                                                    "type": "ComponentColorEffect",
                                                                                     "element": {
-                                                                                        "className": "ClassOpenSans",
                                                                                         "style": {
-                                                                                            "font-size": "14px",
-                                                                                            "font-weight": "bold",
-                                                                                            "padding": [
-                                                                                                0
-                                                                                            ]
+                                                                                            "color": "black"
                                                                                         }
                                                                                     },
-                                                                                    "animationEffect": {
-                                                                                        "element": {
-                                                                                            "style": {
-                                                                                                "display": "inline-block"
-                                                                                            }
-                                                                                        },
-                                                                                        "animationSubEffect": {
-                                                                                            "arrayAnimationSubEffectHolder": [
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentFont",
+                                                                                            "element": {
+                                                                                                "className": "ClassOpenSans",
+                                                                                                "style": {
+                                                                                                    "font-size": "14px",
+                                                                                                    "font-weight": "bold",
+                                                                                                    "padding": [
+                                                                                                        0
+                                                                                                    ]
+                                                                                                }
+                                                                                            },
+                                                                                            "arrayAppObject": [
                                                                                                 {
-                                                                                                    "information": {
-                                                                                                        "information": "user",
-                                                                                                        "element": {}
-                                                                                                    }
+                                                                                                    "type": "ComponentAnimationEffect",
+                                                                                                    "element": {
+                                                                                                        "style": {
+                                                                                                            "display": "inline-block"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                                            "arrayAppObject": [
+                                                                                                                {
+                                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                                    "arrayAppObject": [
+                                                                                                                        {
+                                                                                                                            "type": "ComponentInformation",
+                                                                                                                            "information": "user",
+                                                                                                                            "element": {}
+                                                                                                                        }
+                                                                                                                    ]
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    ]
                                                                                                 }
                                                                                             ]
                                                                                         }
-                                                                                    }
+                                                                                    ]
                                                                                 }
-                                                                            }
+                                                                            ]
                                                                         }
                                                                     ]
                                                                 }
