@@ -1,4 +1,4 @@
-import { AppObject, Component, ComponentPageBody, ComponentDivisor, ComponentDataInput, ComponentOption, Observer } from 'backappjh';
+import { AppObject, Component, ComponentPageBody, ComponentDataInput, ComponentOption, Observer } from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class Disk extends AppObject implements Observer {
@@ -86,11 +86,11 @@ export class Disk extends AppObject implements Observer {
         // console.log('SELECTED:' + file);
         let array = file.split('.');
         let format = array[array.length - 1];
-        (<any>(<ComponentDivisor>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).pause();
-        (<ComponentDivisor>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].arraySource[0].getElement().setAttribute('src', 'videos/' + file);
-        (<ComponentDivisor>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].arraySource[0].getElement().setAttribute('type', 'video/' + format);
-        (<any>(<ComponentDivisor>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).load();
-        (<any>(<ComponentDivisor>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).play();
+        (<any>(<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).pause();
+        (<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].arraySource[0].getElement().setAttribute('src', 'videos/' + file);
+        (<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].arraySource[0].getElement().setAttribute('type', 'video/' + format);
+        (<any>(<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).load();
+        (<any>(<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).play();
         // ApiConnection.request('GET', 'getVideos', (text) => { _self.response(text); });
     }
 
@@ -107,9 +107,9 @@ export class Disk extends AppObject implements Observer {
             console.log(data.space.total);
             console.log(data.space.available);
 
-            (<ComponentDivisor>component).arrayChart[0].arrayData[1][1] = data.space.available;
-            (<ComponentDivisor>component).arrayChart[0].arrayData[2][1] = data.space.total - data.space.free;
-            (<ComponentDivisor>component).arrayChart[0].arrayData[3][1] = data.space.free - data.space.available;
+            (<any>component).arrayChart[0].arrayData[1][1] = data.space.available;
+            (<any>component).arrayChart[0].arrayData[2][1] = data.space.total - data.space.free;
+            (<any>component).arrayChart[0].arrayData[3][1] = data.space.free - data.space.available;
 
             // let t = setTimeout(() => { _self.response(text); }, 5000);
         }

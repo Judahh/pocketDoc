@@ -5,9 +5,6 @@ import { Authentication } from './authentication';
 import { Address } from './address';
 import { Phone } from './phone';
 import { Permission } from './permission';
-import { ComponentTable } from 'backappjh/app/view/common/table/componentTable';
-import { ComponentTableLine } from 'backappjh/app/view/common/table/tableLine/componentTableLine';
-import { ComponentTableCell } from 'backappjh/app/view/common/table/tableLine/tableCell/componentTableCell';
 
 export class UserManegement extends AppObject {
     private static instance: UserManegement;
@@ -361,11 +358,11 @@ export class UserManegement extends AppObject {
         }
     }
 
-    public refreshGUI(component: ComponentTable) {
+    public refreshGUI(component) {
         if (component.arrayTableLine.length > 0) {
             // console.log('DESTROY', component, component.arrayTableLine.length);
             component.destroyChildElements();
-            component.arrayTableLine = new Array<ComponentTableLine>();
+            component.arrayTableLine = new Array<any>();
             // console.log('DESTROYED', component, component.arrayTableLine.length);
             this.socketIo.emit('getDevices', {});
         }
