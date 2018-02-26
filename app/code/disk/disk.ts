@@ -86,11 +86,11 @@ export class Disk extends AppObject implements Observer {
         // console.log('SELECTED:' + file);
         let array = file.split('.');
         let format = array[array.length - 1];
-        (<any>(<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).pause();
-        (<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].arraySource[0].getElement().setAttribute('src', 'videos/' + file);
-        (<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].arraySource[0].getElement().setAttribute('type', 'video/' + format);
-        (<any>(<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).load();
-        (<any>(<Component>component.getFather().getFather()).arrayDivisor[1].arrayVideoHolder[0].arrayVideo[0].getElement()).play();
+        (<any>(<Component>(<Component>component.getFather().getFather()).arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement()).pause();
+        (<Component>(<Component>component.getFather().getFather()).arrayAppObject[1].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement().setAttribute('src', 'videos/' + file);
+        (<Component>(<Component>component.getFather().getFather()).arrayAppObject[1].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement().setAttribute('type', 'video/' + format);
+        (<any>(<Component>(<Component>component.getFather().getFather()).arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement()).load();
+        (<any>(<Component>(<Component>component.getFather().getFather()).arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement()).play();
         // ApiConnection.request('GET', 'getVideos', (text) => { _self.response(text); });
     }
 

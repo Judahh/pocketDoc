@@ -1,5 +1,5 @@
 // import { Component } from './../../../node_modules/backappjh/app/view/common/component/component';
-import { AppObject, Component, ComponentDataInput, ComponentOption, ComponentDivisor } from 'backappjh';
+import { AppObject, Component, ComponentDataInput, ComponentOption } from 'backappjh';
 
 export class Time extends AppObject {
     test: string;

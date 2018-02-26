@@ -1,4 +1,4 @@
-import { AppObject, Component, ComponentDataInput, ComponentOption, ComponentDivisor, ComponentInformation, ComponentPageBody, Observer } from 'backappjh';
+import { AppObject, Component, ComponentDataInput, ComponentOption, ComponentInformation, ComponentPageBody, Observer } from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 
 export class Wifi extends AppObject implements Observer {
@@ -101,9 +101,9 @@ export class Wifi extends AppObject implements Observer {
     }
 
     public connect(component) {
-        let selectedIndex = (<HTMLSelectElement>(<ComponentPageBody>component.getFather()).arrayDivisor[3].arrayDivisor[0].arrayDivisor[0].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let selected = (<HTMLSelectElement>(<ComponentPageBody>component.getFather()).arrayDivisor[3].arrayDivisor[0].arrayDivisor[0].arrayDataInput[0].arrayComboBox[0].getElement()).options[selectedIndex].text;
-        let password = (<HTMLInputElement>(<ComponentPageBody>component.getFather()).arrayDivisor[4].arrayDataInput[0].arrayTextField[0].getElement()).value;
+        let selectedIndex = (<HTMLSelectElement>(<ComponentDataInput>(<ComponentPageBody>component.getFather()).arrayAppObject[3].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let selected = (<HTMLSelectElement>(<ComponentDataInput>(<ComponentPageBody>component.getFather()).arrayAppObject[3].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayComboBox[0].getElement()).options[selectedIndex].text;
+        let password = (<HTMLInputElement>(<ComponentDataInput>(<ComponentPageBody>component.getFather()).arrayAppObject[4].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         console.log(selected);
         console.log(password);
 

@@ -1,4 +1,4 @@
-import { AppObject, Component, ComponentVideo } from 'backappjh';
+import { AppObject, Component } from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 import { Disk } from './../disk/disk';
 import * as freeice from 'freeice';
@@ -58,7 +58,7 @@ export class Stream extends AppObject {
 
     public streamView(component, stream) {
         console.log('STREAMVIEW!!!');
-        (<any>(<ComponentVideo>component).getElement()).src = window.URL.createObjectURL(stream);
+        (<any>(<Component>component).getElement()).src = window.URL.createObjectURL(stream);
     }
 
     private init() {
