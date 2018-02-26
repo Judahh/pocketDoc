@@ -2,6 +2,7 @@ typings
 *.js
 *.map
 *.webm
+*.gz
 node_modules
 backApp
 backApi

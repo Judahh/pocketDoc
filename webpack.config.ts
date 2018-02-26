@@ -54,14 +54,16 @@ if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
                 mangle: false,
                 compress: false
             }
-        }) // ,
-        // new CompressionPlugin({
-        //     asset: '[path].gz[query]',
-        //     algorithm: 'gzip',
-        //     test: /\.js$|\.css$|\.html$/,
-        //     threshold: 10240,
-        //     minRatio: 0
-        // })
+        })
+    );
+    config.plugins.push(
+        new CompressionPlugin(
+            // {
+            //     asset: '[path].gz[query]',
+            //     algorithm: 'gzip',
+            //     test: /\.js$|\.css$|\.html$/
+            // }
+        )
     );
 } else {
     console.log('Development');
