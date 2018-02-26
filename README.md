@@ -55,7 +55,7 @@ In this folder is where icon are stored.
 
 ### Images
 
-In this folder is where images are stored.
+In this folder is where image are stored.
 
 ### Videos
 

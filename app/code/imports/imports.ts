@@ -11,6 +11,8 @@ import { Languages } from './../languages/Languages';
 import { Keyboard } from './../keyboard/keyboard';
 import { Operations } from './../operations/operations';
 import * as loader from './../onLoad/loader';
+// tslint:disable-next-line:no-empty
+try { require('./../../style/app.css'); } catch (e) { };
 
 export {
     loader,

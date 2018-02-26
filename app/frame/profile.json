@@ -22,7 +22,7 @@
                         "opacity": 0.1,
                         "height": "100%"
                     },
-                    "src": "images/pocketDoc.svg"
+                    "src": "image/pocketDoc.svg"
                 }
             }
         }
@@ -90,7 +90,7 @@
                                                         "padding-left": "2%",
                                                         "opacity": 0.8
                                                     },
-                                                    "src": "images/foto_pessoa.png"
+                                                    "src": "image/foto_pessoa.png"
                                                 }
                                             }
                                         }
