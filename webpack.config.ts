@@ -17,27 +17,23 @@ const config: webpack.Configuration = {
         extensions: ['.webpack.js', '.webpack.ts', '.web.js', '.web.ts', '.js', '.ts', '.tsx']
     },
     module: {
-        loaders: [
-            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-            { test: /\.ts$/, loader: 'ts-loader' },
+        rules: [
             // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
             {
+                test: /\.ts$/,
+                use: ['ts-loader']
+            },
+            {
                 test: /\.css$/,
-                loader: 'style-loader!css-loader!postcss-loader',
+                use: ['style-loader', 'css-loader'],
                 include: [
                     path.resolve(__dirname, 'node_modules'),
                     path.resolve(__dirname, 'app/view/common/fonts')
                 ]
             },
-            { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
-        ],
-        rules: [
             {
-                test: /\.css$/,
-                use: [
-                    'style-loader',
-                    'css-loader'
-                ]
+                test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+                use: ['url-loader', 'file-loader']
             }
         ]
     },
