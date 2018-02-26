@@ -5,6 +5,7 @@ import { Authentication } from './authentication';
 import { Address } from './address';
 import { Phone } from './phone';
 import { Permission } from './permission';
+import {  } from 'backappjh/app/view/common/component/generic/componentGeneric';
 
 export class UserManegement extends AppObject {
     private static instance: UserManegement;
@@ -50,41 +51,41 @@ export class UserManegement extends AppObject {
         let basicInfoDivisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[2].arrayAppObject[0];
         let name: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         let nickname: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
-        let mother: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let father: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[3].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let nUId: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let uId: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let uIdEmitter: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[1].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let uIdState: number = (<HTMLSelectElement>basicInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[2].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let birth: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[6].arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let birthState: number = (<HTMLSelectElement>basicInfoDivisor.arrayAppObject[6].arrayAppObject[0].arrayAppObject[1].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let nationality: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[7].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let role: string = (<HTMLInputElement>basicInfoDivisor.arrayAppObject[8].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
+        let mother: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let father: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[3].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let nUId: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let uId: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let uIdEmitter: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[1].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let uIdState: number = (<HTMLSelectElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[2].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let birth: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[6].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let birthState: number = (<HTMLSelectElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[6].arrayAppObject[0].arrayAppObject[1].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let nationality: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[7].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let role: string = (<HTMLInputElement>(<ComponentDataInput>basicInfoDivisor.arrayAppObject[8].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         // console.log(name, nickname, mother, father, nUId, uId, birth, nationality, role, uIdEmitter, uIdState, birthState);
 
-        let addressInfoDivisor: Component = (<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[3].arrayAppObject[0];
-        let type: number = (<HTMLSelectElement>addressInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let typeStreet: number = (<HTMLSelectElement>addressInfoDivisor.arrayAppObject[1].arrayAppObject[0].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let address: string = (<HTMLInputElement>addressInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let number: string = (<HTMLInputElement>addressInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[1].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let complement: string = (<HTMLInputElement>addressInfoDivisor.arrayAppObject[3].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let district: string = (<HTMLInputElement>addressInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let city: string = (<HTMLInputElement>addressInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[1].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let state: number = (<HTMLSelectElement>addressInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[2].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let zip: string = (<HTMLInputElement>addressInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
+        let addressInfoDivisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[3].arrayAppObject[0];
+        let type: number = (<HTMLSelectElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let typeStreet: number = (<HTMLSelectElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let address: string = (<HTMLInputElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let number: string = (<HTMLInputElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[1].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let complement: string = (<HTMLInputElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[3].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let district: string = (<HTMLInputElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let city: string = (<HTMLInputElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[1].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let state: number = (<HTMLSelectElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[2].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let zip: string = (<HTMLInputElement>(<ComponentDataInput>addressInfoDivisor.arrayAppObject[5].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         // console.log(type, typeStreet, address, number, complement, district, city, state, zip);
 
-        let phoneInfoDivisor: Component = (<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[4].arrayAppObject[0];
-        let phoneType: number = (<HTMLSelectElement>phoneInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
-        let phoneNumber: string = (<HTMLInputElement>phoneInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[1].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let email: string = (<HTMLInputElement>phoneInfoDivisor.arrayAppObject[0].arrayAppObject[1].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
+        let phoneInfoDivisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[4].arrayAppObject[0];
+        let phoneType: number = (<HTMLSelectElement>(<ComponentDataInput>phoneInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
+        let phoneNumber: string = (<HTMLInputElement>(<ComponentDataInput>phoneInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[1].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let email: string = (<HTMLInputElement>(<ComponentDataInput>phoneInfoDivisor.arrayAppObject[0].arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         // console.log(phoneType, phoneNumber, email);
 
-        let authInfoDivisor: Component = (<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[5].arrayAppObject[0];
-        let username: string = (<HTMLInputElement>authInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let password: string = (<HTMLInputElement>authInfoDivisor.arrayAppObject[1].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let cpassword: string = (<HTMLInputElement>authInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let permission: number = (<HTMLSelectElement>authInfoDivisor.arrayAppObject[3].arrayAppObject[0].arrayDataInput[0].arrayComboBox[0].getElement()).selectedIndex;
+        let authInfoDivisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather().getFather().getFather()).arrayAppObject[5].arrayAppObject[0];
+        let username: string = (<HTMLInputElement>(<ComponentDataInput>authInfoDivisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let password: string = (<HTMLInputElement>(<ComponentDataInput>authInfoDivisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let cpassword: string = (<HTMLInputElement>(<ComponentDataInput>authInfoDivisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let permission: number = (<HTMLSelectElement>(<ComponentDataInput>authInfoDivisor.arrayAppObject[3].arrayAppObject[0].arrayAppObject[0]).arrayComboBox[0].getElement()).selectedIndex;
         // console.log(username, password, cpassword, permission);
 
         let auth = new Authentication(username, password, permission);
@@ -102,16 +103,16 @@ export class UserManegement extends AppObject {
     public login(component) {
         console.log('login');
         this.tempRegister = undefined;
-        let divisor: Component = (<ComponentPageBody>component.getFather().getFather().getFather().getFather()).arrayAppObject[0];
-        let username: string = (<HTMLInputElement>divisor.arrayAppObject[1].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let password: string = (<HTMLInputElement>divisor.arrayAppObject[2].arrayDataInput[0].arrayTextField[0].getElement()).value;
+        let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather().getFather()).arrayAppObject[0];
+        let username: string = (<HTMLInputElement>(<ComponentDataInput>divisor.arrayAppObject[1].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let password: string = (<HTMLInputElement>(<ComponentDataInput>divisor.arrayAppObject[2].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         this.socketIo.emit('login', { username: username, password: password });
     }
 
     public register(component) {
-        let divisor: Component = (<ComponentPageBody>component.getFather().getFather().getFather().getFather()).arrayAppObject[0];
-        let username: string = (<HTMLInputElement>divisor.arrayAppObject[1].arrayDataInput[0].arrayTextField[0].getElement()).value;
-        let password: string = (<HTMLInputElement>divisor.arrayAppObject[2].arrayDataInput[0].arrayTextField[0].getElement()).value;
+        let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather().getFather()).arrayAppObject[0];
+        let username: string = (<HTMLInputElement>(<ComponentDataInput>divisor.arrayAppObject[1].arrayAppObject[0]).arrayTextField[0].getElement()).value;
+        let password: string = (<HTMLInputElement>(<ComponentDataInput>divisor.arrayAppObject[2].arrayAppObject[0]).arrayTextField[0].getElement()).value;
         this.tempRegister = new Authentication(username, password);
         this.goTo('createUser');
     }
@@ -173,14 +174,14 @@ export class UserManegement extends AppObject {
     }
 
     public getInfo(user: User) {
-        let menuDivisor = this.getHeader().arrayMenuHorizontal[0].arrayRightHolder[0].arrayAppObject[0].arrayItem[0].arrayMenuVertical[0].arrayAppObject[0];
+        let menuDivisor = this.getHeader().arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0];
 
-        let username = menuDivisor.arrayAppObject[0].arrayAppObject[1].arrayAppObject[0].arrayItem[0].colorEffect.font.animationEffect.animationSubEffect.arrayAnimationSubEffectHolder[0];
-        let information = username.information;
+        let username = <AppObject>menuDivisor.arrayAppObject[0].arrayAppObject[1].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0];
+        let information = <ComponentInformation>username.arrayAppObject[0];
         information.getElement().innerHTML = user.authentication.username;
 
-        let group = menuDivisor.arrayAppObject[0].arrayAppObject[2].arrayAppObject[0].arrayItem[0].colorEffect.font.animationEffect.animationSubEffect.arrayAnimationSubEffectHolder[0];
-        information = group.information;
+        let group = <AppObject>menuDivisor.arrayAppObject[0].arrayAppObject[2].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0];
+        information = <ComponentInformation>group.arrayAppObject[0];
         let auth: Permission = user.authentication.permission;
         information.getElement().innerHTML = Permission[auth];
         information.information = Permission[auth];
@@ -303,7 +304,7 @@ export class UserManegement extends AppObject {
             let line = this.newLine(component, data.newDevice.identification.serialNumber, ['user', 'device']);
             for (let index = 0; index < data.newDevice.users.length; index++) {
                 let user = data.newDevice.users[index];
-                this.newLine(line.arrayComponent[0].arrayAppObject[1].arrayTable[0], user, ['user']);
+                this.newLine(<Component>line.arrayAppObject[0].arrayAppObject[1].arrayAppObject[0], user, ['user']);
             }
         }
     }
@@ -427,7 +428,7 @@ export class UserManegement extends AppObject {
     }
 
     private refreshHeader() {
-        let header: ComponentHeader;
+        let header: Component;
         let pageBody;
         if (this !== undefined) {
             header = this.getHeader();
@@ -442,14 +443,14 @@ export class UserManegement extends AppObject {
             header = pageBody.getFather().header;
         }
 
-        header.arrayMenuHorizontal[0].arrayRightHolder[0].arrayAppObject[0].arrayItem[0].arrayMenuVertical = new Array<ComponentMenuVertical>();
+        header.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject = new Array<AppObject>();
 
         if (this !== undefined) {
-            header.arrayMenuHorizontal[0].arrayRightHolder[0].arrayAppObject[0].arrayItem[0].arrayMenuVertical.push(this.menu);
-            this.menu.insert(header.arrayMenuHorizontal[0].arrayRightHolder[0].arrayAppObject[0].arrayItem[0].getElement());
+            header.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject.push(this.menu);
+            this.menu.insert((<Component>header.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement());
         } else {
-            header.arrayMenuHorizontal[0].arrayRightHolder[0].arrayAppObject[0].arrayItem[0].arrayMenuVertical.push(UserManegement.getInstance().menu);
-            UserManegement.getInstance().menu.insert(header.arrayMenuHorizontal[0].arrayRightHolder[0].arrayAppObject[0].arrayItem[0].getElement());
+            header.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject.push(UserManegement.getInstance().menu);
+            UserManegement.getInstance().menu.insert((<Component>header.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement());
         }
     }
 
@@ -472,25 +473,25 @@ export class UserManegement extends AppObject {
         let item = new ComponentItem(divisor);
         item.getElement().setAttribute('style', 'width: 100%;');
 
-        let animationSubEffectHolder = new ComponentAnimationSubEffectHolder(item.colorEffect.font.animationEffect.animationSubEffect);
-        animationSubEffectHolder.information.information = text;
-        animationSubEffectHolder.information.getElement().innerHTML = text;
+        let animationSubEffectHolder = new Component(<Component>item.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]);
+        (<ComponentInformation>animationSubEffectHolder.arrayAppObject[0]).information = text;
+        (<ComponentInformation>animationSubEffectHolder.arrayAppObject[0]).getElement().innerHTML = text;
 
-        item.colorEffect.font.animationEffect.animationSubEffect.arrayAnimationSubEffectHolder.push(animationSubEffectHolder);
-        divisor.arrayItem.push(item);
+        item.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject.push(animationSubEffectHolder);
+        divisor.arrayAppObject.push(item);
         cell.arrayAppObject.push(divisor);
         if (type.length > 0) {
             cell.arrayAppObject.push(this.newTable(cell, type));
         }
-        line.arrayTableCell.push(cell);
-        (<ComponentTable>fatherTable).arrayTableLine.push(line);
+        line.arrayAppObject.push(cell);
+        fatherTable.arrayAppObject.push(line);
         return line;
     }
 
-    private newTable(fatherCell: ComponentTableCell, type: Array<string>) {
+    private newTable(fatherCell: Component, type: Array<string>) {
         let fatherDivisor = new Component(fatherCell);
         fatherDivisor.getElement().setAttribute('style', 'border-style: groove;border-width: 1px;box-sizing: border-box;display: inline-block;width: 100%;overflow: auto;height: 100px;');
-        let table = new ComponentTable(fatherDivisor);
+        let table = new Component(fatherDivisor);
         let event1 = new AppObjectEvent(table);
         let currentType = type.pop();
         event1.name = 'dragover';
@@ -506,7 +507,7 @@ export class UserManegement extends AppObject {
         table.renderAfterUpdateJSON();
         table.getElement().setAttribute('style', 'width: 100%;height: 100%;');
 
-        fatherDivisor.arrayTable.push(table);
+        fatherDivisor.arrayAppObject.push(table);
         return fatherDivisor;
     }
 }
