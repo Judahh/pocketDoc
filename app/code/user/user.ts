@@ -8,10 +8,10 @@ export class User {
     nickname: string;
     mother: string;
     father: string;
-    uId: number;//rg
+    uId: number; // rg
     uIdEmitter: string;
     uIdState: number;
-    nUId: number;//cpf
+    nUId: number; // cpf
     birth: Date;
     birthState: number;
     nationality: string;
