@@ -7,7 +7,7 @@
 //         let _self = this;
 //         img.onload = _self.isOnline;
 //         img.onerror = _self.isOffline;
-//         img.src = 'http://localhost:3000/image/pocketDoc.svg';        
+//         img.src = 'http://localhost:3000/image/pocketDoc.svg';
 //     }
 
 //     public isOnline(){

@@ -3,6 +3,7 @@ typings
 *.map
 *.webm
 *.gz
+dist
 node_modules
 backApp
 backApi

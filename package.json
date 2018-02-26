@@ -58,7 +58,7 @@
     "backappjh": "0.2.23",
     "chai": "^4.1.2",
     "css-loader": "0.28.10",
-    "compression-webpack-plugin":"1.1.8",
+    "compression-webpack-plugin": "1.1.8",
     "d3": "4.13.0",
     "dotenv": "^5.0.0",
     "file-loader": "1.1.9",
@@ -66,7 +66,6 @@
     "freeice": "^2.2.0",
     "mocha": "^5.0.1",
     "moment": "2.20.1",
-    "postcss-loader": "2.1.1",
     "semaphore": "^1.1.0",
     "style-loader": "^0.20.2",
     "ts-loader": "^4.0.0",
@@ -77,6 +76,5 @@
     "webpack-cli": "^2.0.9",
     "webpack": "^4.0.0"
   },
-  "devDependencies": {
-  }
+  "devDependencies": {}
 }
