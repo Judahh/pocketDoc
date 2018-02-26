@@ -28,4 +28,3 @@ export {
     Languages,
     UserManegement
 };
-// require('./../../../node_modules/backappjh/dist/backApp.js');

@@ -6,7 +6,7 @@ import { HardwareHandler } from './hardwareHandler/hardwareHandler';
 export class Api extends BasicApi {
 
   constructor() {
-    let hardwareHandler= new HardwareHandler();
+    let hardwareHandler = new HardwareHandler();
     super(new AppHandler(hardwareHandler), new ExternalHandler(hardwareHandler));
     this.electron = new Electron(process.env.ELECTRON_TOUCH, process.env.ELECTRON_TOUCH_SIMULATE, process.env.ELECTRON_FRAME,
       process.env.ELECTRON_KIOSK, process.env.ELECTRON_NODE, process.env.ELECTRON_WIDTH, process.env.ELECTRON_HEIGHT,
