@@ -455,7 +455,7 @@ export class UserManegement extends AppObject {
     }
 
     private newLine(fatherTable: Component, text: string, type: Array<string>) {
-        let line = new Component(fatherTable);
+        let line = new Component('tr', fatherTable);
         line.getElement().setAttribute('style', 'border-style: groove;border-width: 1px;box-sizing: border-box;display: inline-block;width: 100%;');
         line.getElement().setAttribute('draggable', 'true');
         let event = new AppObjectEvent(line);
@@ -466,14 +466,14 @@ export class UserManegement extends AppObject {
         console.log('new line:', currentType);
         line.arrayAppObjectEvent.push(event);
         line.renderAfterUpdateJSON();
-        let cell = new Component(line);
+        let cell = new Component('tr', line);
         cell.getElement().setAttribute('style', 'width: 100%;height: 100%;display: block;float: left;box-sizing: border-box;');
-        let divisor = new Component(cell);
+        let divisor = new Component('th', cell);
         divisor.getElement().setAttribute('style', 'width: 100%;');
         let item = new ComponentItem(divisor);
         item.getElement().setAttribute('style', 'width: 100%;');
 
-        let animationSubEffectHolder = new Component(<Component>item.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]);
+        let animationSubEffectHolder = new Component('animationSubEffectHolder', <Component>item.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]);
         (<ComponentInformation>animationSubEffectHolder.arrayAppObject[0]).information = text;
         (<ComponentInformation>animationSubEffectHolder.arrayAppObject[0]).getElement().innerHTML = text;
 
@@ -489,9 +489,9 @@ export class UserManegement extends AppObject {
     }
 
     private newTable(fatherCell: Component, type: Array<string>) {
-        let fatherDivisor = new Component(fatherCell);
+        let fatherDivisor = new Component('div', fatherCell);
         fatherDivisor.getElement().setAttribute('style', 'border-style: groove;border-width: 1px;box-sizing: border-box;display: inline-block;width: 100%;overflow: auto;height: 100px;');
-        let table = new Component(fatherDivisor);
+        let table = new Component('table', fatherDivisor);
         let event1 = new AppObjectEvent(table);
         let currentType = type.pop();
         event1.name = 'dragover';

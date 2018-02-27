@@ -5,7 +5,7 @@ import * as  CompressionPlugin from 'compression-webpack-plugin';
 require('dotenv').config();
 
 const config: webpack.Configuration = {
-    entry: './app/code/imports/imports.ts',
+    entry: './app/code/imports/imports.js',
     output: {
         libraryTarget: 'commonjs',
         path: path.resolve(__dirname, 'dist'),
@@ -13,16 +13,10 @@ const config: webpack.Configuration = {
         publicPath: '/dist/'
     },
     resolve: {
-        // Add `.ts` and `.tsx` as a resolvable extension.
         extensions: ['.webpack.js', '.webpack.ts', '.web.js', '.web.ts', '.js', '.ts', '.tsx']
     },
     module: {
         rules: [
-            // all files with a `.ts` or `.tsx` extension will be handled by `ts-loader`
-            {
-                test: /\.tsx?$/,
-                use: ['ts-loader']
-            },
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
@@ -31,9 +25,55 @@ const config: webpack.Configuration = {
                     path.resolve(__dirname, 'app/view/common/fonts')
                 ]
             },
+            // {
+            //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+            //     use: ['url-loader', 'file-loader']
+            // }
             {
                 test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
-                use: ['url-loader', 'file-loader']
+                use: ['file-loader']
+            },
+            {
+                test: /\.png$/,
+                loader: 'url-loader',
+                options: {
+                    mimetype: 'image/png'
+                }
+            },
+            {
+                test: /\.(woff|woff2)$/,
+                loader: 'url-loader',
+                options: {
+                    mimetype: 'application/font-woff'
+                }
+            },
+            {
+                test: /\.eot$/,
+                loader: 'url-loader',
+                options: {
+                    mimetype: 'application/vnd.ms-fontobject'
+                }
+            },
+            {
+                test: /\.otf$/,
+                loader: 'url-loader',
+                options: {
+                    mimetype: 'application/octet-stream'
+                }
+            },
+            {
+                test: /\.ttf$/,
+                loader: 'url-loader',
+                options: {
+                    mimetype: 'application/octet-stream'
+                }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'url-loader',
+                options: {
+                    mimetype: 'image/svg+xml'
+                }
             }
         ]
     },
@@ -44,22 +84,11 @@ if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
     console.log('Production');
     config.plugins.push(
         new UglifyJSPlugin({
-            parallel: true,
-            uglifyOptions: {
-                ecma: 8,
-                mangle: false,
-                compress: false
-            }
+            parallel: true
         })
     );
     config.plugins.push(
-        new CompressionPlugin(
-            // {
-            //     asset: '[path].gz[query]',
-            //     algorithm: 'gzip',
-            //     test: /\.js$|\.css$|\.html$/
-            // }
-        )
+        new CompressionPlugin()
     );
 } else {
     console.log('Development');
