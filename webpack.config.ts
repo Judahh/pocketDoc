@@ -22,58 +22,27 @@ const config: webpack.Configuration = {
                 use: ['style-loader', 'css-loader'],
                 include: [
                     path.resolve(__dirname, 'node_modules'),
-                    path.resolve(__dirname, 'app/view/common/fonts')
+                    path.resolve(__dirname, 'app/style'),
+                    path.resolve(__dirname, 'app/style/fonts')
                 ]
             },
             // {
             //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
-            //     use: ['url-loader', 'file-loader']
-            // }
+            //     use: ['file-loader', 'url-loader']
+            // } // ,
             {
                 test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
-                use: ['file-loader']
-            },
-            {
-                test: /\.png$/,
-                loader: 'url-loader',
+                loader: 'file-loader',
                 options: {
-                    mimetype: 'image/png'
+                    publicPath: '/',
+                    name: '[path][name].[ext]',
+                    outputPath: '/dist/',
+                    // useRelativePath: true
                 }
             },
             {
-                test: /\.(woff|woff2)$/,
-                loader: 'url-loader',
-                options: {
-                    mimetype: 'application/font-woff'
-                }
-            },
-            {
-                test: /\.eot$/,
-                loader: 'url-loader',
-                options: {
-                    mimetype: 'application/vnd.ms-fontobject'
-                }
-            },
-            {
-                test: /\.otf$/,
-                loader: 'url-loader',
-                options: {
-                    mimetype: 'application/octet-stream'
-                }
-            },
-            {
-                test: /\.ttf$/,
-                loader: 'url-loader',
-                options: {
-                    mimetype: 'application/octet-stream'
-                }
-            },
-            {
-                test: /\.svg$/,
-                loader: 'url-loader',
-                options: {
-                    mimetype: 'image/svg+xml'
-                }
+                test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+                use: ['url-loader']
             }
         ]
     },

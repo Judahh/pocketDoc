@@ -12,7 +12,12 @@ import { Keyboard } from './../keyboard/keyboard';
 import { Operations } from './../operations/operations';
 import * as loader from './../onLoad/loader';
 // tslint:disable-next-line:no-empty
-try { require('./../../style/app.css'); } catch (e) { };
+try { require('./../../style/app.css'); } catch (e) { console.log('ERROR FONT'); };
+
+let w: any = window;
+w.FontAwesomeConfig = {
+    searchPseudoElements: true
+}
 
 export {
     loader,
