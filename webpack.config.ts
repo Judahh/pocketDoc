@@ -36,7 +36,7 @@ const config: webpack.Configuration = {
                 options: {
                     publicPath: '/',
                     name: '[path][name].[ext]',
-                    outputPath: '/dist/',
+                    // outputPath: '/dist/',
                     // useRelativePath: true
                 }
             },

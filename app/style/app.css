@@ -103,13 +103,13 @@
   src: url("../../../../../../fonts/newIcons.ttf")  format('truetype');
   font-weight: normal;
   font-style: normal;
-}
+}*/
 
 @font-face {
     font-family: "FontFuturisticI";
     src: url("fonts/Letters/FuturisticFontI.otf");
     src: url("fonts/Letters/FuturisticFontI.woff") format('woff');
-    src: url("../../../../../../fonts/FuturisticFontI.ttf")  format('truetype');
+    /* src: url("fonts/Letters/FuturisticFontI.ttf")  format('truetype'); */
     font-weight: normal;
     font-style: normal;
 }
@@ -118,10 +118,19 @@
     font-family: "FontFuturisticII";
     src: url("fonts/Letters/FuturisticFontII.otf");
     src: url("fonts/Letters/FuturisticFontII.woff") format('woff');
-    src: url("../../../../../../fonts/FuturisticFontII.ttf")  format('truetype');
+    /* src: url("fonts/Letters/FuturisticFontII.ttf")  format('truetype'); */
     font-weight: normal;
     font-style: normal;
-} */
+} 
+
+@font-face {
+    font-family: "FontFuturisticI";
+    src: url("https://github.com/Judahh/fonts/blob/master/Letters/FuturisticFontI.otf?raw=true");
+    src: url("https://github.com/Judahh/fonts/blob/master/Letters/FuturisticFontI.woff?raw=true") format('woff');
+    src: url("https://github.com/Judahh/fonts/blob/master/Letters/FuturisticFontI.ttf?raw=true")  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto');
 
