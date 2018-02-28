@@ -60,7 +60,9 @@ if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
         })
     );
     config.plugins.push(
-        new CompressionPlugin()
+        new CompressionPlugin({
+            minRatio: 1
+        })
     );
 } else {
     console.log('Development');
