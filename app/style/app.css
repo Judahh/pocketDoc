@@ -123,15 +123,6 @@
     font-style: normal;
 } 
 
-@font-face {
-    font-family: "FontFuturisticI";
-    src: url("https://github.com/Judahh/fonts/blob/master/Letters/FuturisticFontI.otf?raw=true");
-    src: url("https://github.com/Judahh/fonts/blob/master/Letters/FuturisticFontI.woff?raw=true") format('woff');
-    src: url("https://github.com/Judahh/fonts/blob/master/Letters/FuturisticFontI.ttf?raw=true")  format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto');
 
 @import url('https://use.fontawesome.com/releases/v5.0.7/css/all.css');

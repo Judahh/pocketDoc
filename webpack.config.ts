@@ -2,6 +2,7 @@ import * as  path from 'path';
 import * as webpack from 'webpack';
 import * as UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 import * as  CompressionPlugin from 'compression-webpack-plugin';
+import * as  ExtractTextPlugin from 'extract-text-webpack-plugin';
 require('dotenv').config();
 
 const config: webpack.Configuration = {
@@ -30,23 +31,25 @@ const config: webpack.Configuration = {
             //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
             //     use: ['file-loader', 'url-loader']
             // } // ,
-            {
-                test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
-                loader: 'file-loader',
-                options: {
-                    publicPath: '/',
-                    name: '[path][name].[ext]',
-                    // outputPath: '/dist/',
-                    // useRelativePath: true
-                }
-            },
+            // {
+            //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
+            //     loader: 'file-loader',
+            //     options: {
+            //         publicPath: '/',
+            //         // name: '[name].[ext]',
+            //         // outputPath: '/[path]/',
+            //         // useRelativePath: true
+            //     }
+            // },
             {
                 test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
                 use: ['url-loader']
             }
         ]
     },
-    plugins: []
+    plugins: [
+        // new ExtractTextPlugin('app/style/app.css?[contenthash]')
+    ]
 };
 
 if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
