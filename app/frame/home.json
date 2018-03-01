@@ -76,7 +76,7 @@
                                 {
                                     "type": "ComponentFont",
                                     "element": {
-                                        "className": "ClassOpenSans",
+                                        "className": "ClassFuturisticI",
                                         "style": {
                                             "width": "100%",
                                             "font-size": "70px",

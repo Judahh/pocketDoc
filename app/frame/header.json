@@ -160,6 +160,7 @@
                                                             ]
                                                         },
                                                         {
+                                                            "type": "ComponentItem",
                                                             "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "devices",
@@ -380,6 +381,7 @@
                                                             ]
                                                         },
                                                         {
+                                                            "type": "ComponentItem",
                                                             "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "realTime",
@@ -444,6 +446,7 @@
                                                             ]
                                                         },
                                                         {
+                                                            "type": "ComponentItem",
                                                             "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "synchronization",
@@ -508,6 +511,7 @@
                                                             ]
                                                         },
                                                         {
+                                                            "type": "ComponentItem",
                                                             "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "closeOperation",
