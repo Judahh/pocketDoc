@@ -25,8 +25,7 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "padding": "5px",
                                             "font-size": "30px"
                                         }
@@ -35,7 +34,6 @@
                                         {
                                             "type": "ComponentColorEffect",
                                             "element": {
-                                                "className": "ClassNeon"
                                             },
                                             "colorEffect": "test",
                                             "arrayAppObject": [
@@ -80,7 +78,7 @@
                                                     "top": "100%",
                                                     "float": "left",
                                                     "left": "0px",
-                                                    "background-color": "#cac8c6",
+                                                    "background-color": "rgba(255, 255, 255, 0.1)",
                                                     "width": "max-content",
                                                     "position": "absolute"
                                                 }
@@ -112,7 +110,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -122,7 +120,6 @@
                                                                 {
                                                                     "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassNeon"
                                                                     },
                                                                     "colorEffect": "test",
                                                                     "arrayAppObject": [
@@ -177,7 +174,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -187,7 +184,6 @@
                                                                 {
                                                                     "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassNeon"
                                                                     },
                                                                     "colorEffect": "test",
                                                                     "arrayAppObject": [
@@ -249,8 +245,7 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "padding": "5px",
                                             "font-size": "30px"
                                         }
@@ -259,7 +254,6 @@
                                         {
                                             "type": "ComponentColorEffect",
                                             "element": {
-                                                "className": "ClassNeon"
                                             },
                                             "colorEffect": "test",
                                             "arrayAppObject": [
@@ -304,7 +298,7 @@
                                                     "top": "100%",
                                                     "float": "left",
                                                     "left": "40px",
-                                                    "background-color": "#cac8c6",
+                                                    "background-color": "rgba(255, 255, 255, 0.1)",
                                                     "width": "max-content",
                                                     "position": "absolute"
                                                 }
@@ -336,7 +330,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -346,7 +340,6 @@
                                                                 {
                                                                     "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassNeon"
                                                                     },
                                                                     "colorEffect": "test",
                                                                     "arrayAppObject": [
@@ -401,7 +394,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -411,7 +404,6 @@
                                                                 {
                                                                     "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassNeon"
                                                                     },
                                                                     "colorEffect": "test",
                                                                     "arrayAppObject": [
@@ -466,7 +458,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -476,7 +468,6 @@
                                                                 {
                                                                     "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassNeon"
                                                                     },
                                                                     "colorEffect": "test",
                                                                     "arrayAppObject": [
@@ -531,7 +522,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -541,7 +532,6 @@
                                                                 {
                                                                     "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassNeon"
                                                                     },
                                                                     "colorEffect": "test",
                                                                     "arrayAppObject": [
@@ -602,15 +592,13 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "padding": "5px",
                                             "font-size": "30px"
                                         }
                                     },
                                     "colorEffect": {
                                         "element": {
-                                            "className": "ClassNeon"
                                         },
                                         "colorEffect": "test",
                                         "font": {
@@ -672,7 +660,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -680,7 +668,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -721,7 +708,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -729,7 +716,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -770,7 +756,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -778,7 +764,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -819,7 +804,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -827,7 +812,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -868,7 +852,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -876,7 +860,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -923,15 +906,13 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "padding": "5px",
                                             "font-size": "30px"
                                         }
                                     },
                                     "colorEffect": {
                                         "element": {
-                                            "className": "ClassNeon"
                                         },
                                         "colorEffect": "test",
                                         "font": {
@@ -993,7 +974,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -1001,7 +982,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -1042,7 +1022,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -1050,7 +1030,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -1091,7 +1070,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -1099,7 +1078,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -1140,7 +1118,7 @@
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
                                                                     "color": "white",
-                                                                    "opacity": "0.9",
+                                                                    "opacity": "1",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
@@ -1148,7 +1126,6 @@
                                                             },
                                                             "colorEffect": {
                                                                 "element": {
-                                                                    "className": "ClassNeon"
                                                                 },
                                                                 "colorEffect": "test",
                                                                 "font": {
@@ -1195,8 +1172,7 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "padding": "5px",
                                             "font-size": "30px"
                                         }
@@ -1208,7 +1184,6 @@
                                     ],
                                     "colorEffect": {
                                         "element": {
-                                            "className": "ClassNeon"
                                         },
                                         "colorEffect": "test",
                                         "font": {
@@ -1249,8 +1224,7 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "padding": "5px",
                                             "font-size": "34px"
                                         }
@@ -1267,7 +1241,6 @@
                                     ],
                                     "colorEffect": {
                                         "element": {
-                                            "className": "ClassNeon"
                                         },
                                         "colorEffect": "test",
                                         "font": {
@@ -1325,8 +1298,7 @@
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
                                             "color": "white",
-                                            "mix-blend-mode": "difference",
-                                            "opacity": "0.9",
+                                            "opacity": "1",
                                             "font-size": "34px"
                                         }
                                     },
@@ -1334,7 +1306,6 @@
                                         {
                                             "type": "ComponentColorEffect",
                                             "element": {
-                                                "className": "ClassNeon",
                                                 "style": {
                                                     "padding": "5px",
                                                     "font-size": "30px"
@@ -1395,7 +1366,7 @@
                                             "left": "-280px",
                                             "width": "300px",
                                             "height": "140px",
-                                            "background-color": "#cac8c6",
+                                            "background-color": "rgba(255, 255, 255, 0.1)",
                                             "position": "absolute"
                                         }
                                     },

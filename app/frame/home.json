@@ -23,10 +23,10 @@
                 "type": "ComponentFontAwesome",
                 "element": {
                     "style": {
-                        "color": "rgba(0,0,0,0.1)",
-                        "color": "rgba(255,255,255,0.1)",
                         "color": "rgba(0,0,0,0.3)",
                         "color": "rgba(255,255,255,0.3)",
+                        "color": "rgba(0,0,0,0.1)",
+                        "color": "rgba(255,255,255,0.1)",
                         "font-size": "70vw"
                     },
                     "className": "fas fa-user-md"
@@ -79,7 +79,7 @@
                                         "className": "ClassOpenSans",
                                         "style": {
                                             "width": "100%",
-                                            "font-size": "40px",
+                                            "font-size": "70px",
                                             "padding": [
                                                 0
                                             ]
