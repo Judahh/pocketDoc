@@ -13,13 +13,18 @@
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
                             "arrayAppObject": [
                                 {
                                     "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "padding": "5px",
@@ -72,7 +77,7 @@
                                             "type": "ComponentMenuVertical",
                                             "element": {
                                                 "style": {
-                                                    "top": "25px",
+                                                    "top": "100%",
                                                     "float": "left",
                                                     "left": "0px",
                                                     "background-color": "#cac8c6",
@@ -106,43 +111,59 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
                                                                 }
                                                             },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassOpenSans"
+                                                                        "className": "ClassNeon"
                                                                     },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
+                                                                    "colorEffect": "test",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentFont",
+                                                                            "element": {
+                                                                                "className": "ClassOpenSans"
+                                                                            },
+                                                                            "arrayAppObject": [
                                                                                 {
-                                                                                    "information": {
-                                                                                        "information": "active",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
+                                                                                    "type": "ComponentAnimationEffect",
+                                                                                    "element": {
+                                                                                        "className": "ClassPulse"
+                                                                                    },
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                            "arrayAppObject": [
+                                                                                                {
+                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentInformation",
+                                                                                                            "information": "active",
+                                                                                                            "link": "link0",
+                                                                                                            "opacity": 1
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
-                                                            }
+                                                            ]
                                                         },
                                                         {
-                                                            "arrayRouter": [
+                                                            "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "devices",
                                                                     "runFunction": "isLogged",
@@ -155,40 +176,56 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
                                                                 }
                                                             },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassOpenSans"
+                                                                        "className": "ClassNeon"
                                                                     },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
+                                                                    "colorEffect": "test",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentFont",
+                                                                            "element": {
+                                                                                "className": "ClassOpenSans"
+                                                                            },
+                                                                            "arrayAppObject": [
                                                                                 {
-                                                                                    "information": {
-                                                                                        "information": "devices",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
+                                                                                    "type": "ComponentAnimationEffect",
+                                                                                    "element": {
+                                                                                        "className": "ClassPulse"
+                                                                                    },
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                            "arrayAppObject": [
+                                                                                                {
+                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentInformation",
+                                                                                                            "information": "devices",
+                                                                                                            "link": "link0",
+                                                                                                            "opacity": 1
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
-                                                            }
+                                                            ]
                                                         }
                                                     ]
                                                 }
@@ -200,69 +237,92 @@
                         },
                         {
                             "type": "ComponentDivisor",
-                            "arrayItem": [
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
+                            "arrayAppObject": [
                                 {
+                                    "type": "ComponentItem",
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "padding": "5px",
                                             "font-size": "30px"
                                         }
                                     },
-                                    "colorEffect": {
-                                        "element": {
-                                            "className": "ClassNeon"
-                                        },
-                                        "colorEffect": "test",
-                                        "font": {
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentColorEffect",
                                             "element": {
-                                                "className": "ClassIcon"
+                                                "className": "ClassNeon"
                                             },
-                                            "animationEffect": {
-                                                "element": {
-                                                    "className": "ClassMaterialDesign"
-                                                },
-                                                "animationSubEffect": {
-                                                    "arrayAnimationSubEffectHolder": [
+                                            "colorEffect": "test",
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentFont",
+                                                    "element": {
+                                                        "className": "ClassMaterialDesign"
+                                                    },
+                                                    "arrayAppObject": [
                                                         {
-                                                            "information": {
-                                                                "information": "",
-                                                                "link": "link0",
-                                                                "opacity": 1
-                                                            }
+                                                            "type": "ComponentAnimationEffect",
+                                                            "element": {
+                                                                "className": "ClassPulse"
+                                                            },
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentAnimationSubEffect",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentAnimationSubEffectHolder",
+                                                                            "arrayAppObject": [
+                                                                                {
+                                                                                    "type": "ComponentInformation",
+                                                                                    "information": "",
+                                                                                    "link": "link0",
+                                                                                    "opacity": 1
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
                                                         }
                                                     ]
                                                 }
-                                            }
-                                        }
-                                    },
-                                    "arrayMenuVertical": [
+                                            ]
+                                        },
                                         {
+                                            "type": "ComponentMenuVertical",
                                             "element": {
                                                 "style": {
-                                                    "top": "25px",
+                                                    "top": "100%",
                                                     "float": "left",
-                                                    "left": "0px",
+                                                    "left": "40px",
                                                     "background-color": "#cac8c6",
                                                     "width": "max-content",
                                                     "position": "absolute"
                                                 }
                                             },
                                             "class": "",
-                                            "arrayDivisor": [
+                                            "arrayAppObject": [
                                                 {
+                                                    "type": "ComponentDivisor",
                                                     "element": {
                                                         "style": {
                                                             "height": "fit-content",
                                                             "width": "max-content"
                                                         }
                                                     },
-                                                    "arrayItem": [
+                                                    "arrayAppObject": [
                                                         {
-                                                            "arrayRouter": [
+                                                            "type": "ComponentItem",
+                                                            "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "map",
                                                                     "runFunction": "isLogged",
@@ -275,82 +335,59 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
                                                                 }
                                                             },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassOpenSans"
+                                                                        "className": "ClassNeon"
                                                                     },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
+                                                                    "colorEffect": "test",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentFont",
+                                                                            "element": {
+                                                                                "className": "ClassOpenSans"
+                                                                            },
+                                                                            "arrayAppObject": [
                                                                                 {
-                                                                                    "information": {
-                                                                                        "information": "map",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
+                                                                                    "type": "ComponentAnimationEffect",
+                                                                                    "element": {
+                                                                                        "className": "ClassPulse"
+                                                                                    },
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                            "arrayAppObject": [
+                                                                                                {
+                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentInformation",
+                                                                                                            "information": "control",
+                                                                                                            "link": "link0",
+                                                                                                            "opacity": 1
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
-                                                            }
+                                                            ]
                                                         },
                                                         {
-                                                            "element": {
-                                                                "style": {
-                                                                    "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
-                                                                    "opacity": "0.9",
-                                                                    "padding": "5px",
-                                                                    "display": "block",
-                                                                    "font-size": "16px"
-                                                                }
-                                                            },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
-                                                                    "element": {
-                                                                        "className": "ClassOpenSans"
-                                                                    },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
-                                                                                {
-                                                                                    "information": {
-                                                                                        "information": "control",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
-                                                                                }
-                                                                            ]
-                                                                        }
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        {
-                                                            "arrayRouter": [
+                                                            "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "realTime",
                                                                     "runFunction": "isLogged",
@@ -363,43 +400,59 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
                                                                 }
                                                             },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassOpenSans"
+                                                                        "className": "ClassNeon"
                                                                     },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
+                                                                    "colorEffect": "test",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentFont",
+                                                                            "element": {
+                                                                                "className": "ClassOpenSans"
+                                                                            },
+                                                                            "arrayAppObject": [
                                                                                 {
-                                                                                    "information": {
-                                                                                        "information": "realTime",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
+                                                                                    "type": "ComponentAnimationEffect",
+                                                                                    "element": {
+                                                                                        "className": "ClassPulse"
+                                                                                    },
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                            "arrayAppObject": [
+                                                                                                {
+                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentInformation",
+                                                                                                            "information": "realTime",
+                                                                                                            "link": "link0",
+                                                                                                            "opacity": 1
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
-                                                            }
+                                                            ]
                                                         },
                                                         {
-                                                            "arrayRouter": [
+                                                            "arrayAppObjectEvent": [
                                                                 {
                                                                     "link": "synchronization",
                                                                     "runFunction": "isLogged",
@@ -412,79 +465,121 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
                                                                 }
                                                             },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassOpenSans"
+                                                                        "className": "ClassNeon"
                                                                     },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
+                                                                    "colorEffect": "test",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentFont",
+                                                                            "element": {
+                                                                                "className": "ClassOpenSans"
+                                                                            },
+                                                                            "arrayAppObject": [
                                                                                 {
-                                                                                    "information": {
-                                                                                        "information": "videoUpload",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
+                                                                                    "type": "ComponentAnimationEffect",
+                                                                                    "element": {
+                                                                                        "className": "ClassPulse"
+                                                                                    },
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                            "arrayAppObject": [
+                                                                                                {
+                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentInformation",
+                                                                                                            "information": "videoUpload",
+                                                                                                            "link": "link0",
+                                                                                                            "opacity": 1
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
-                                                            }
+                                                            ]
                                                         },
                                                         {
+                                                            "arrayAppObjectEvent": [
+                                                                {
+                                                                    "link": "closeOperation",
+                                                                    "runFunction": "isLogged",
+                                                                    "code": "UserManegement"
+                                                                },
+                                                                {
+                                                                    "link": "login"
+                                                                }
+                                                            ],
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
                                                                     "font-size": "16px"
                                                                 }
                                                             },
-                                                            "colorEffect": {
-                                                                "element": {
-                                                                    "className": "ClassNeon"
-                                                                },
-                                                                "colorEffect": "test",
-                                                                "font": {
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentColorEffect",
                                                                     "element": {
-                                                                        "className": "ClassOpenSans"
+                                                                        "className": "ClassNeon"
                                                                     },
-                                                                    "animationEffect": {
-                                                                        "element": {
-                                                                            "className": "ClassPulse"
-                                                                        },
-                                                                        "animationSubEffect": {
-                                                                            "arrayAnimationSubEffectHolder": [
+                                                                    "colorEffect": "test",
+                                                                    "arrayAppObject": [
+                                                                        {
+                                                                            "type": "ComponentFont",
+                                                                            "element": {
+                                                                                "className": "ClassOpenSans"
+                                                                            },
+                                                                            "arrayAppObject": [
                                                                                 {
-                                                                                    "information": {
-                                                                                        "information": "closeOperation",
-                                                                                        "link": "link0",
-                                                                                        "opacity": 1
-                                                                                    }
+                                                                                    "type": "ComponentAnimationEffect",
+                                                                                    "element": {
+                                                                                        "className": "ClassPulse"
+                                                                                    },
+                                                                                    "arrayAppObject": [
+                                                                                        {
+                                                                                            "type": "ComponentAnimationSubEffect",
+                                                                                            "arrayAppObject": [
+                                                                                                {
+                                                                                                    "type": "ComponentAnimationSubEffectHolder",
+                                                                                                    "arrayAppObject": [
+                                                                                                        {
+                                                                                                            "type": "ComponentInformation",
+                                                                                                            "information": "closeOperation",
+                                                                                                            "link": "link0",
+                                                                                                            "opacity": 1
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    ]
                                                                                 }
                                                                             ]
                                                                         }
-                                                                    }
+                                                                    ]
                                                                 }
-                                                            }
+                                                            ]
                                                         }
                                                     ]
                                                 }
@@ -496,12 +591,17 @@
                         },
                         {
                             "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
                             "arrayItem": [
                                 {
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "padding": "5px",
@@ -571,7 +671,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -620,7 +720,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -669,7 +769,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -718,7 +818,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -767,7 +867,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -812,12 +912,17 @@
                         },
                         {
                             "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
                             "arrayItem": [
                                 {
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "padding": "5px",
@@ -887,7 +992,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -936,7 +1041,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -985,7 +1090,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -1034,7 +1139,7 @@
                                                             "element": {
                                                                 "style": {
                                                                     "vertical-align": "-webkit-baseline-middle",
-                                                                    "color": "black",
+                                                                    "color": "white",
                                                                     "opacity": "0.9",
                                                                     "padding": "5px",
                                                                     "display": "block",
@@ -1079,12 +1184,17 @@
                         },
                         {
                             "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
                             "arrayItem": [
                                 {
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "padding": "5px",
@@ -1128,12 +1238,17 @@
                         },
                         {
                             "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
                             "arrayItem": [
                                 {
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "padding": "5px",
@@ -1190,6 +1305,11 @@
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "display": "inline-flex"
+                                }
+                            },
                             "arrayAppObject": [
                                 {
                                     "type": "ComponentItem",
@@ -1204,7 +1324,7 @@
                                     "element": {
                                         "style": {
                                             "vertical-align": "-webkit-baseline-middle",
-                                            "color": "black",
+                                            "color": "white",
                                             "mix-blend-mode": "difference",
                                             "opacity": "0.9",
                                             "font-size": "34px"
@@ -1374,7 +1494,7 @@
                                                                                     "type": "ComponentColorEffect",
                                                                                     "element": {
                                                                                         "style": {
-                                                                                            "color": "black"
+                                                                                            "color": "white"
                                                                                         }
                                                                                     },
                                                                                     "arrayAppObject": [
@@ -1445,7 +1565,7 @@
                                                                             "colorEffect": {
                                                                                 "element": {
                                                                                     "style": {
-                                                                                        "color": "black"
+                                                                                        "color": "white"
                                                                                     }
                                                                                 },
                                                                                 "font": {
@@ -1521,7 +1641,7 @@
                                                                         "element": {
                                                                             "style": {
                                                                                 "width": "80%",
-                                                                                "color": "black"
+                                                                                "color": "white"
                                                                             }
                                                                         },
                                                                         "font": {

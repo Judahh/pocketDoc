@@ -15,9 +15,9 @@
         "vehicle": "Vehicle",
         "User": "User",
         "logout": "Logout",
-        "active":"Active",
-        "devices":"Devices",
-        "role":"Role"
+        "active": "Active",
+        "devices": "Devices",
+        "role": "Role"
     },
     {
         "language": "en-US",
@@ -35,9 +35,9 @@
         "vehicle": "Vehicle",
         "User": "User",
         "logout": "Logout",
-        "active":"Active",
-        "devices":"Devices",
-        "role":"Role"
+        "active": "Active",
+        "devices": "Devices",
+        "role": "Role"
     },
     {
         "language": "pt",
@@ -55,9 +55,9 @@
         "vehicle": "Viatura",
         "User": "Usuário",
         "logout": "Sair",
-        "active":"Ativos",
-        "devices":"Dispositivos",
-        "role":"Cargo"
+        "active": "Ativos",
+        "devices": "Dispositivos",
+        "role": "Cargo"
     },
     {
         "language": "pt-BR",
@@ -75,8 +75,8 @@
         "vehicle": "Viatura",
         "User": "Usuário",
         "logout": "Sair",
-        "active":"Ativos",
-        "devices":"Dispositivos",
-        "role":"Cargo"
+        "active": "Ativos",
+        "devices": "Dispositivos",
+        "role": "Cargo"
     }
 ]
