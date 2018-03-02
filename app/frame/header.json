@@ -4,6 +4,20 @@
             "background-color": "rgba(255, 255, 255, 0.1)"
         }
     },
+    "arrayAppObjectEvent": [
+        {
+            "name": "authorization",
+            "appObject": {},
+            "runFunction": "isLogged(this)",
+            "code": "UserManegement"
+        },
+        {
+            "name": "build",
+            "appObject": {},
+            "runFunction": "goToLogin()",
+            "code": "UserManegement"
+        }
+    ],
     "arrayAppObject": [
         {
             "type": "ComponentMenuHorizontal",
@@ -60,11 +74,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "hospitals",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -86,11 +102,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "docs",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -112,11 +130,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "medicines",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -138,11 +158,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "symptoms",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -164,11 +186,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "diseases",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -190,11 +214,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "vectors",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -216,11 +242,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "pathogens",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -293,11 +321,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "contacts",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -319,11 +349,13 @@
                                                     "type": "ComponentInformation",
                                                     "arrayAppObjectEvent": [
                                                         {
+                                                            "name": "router",
                                                             "link": "addContact",
                                                             "runFunction": "isLogged",
                                                             "code": "UserManegement"
                                                         },
                                                         {
+                                                            "name": "router",
                                                             "link": "login"
                                                         }
                                                     ],
@@ -362,6 +394,18 @@
                                             "display": "inherit"
                                         }
                                     },
+                                    "arrayAppObjectEvent": [
+                                        {
+                                            "name": "router",
+                                            "link": "messages",
+                                            "runFunction": "isLogged",
+                                            "code": "UserManegement"
+                                        },
+                                        {
+                                            "name": "router",
+                                            "link": "login"
+                                        }
+                                    ],
                                     "arrayAppObject": [
                                         {
                                             "type": "ComponentFontAwesome",
@@ -395,6 +439,18 @@
                                             "display": "inherit"
                                         }
                                     },
+                                    "arrayAppObjectEvent": [
+                                        {
+                                            "name": "router",
+                                            "link": "newDisease",
+                                            "runFunction": "isLogged",
+                                            "code": "UserManegement"
+                                        },
+                                        {
+                                            "name": "router",
+                                            "link": "login"
+                                        }
+                                    ],
                                     "arrayAppObject": [
                                         {
                                             "type": "ComponentFontAwesome",
@@ -487,11 +543,13 @@
                                                             "type": "ComponentInformation",
                                                             "arrayAppObjectEvent": [
                                                                 {
+                                                                    "name": "router",
                                                                     "link": "profile",
                                                                     "runFunction": "isLogged",
                                                                     "code": "UserManegement"
                                                                 },
                                                                 {
+                                                                    "name": "router",
                                                                     "link": "login"
                                                                 }
                                                             ],
@@ -513,11 +571,13 @@
                                                             "type": "ComponentInformation",
                                                             "arrayAppObjectEvent": [
                                                                 {
+                                                                    "name": "router",
                                                                     "link": "historical",
                                                                     "runFunction": "isLogged",
                                                                     "code": "UserManegement"
                                                                 },
                                                                 {
+                                                                    "name": "router",
                                                                     "link": "login"
                                                                 }
                                                             ],
@@ -534,6 +594,29 @@
                                                                 "className": "ClassPulse ClassOpenSans"
                                                             },
                                                             "information": "historical"
+                                                        },
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "arrayAppObjectEvent": [
+                                                                {
+                                                                    "name": "click",
+                                                                    "runFunction": "logout(this)",
+                                                                    "code": "UserManegement"
+                                                                }
+                                                            ],
+                                                            "element": {
+                                                                "style": {
+                                                                    "vertical-align": "-webkit-baseline-middle",
+                                                                    "color": "white",
+                                                                    "opacity": "1",
+                                                                    "padding": "5px",
+                                                                    "display": "block",
+                                                                    "font-size": "16px",
+                                                                    "-webkit-font-smoothing": "antialiased"
+                                                                },
+                                                                "className": "ClassPulse ClassOpenSans"
+                                                            },
+                                                            "information": "logoff"
                                                         }
                                                     ]
                                                 }
