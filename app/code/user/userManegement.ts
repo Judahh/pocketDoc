@@ -5,7 +5,7 @@ import { Authentication } from './authentication';
 import { Address } from './address';
 import { Phone } from './phone';
 import { Permission } from './permission';
-import {  } from 'backappjh/app/view/common/component/generic/componentGeneric';
+import { } from 'backappjh/app/view/common/component/generic/componentGeneric';
 
 export class UserManegement extends AppObject {
     private static instance: UserManegement;
@@ -420,9 +420,11 @@ export class UserManegement extends AppObject {
             pageBody = UserManegement.getInstance().getPageBody();
         }
         if (pageBody !== undefined) {
+            console.log('pageBody', pageBody);
             pageBody.goToPage(page);
         } else {
             pageBody = (<ComponentView>header.getFather()).pageBody;
+            console.log('pageBody H', pageBody);
             pageBody.goToPage(page);
         }
     }

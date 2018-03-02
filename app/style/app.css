@@ -6,7 +6,7 @@
   font-style: normal;
 }  */
 
-@font-face {
+/* @font-face {
     font-family: "FontIcon";
     src: url("fonts/BlueLionIcons.otf");
     src: url("fonts/BlueLionIcons.woff") format('woff');
@@ -94,7 +94,7 @@
   src: url("fonts/Material-Design-Iconic-Font.woff") format('woff');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 @font-face {
     font-family: "FontFuturisticI";
@@ -104,13 +104,13 @@
     font-style: normal;
 }
 
-@font-face {
+/* @font-face {
     font-family: "FontFuturisticII";
     src: url("fonts/Letters/FuturisticFontII.otf");
     src: url("fonts/Letters/FuturisticFontII.woff") format('woff');
     font-weight: normal;
     font-style: normal;
-} 
+}  */
 
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans|Roboto');
 
@@ -209,4 +209,19 @@ font {
 
 .ClassFontAwesome{
     font-family: "FontAwesome";
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: black;
+  background-color: white;
+  transition: background-color 5000s ease-in-out 0s;
 }

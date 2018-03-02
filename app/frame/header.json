@@ -6,15 +6,15 @@
     },
     "arrayAppObjectEvent": [
         {
-            "name": "authorization",
-            "appObject": {},
-            "runFunction": "isLogged(this)",
-            "code": "UserManegement"
-        },
-        {
             "name": "build",
             "appObject": {},
             "runFunction": "goToLogin()",
+            "code": "UserManegement"
+        },
+        {
+            "name": "authorization",
+            "appObject": {},
+            "runFunction": "isLogged(this)",
             "code": "UserManegement"
         }
     ],
