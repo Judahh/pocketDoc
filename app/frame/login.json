@@ -129,7 +129,7 @@
                                     "arrayAppObject": [
                                         {
                                             "type": "ComponentInformation",
-                                            "information": "Login",
+                                            "information": "signIn",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
@@ -149,10 +149,8 @@
                                     "type": "ComponentDivisor",
                                     "arrayAppObjectEvent": [
                                         {
-                                            "name": "click",
-                                            "appObject": {},
-                                            "runFunction": "register(this)",
-                                            "code": "UserManegement"
+                                            "name": "router",
+                                            "link": "signUp"
                                         }
                                     ],
                                     "element": {
@@ -165,7 +163,7 @@
                                     "arrayAppObject": [
                                         {
                                             "type": "ComponentInformation",
-                                            "information": "register",
+                                            "information": "signUp",
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {

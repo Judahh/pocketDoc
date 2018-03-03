@@ -1,18 +1,30 @@
 [
     {
         "language":"en",
-        "register":"Register"
+        "signIn":"Sign In",
+        "signUp":"Sign Up",
+        "user":"User",
+        "password":"Password"
     },
     {
         "language":"en-US",
-        "register":"Register"
+        "signIn":"Sign In",
+        "signUp":"Sign Up",
+        "user":"User",
+        "password":"Password"
     },
     {
         "language":"pt",
-        "register":"Registro"
+        "signIn":"Logar",
+        "signUp":"Registrar",
+        "user":"Usuário",
+        "password":"Senha"
     },
     {
         "language":"pt-BR",
-        "register":"Registro"
+        "signIn":"Logar",
+        "signUp":"Registrar",
+        "user":"Usuário",
+        "password":"Senha"
     }
 ]
