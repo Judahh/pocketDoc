@@ -5,8 +5,9 @@ before_install:
 - npm install -g npm
 install:
 - npm install
-- npm run tsc
-script: tsc
+script: 
+  - tsc
+  - webpack
 deploy:
   provider: heroku
   api_key:
