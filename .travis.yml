@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - '9'
 install:
-- npm install
+- npm install 5.7.1
 script: tsc
 deploy:
   provider: heroku
