@@ -1,4 +1,4 @@
-# Pocket Doc ![Build Status](https://travis-ci.com/judahh/pocketDoc.svg?token=yy4x23H8TG2tSgR4Bmgx&branch=master)
+# Pocket Doc ![Build Status](https://travis-ci.org/Judahh/pocketDoc.svg?branch=master)
 
 ## Development
 
