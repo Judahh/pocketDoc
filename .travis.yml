@@ -1,8 +1,9 @@
 language: node_js
 node_js:
 - '9'
+before_install:
 install:
-- npm install 5.7.1
+- nvm install 5.7.1
 script: tsc
 deploy:
   provider: heroku
