@@ -225,3 +225,13 @@ select:-webkit-autofill:focus {
   background-color: white;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+input[type="date"]:before {
+    color: lightgrey;
+    content: attr(placeholder) !important;
+    margin-right: 0.5em;
+}
+
+input[type="date"]:focus:before {
+    content: '' !important;
+}
