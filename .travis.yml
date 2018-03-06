@@ -3,7 +3,7 @@ node_js:
 - '9'
 before_install:
 install:
-- nvm install 5.7.1
+- npm install -g
 script: tsc
 deploy:
   provider: heroku
