@@ -6,7 +6,7 @@
   "private": true,
   "main": "api/server.js",
   "engines": {
-    "node": "9.4.6",
+    "node": "9.7.1",
     "npm": "5.7.1"
   },
   "description": "pocketDoc project",
