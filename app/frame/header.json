@@ -4,26 +4,32 @@
             "background-color": "rgba(255, 255, 255, 0.1)"
         }
     },
-    "arrayAppObjectEvent": [
-        {
-            "name": "build",
-            "appObject": {},
-            "runFunction": "goToLogin()",
-            "code": "UserManegement"
-        },
-        {
-            "name": "authorization",
-            "appObject": {},
-            "runFunction": "isLogged(this)",
-            "code": "UserManegement"
-        }
-    ],
     "arrayAppObject": [
         {
             "type": "ComponentMenuHorizontal",
+            "arrayAppObjectEvent": [
+                {
+                    "name": "build",
+                    "appObject": {},
+                    "runFunction": "goToLogin()",
+                    "code": "UserManegement"
+                },
+                {
+                    "name": "authorization",
+                    "appObject": {},
+                    "subscribeFunction": "subscribeSign",
+                    "runFunction": "isLogged(this)",
+                    "code": "UserManegement"
+                }
+            ],
             "arrayAppObject": [
                 {
                     "type": "ComponentLeftHolder",
+                    "element": {
+                        "style": {
+                            "width": "50%"
+                        }
+                    },
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",
@@ -472,10 +478,20 @@
                     ]
                 },
                 {
-                    "type": "ComponentCenterHolder"
+                    "type": "ComponentCenterHolder",
+                    "element": {
+                        "style": {
+                            "width": "0%"
+                        }
+                    }
                 },
                 {
                     "type": "ComponentRightHolder",
+                    "element": {
+                        "style": {
+                            "width": "50%"
+                        }
+                    },
                     "arrayAppObject": [
                         {
                             "type": "ComponentDivisor",

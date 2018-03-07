@@ -52,57 +52,78 @@
                     "type": "ComponentDivisor",
                     "element": {
                         "style": {
+                            "width": "75%",
                             "border": "solid 1px white",
-                            "padding": "5px"
+                            "padding": "5px",
+                            "box-sizing": "border-box"
                         }
                     },
                     "arrayAppObject": [
                         {
-                            "type": "ComponentDataInput",
+                            "type": "ComponentDivisor",
                             "element": {
                                 "style": {
-                                    "display": "block",
-                                    "padding": "5px",
-                                    "width": "100%",
-                                    "box-sizing": "border-box"
                                 }
                             },
                             "arrayAppObject": [
                                 {
-                                    "type": "ComponentTextField",
+                                    "type": "ComponentDataInput",
                                     "element": {
                                         "style": {
-                                            "color": "white",
-                                            "border-bottom": "1px solid white",
-                                            "opacity": 1
-                                        },
-                                        "placeholder": "user"
-                                    }
+                                            "display": "inline-flex",
+                                            "padding": "5px",
+                                            "width": "100%",
+                                            "box-sizing": "border-box"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentTextField",
+                                            "element": {
+                                                "style": {
+                                                    "color": "white",
+                                                    "border-bottom": "1px solid white",
+                                                    "opacity": 1
+                                                },
+                                                "placeholder": "username"
+                                            }
+                                        }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "type": "ComponentDataInput",
+                            "type": "ComponentDivisor",
                             "element": {
                                 "style": {
-                                    "display": "block",
-                                    "padding": "5px",
-                                    "width": "100%",
-                                    "box-sizing": "border-box"
                                 }
                             },
                             "arrayAppObject": [
                                 {
-                                    "type": "ComponentTextField",
+                                    "type": "ComponentDataInput",
                                     "element": {
                                         "style": {
-                                            "color": "white",
-                                            "border-bottom": "1px solid white",
-                                            "opacity": 1
-                                        },
-                                        "placeholder": "password",
-                                        "type": "password"
-                                    }
+                                            "display": "inline-flex",
+                                            "padding": "5px",
+                                            "width": "100%",
+                                            "box-sizing": "border-box"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentTextField",
+                                            "element": {
+                                                "style": {
+                                                    "color": "white",
+                                                    "border-bottom": "1px solid white",
+                                                    "opacity": 1
+                                                },
+                                                "placeholder": "password",
+                                                "type":"password"
+
+                                            }
+                                        }
+                                    ]
                                 }
                             ]
                         },
@@ -115,12 +136,14 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "login(this)",
+                                            "runFunction": "signIn(this)",
                                             "code": "UserManegement"
                                         }
                                     ],
                                     "element": {
                                         "style": {
+                                            "display": "inline-flex",
+                                            "width": "50%",
                                             "padding": "5px",
                                             "float": "left",
                                             "box-sizing": "border-box"
@@ -133,6 +156,7 @@
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
+                                                    "width": "100%",
                                                     "padding": "5px",
                                                     "font-size": "16px",
                                                     "text-align": "center",
@@ -149,12 +173,16 @@
                                     "type": "ComponentDivisor",
                                     "arrayAppObjectEvent": [
                                         {
-                                            "name": "router",
-                                            "link": "signUp"
+                                            "name": "click",
+                                            "appObject": {},
+                                            "runFunction": "signUp(this)",
+                                            "code": "UserManegement"
                                         }
                                     ],
                                     "element": {
                                         "style": {
+                                            "display": "inline-flex",
+                                            "width": "50%",
                                             "padding": "5px",
                                             "float": "left",
                                             "box-sizing": "border-box"
@@ -167,6 +195,7 @@
                                             "element": {
                                                 "className": "ClassOpenSans",
                                                 "style": {
+                                                    "width": "100%",
                                                     "padding": "5px",
                                                     "font-size": "16px",
                                                     "text-align": "center",

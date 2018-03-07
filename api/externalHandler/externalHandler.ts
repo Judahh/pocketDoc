@@ -50,7 +50,7 @@ export class ExternalHandler extends BasicExternalHandler {
         this.externalPublish('newDevice', { identification: identification, users: users });
     }
 
-    protected serverConnected(socketBasic){
+    protected serverConnected(socketBasic) {
         console.log('ID:', socketBasic.getIdentification());
         socketBasic.emit('subscribeGPS', {});
         socketBasic.emit('subscribeGSM', {});
@@ -97,8 +97,6 @@ export class ExternalHandler extends BasicExternalHandler {
         socketBasic.on('users', (users) => {
             _self.users(socketBasic, users);
         });
-
-        
 
         // console.log(socketBasic.getIdentification());
         // _self.externalPublish('newDevice', _self.getFullIdentification(socketBasic));

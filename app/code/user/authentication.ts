@@ -13,7 +13,7 @@ export class Authentication {
         this.password = password;
         if (permission) {
             this.permission = permission;
-        }else{
+        } else {
             this.permission = Permission.User;
         }
     }

@@ -130,15 +130,15 @@ export class HardwareHandler extends BasicHardwareHandler {
         this.handler.addEvent(event);
     }
 
-    public login(user, socket) {
+    public signIn(user, socket) {
         let _self = this;
         this.handler.readArray('user', (error, data) => {
-            _self.loginCheck(user, data, socket);
+            _self.signInCheck(user, data, socket);
         });
     }
 
-    public loginCheck(user, data, socket) {
-        // console.log(user);
+    public signInCheck(user, data, socket) {
+        console.log(user);
         for (let index = 0; index < data.length; index++) {
             let element = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
             if (user.username === element.authentication.username) {

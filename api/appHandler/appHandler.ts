@@ -1,4 +1,4 @@
-import { Router, Request, Response, NextFunction, Electron, ApiConfiguration, express, path, BasicApi, BasicAppHandler, BasicSocket } from 'backapijh';
+import { BasicAppHandler, BasicSocket } from 'backapijh';
 import { HardwareHandler } from '../hardwareHandler/hardwareHandler';
 
 export class AppHandler extends BasicAppHandler {
@@ -86,7 +86,7 @@ export class AppHandler extends BasicAppHandler {
         socketBasic.on('subscribe', () => { _self.subscribeWifi(socketBasic); });
 
         socketBasic.on('newUser', (user) => { _self.hardwareHandler.newUser(user, socketBasic); });
-        socketBasic.on('login', (user) => { _self.hardwareHandler.login(user, socketBasic); });
+        socketBasic.on('signIn', (user) => { _self.hardwareHandler.signIn(user, socketBasic); });
 
         socketBasic.on('subscribeStream', () => { _self.externalSubscribeStream('streamOut', socketBasic); });
         socketBasic.on('stream', (stream) => { _self.externalPublish('streamIn', stream); });

@@ -5,6 +5,11 @@ import { Authentication } from './authentication';
 export class User {
 
     name: string;
+    birth: Date;
+    country: string;
+    state: string;
+    city: string;
+
     nickname: string;
     mother: string;
     father: string;
@@ -12,7 +17,6 @@ export class User {
     uIdEmitter: string;
     uIdState: number;
     nUId: number; // cpf
-    birth: Date;
     birthState: number;
     nationality: string;
     email: string;
@@ -22,34 +26,18 @@ export class User {
     authentication: Authentication;
 
     constructor(name: string,
-        nickname: string,
-        mother: string,
-        father: string,
-        uId: number,
-        uIdEmitter: string,
-        uIdState: number,
-        nUId: number,
         birth: Date,
-        birthState: number,
-        nationality: string,
-        email: string,
-        role: string,
+        country: string,
+        state: string,
+        city: string,
         authentication: Authentication) {
         this.arrayAddress = new Array<Address>();
         this.arrayPhone = new Array<Phone>();
         this.name = name;
-        this.nickname = nickname;
-        this.mother = mother;
-        this.father = father;
-        this.uId = uId;
-        this.uIdEmitter = uIdEmitter;
-        this.uIdState = uIdState;
-        this.nUId = nUId;
         this.birth = birth;
-        this.birthState = birthState;
-        this.nationality = nationality;
-        this.email = email;
-        this.role = role;
+        this.country = country;
+        this.state = state;
+        this.city = city;
         this.authentication = authentication
     }
 
