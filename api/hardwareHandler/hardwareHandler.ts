@@ -1,5 +1,5 @@
 import { Disk } from './../disk/disk';
-import { Handler, Event, Operation } from 'flexiblepersistence';
+import { Handler, Event, Operation, Database } from 'flexiblepersistence';
 import { User } from '../user/user';
 import { Authentication } from '../user/authentication';
 import { Permission } from '../user/permission';
@@ -21,7 +21,14 @@ export class HardwareHandler extends BasicHardwareHandler {
         this.deviceSubscribers = {};
         this.externalSubscribers = {};
         this.externalSubscribersOldData = {};
-        this.handler = new Handler(process.env.POCKET_DOC_DB, process.env.POCKET_DOC_DB_HOST, parseInt(process.env.POCKET_DOC_DB_PORT, 10));
+
+        let database = new Database(process.env.POCKET_DOC_READ_DB, process.env.POCKET_DOC_READ_DB_HOST,
+                                    parseInt(process.env.POCKET_DOC_READ_DB_PORT, 10), process.env.POCKET_DOC_DB,
+                                    process.env.POCKET_DOC_DB);
+        let database2 = new Database(process.env.POCKET_DOC_EVENT_DB, process.env.POCKET_DOC_EVENT_DB_HOST,
+                                    parseInt(process.env.POCKET_DOC_EVENT_DB_PORT, 10), process.env.POCKET_DOC_DB,
+                                    process.env.POCKET_DOC_DB);
+        this.handler = new Handler(database, database2);
     }
 
     public getExternalHandler() {
