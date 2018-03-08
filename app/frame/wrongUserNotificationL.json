@@ -1,0 +1,22 @@
+[
+    {
+        "language":"en",
+        "title":"PocketDoc",
+        "error":"Incorrect User or Password!"
+    },
+    {
+        "language":"en-US",
+        "title":"PocketDoc",
+        "error":"Incorrect User or Password!"
+    },
+    {
+        "language":"pt-BR",
+        "title":"PocketDoc",
+        "error":"Usuário ou Senha Incorreto!"
+    },
+    {
+        "language":"pt",
+        "title":"PocketDoc",
+        "error":"Usuário ou Senha Incorreto!"
+    }
+]

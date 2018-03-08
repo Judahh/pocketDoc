@@ -1,0 +1,22 @@
+[
+    {
+        "language":"en",
+        "title":"PocketDoc",
+        "error":"Missing Fields!"
+    },
+    {
+        "language":"en-US",
+        "title":"PocketDoc",
+        "error":"Missing Fields!"
+    },
+    {
+        "language":"pt-BR",
+        "title":"PocketDoc",
+        "error":"Campos Vazios!"
+    },
+    {
+        "language":"pt",
+        "title":"PocketDoc",
+        "error":"Campos Vazios!"
+    }
+]

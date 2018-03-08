@@ -1,4 +1,4 @@
-import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentPageBody, ComponentView, ComponentComboBox, ComponentInformation, AppObjectEvent } from 'backappjh';
+import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentPageBody, ComponentView, ComponentComboBox, ComponentInformation, AppObjectEvent, ComponentNotification } from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 import { User } from './user';
 import { Authentication } from './authentication';
@@ -67,22 +67,31 @@ export class UserManegement extends AppObject {
     public createUser(component) {
         // console.log('createUser!!!');
         let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather());
-        let name: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let birth: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let country: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[1].arrayAppObject[0]).getElement()).value;
-        let state: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let city: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[2].arrayAppObject[1].arrayAppObject[0]).getElement()).value;
-        let role: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[3].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let username: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let password: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[1].arrayAppObject[0]).getElement()).value;
-        let password2: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[2].arrayAppObject[0]).getElement()).value;
-        console.log(divisor, name, birth, country, state, city, role, username, password, password2);
+        let arrayField: Array<HTMLInputElement> = new Array<HTMLInputElement>();
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[1].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[2].arrayAppObject[1].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[3].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[1].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[2].arrayAppObject[0]).getElement());
+        console.log(arrayField[0].value, arrayField[1].value, arrayField[2].value,
+            arrayField[3].value, arrayField[4].value, arrayField[5].value,
+            arrayField[6].value, arrayField[7].value, arrayField[8].value);
 
-        if (password === password2) {
-            let auth = new Authentication(username, password, Permission.User);
-            let user = new User(name, new Date(birth), country, state, city, auth);
+        if (this.checkEquals(arrayField[7], arrayField[8]) && !this.checkArrayEmpty(arrayField)) {
+            let header = divisor.getHeader();
+            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
+            let auth = new Authentication(arrayField[6].value, arrayField[7].value, Permission.User);
+            let user = new User(arrayField[0].value, new Date(arrayField[1].value), arrayField[2].value,
+                arrayField[3].value, arrayField[4].value, auth);
             // console.log(user);
             this.socketIo.emit('newUser', user);
+        } else {
+            let header = divisor.getHeader();
+            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');
         }
     }
 
@@ -93,19 +102,65 @@ export class UserManegement extends AppObject {
         console.log('signIn');
         this.tempRegister = undefined;
         let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather());
-        let username: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let password: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        console.log(divisor, username, password);
-        this.socketIo.emit('signIn', { username: username, password: password });
+        let arrayField: Array<HTMLInputElement> = new Array<HTMLInputElement>();
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement());
+        console.log(divisor, arrayField[0].value, arrayField[1].value);
+        if (!this.checkArrayEmpty(arrayField)) {
+            let header = divisor.getHeader();
+            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
+            this.socketIo.emit('signIn', { username: arrayField[0].value, password: arrayField[1].value });
+        } else {
+            let header = divisor.getHeader();
+            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');
+        }
     }
 
     public signUp(component) {
         let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather());
-        let username: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        let password: string = (<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement()).value;
-        this.tempRegister = new Authentication(username, password);
+        let arrayField: Array<HTMLInputElement> = new Array<HTMLInputElement>();
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement());
+        arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement());
+        let header = divisor.getHeader();
+        (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
+        this.tempRegister = new Authentication(arrayField[0].value, arrayField[1].value);
         this.goTo('signUp');
+    }
 
+    public checkArrayEmpty(arrayField: Array<HTMLInputElement>) {
+        let empty = false;
+        arrayField.forEach(field => {
+            if (this.checkEmpty(field)) {
+                empty = true;
+            }
+        });
+        return empty;
+    }
+
+    public checkEquals(field0: HTMLInputElement, field1: HTMLInputElement) {
+        if (field0.value !== field1.value) {
+            this.errorField(field1);
+            return false;
+        }
+        this.okField(field1);
+        return true;
+    }
+
+    public checkEmpty(field: HTMLInputElement) {
+        if (field.value === '') {
+            this.errorField(field);
+            return true;
+        }
+        this.okField(field);
+        return false;
+    }
+
+    public errorField(field: HTMLInputElement) {
+        field.setAttribute('style', 'border-bottom-color: red');
+    }
+
+    public okField(field: HTMLInputElement) {
+        field.setAttribute('style', 'border-bottom-color: white');
     }
 
     public getUsernameAndPassword(component) {
@@ -117,7 +172,7 @@ export class UserManegement extends AppObject {
         }
 
         if (_self.tempRegister !== undefined) {
-            console.log(component);
+            // console.log(component);
             let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather());
             (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0]).getElement()).value = _self.tempRegister.username;
             (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[1].arrayAppObject[0]).getElement()).value = _self.tempRegister.password;
@@ -172,13 +227,20 @@ export class UserManegement extends AppObject {
             // console.log(this);
             // console.log(UserManegement.getInstance());
             if (!data.userManegement.user) {
-                alert(false);
+                let header = this.getHeader();
+                (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('wrongUser');
             } else {
                 if (this !== undefined) {
+                    // console.log('A');
+                    let header = this.getHeader();
+                    (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
                     this.goTo('home');
                     this.refreshHeader();
                     this.getInfo(data.userManegement.user);
                 } else {
+                    // console.log('B');
+                    let header = UserManegement.getInstance().getHeader();
+                    (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
                     UserManegement.getInstance().goTo('home');
                     UserManegement.getInstance().refreshHeader();
                     UserManegement.getInstance().getInfo(data.userManegement.user);
@@ -402,11 +464,11 @@ export class UserManegement extends AppObject {
             pageBody = UserManegement.getInstance().getPageBody();
         }
         if (pageBody !== undefined) {
-            console.log('pageBody', pageBody);
+            // console.log('pageBody', pageBody);
             pageBody.goToPage(page);
-        } else {
+        } else if (header !== undefined) {
             pageBody = (<ComponentView>header.getFather()).pageBody;
-            console.log('pageBody H', pageBody);
+            // console.log('pageBody H', pageBody);
             pageBody.goToPage(page);
         }
     }
