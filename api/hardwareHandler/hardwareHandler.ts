@@ -23,11 +23,11 @@ export class HardwareHandler extends BasicHardwareHandler {
         this.externalSubscribersOldData = {};
 
         let database = new Database(process.env.POCKET_DOC_READ_DB, process.env.POCKET_DOC_READ_DB_HOST,
-                                    parseInt(process.env.POCKET_DOC_READ_DB_PORT, 10), process.env.POCKET_DOC_DB,
-                                    process.env.POCKET_DOC_DB);
+            parseInt(process.env.POCKET_DOC_READ_DB_PORT, 10), process.env.POCKET_DOC_DB,
+            process.env.POCKET_DOC_DB);
         let database2 = new Database(process.env.POCKET_DOC_EVENT_DB, process.env.POCKET_DOC_EVENT_DB_HOST,
-                                    parseInt(process.env.POCKET_DOC_EVENT_DB_PORT, 10), process.env.POCKET_DOC_DB,
-                                    process.env.POCKET_DOC_DB);
+            parseInt(process.env.POCKET_DOC_EVENT_DB_PORT, 10), process.env.POCKET_DOC_DB,
+            process.env.POCKET_DOC_DB);
         this.handler = new Handler(database, database2);
     }
 
@@ -44,7 +44,7 @@ export class HardwareHandler extends BasicHardwareHandler {
 
     public addUser(device, user) {
         let _self = this;
-        this.handler.readArray('user', (error, data) => {
+        this.handler.readArray('user', {}, (error, data) => {
             for (let index = 0; index < data.length; index++) {
                 let element: User = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
                 if (element.authentication.username === user) {
@@ -56,7 +56,7 @@ export class HardwareHandler extends BasicHardwareHandler {
 
     public removeUser(device, user) {
         let _self = this;
-        this.handler.readArray('user', (error, data) => {
+        this.handler.readArray('user', {}, (error, data) => {
             for (let index = 0; index < data.length; index++) {
                 let element: User = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
                 // console.log('index', index);
@@ -71,7 +71,7 @@ export class HardwareHandler extends BasicHardwareHandler {
 
     public setUsers(device, user) {
         let _self = this;
-        this.handler.readArray('user', (error, data) => {
+        this.handler.readArray('user', {}, (error, data) => {
             let arrayUsers: Array<any> = new Array<any>();
             for (let index = 0; index < data.length; index++) {
                 let element: User = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
@@ -89,7 +89,7 @@ export class HardwareHandler extends BasicHardwareHandler {
 
     public getUsers(socket) {
         let _self = this;
-        this.handler.readArray('user', (error, data) => {
+        this.handler.readArray('user', {}, (error, data) => {
             _self.returnUsers(data, socket);
         });
     }
@@ -106,7 +106,8 @@ export class HardwareHandler extends BasicHardwareHandler {
         socket.emit('users', users);
     }
 
-    public newUser(user, socket) {
+    public signUp(user, socket) {
+        let _self = this;
         if (socket.identification.user !== undefined) {
             if (user.authentication.permission > socket.identification.user.authentication.permission) {
                 user.authentication.permission = socket.identification.user.authentication.permission
@@ -133,13 +134,27 @@ export class HardwareHandler extends BasicHardwareHandler {
                 user.authentication.permission));
         newUser.arrayAddress = user.arrayAddress;
         newUser.arrayPhone = user.arrayPhone;
-        let event = new Event(Operation.add, 'user', newUser);
-        this.handler.addEvent(event);
+        this.handler.readArray('user', { 'username': newUser.authentication.username }, (error, data) => {
+            _self.signUpCheck(newUser, data, socket);
+        });
+
+    }
+
+    public signUpCheck(user, data, socket) {
+        console.log(user);
+        if (data.length > 0) {
+            socket.emit('userManegement', {});
+        } else {
+            let event = new Event(Operation.add, 'user', user);
+            this.handler.addEvent(event);
+            socket.emit('userManegement', { user: user });
+        }
+
     }
 
     public signIn(user, socket) {
         let _self = this;
-        this.handler.readArray('user', (error, data) => {
+        this.handler.readArray('user', { 'username': user.username }, (error, data) => {
             _self.signInCheck(user, data, socket);
         });
     }

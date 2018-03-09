@@ -88,7 +88,7 @@ export class UserManegement extends AppObject {
             let user = new User(arrayField[0].value, new Date(arrayField[1].value), arrayField[2].value,
                 arrayField[3].value, arrayField[4].value, auth);
             // console.log(user);
-            this.socketIo.emit('newUser', user);
+            this.socketIo.emit('signUp', user);
         } else {
             let header = divisor.getHeader();
             (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');

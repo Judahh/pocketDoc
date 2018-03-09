@@ -85,7 +85,7 @@ export class AppHandler extends BasicAppHandler {
         socketBasic.on('subscribeWifi', () => { _self.subscribeWifi(socketBasic); });
         socketBasic.on('subscribe', () => { _self.subscribeWifi(socketBasic); });
 
-        socketBasic.on('newUser', (user) => { _self.hardwareHandler.newUser(user, socketBasic); });
+        socketBasic.on('signUp', (user) => { _self.hardwareHandler.signUp(user, socketBasic); });
         socketBasic.on('signIn', (user) => { _self.hardwareHandler.signIn(user, socketBasic); });
 
         socketBasic.on('subscribeStream', () => { _self.externalSubscribeStream('streamOut', socketBasic); });
