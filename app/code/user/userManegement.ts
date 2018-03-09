@@ -12,7 +12,7 @@ export class UserManegement extends AppObject {
     private subscribers: Array<any>;
     private subscribersSign: Array<any>;
     private logged: User;
-    private tempRegister: Authentication;
+    private tempRegister: User;
     private menu: any;
     private tempObjectArray: Array<any>;
 
@@ -84,8 +84,8 @@ export class UserManegement extends AppObject {
         if (this.checkEquals(arrayField[7], arrayField[8]) && !this.checkArrayEmpty(arrayField)) {
             let header = divisor.getHeader();
             (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
-            let auth = new Authentication(arrayField[6].value, arrayField[7].value, Permission.User);
-            let user = new User(arrayField[0].value, new Date(arrayField[1].value), arrayField[2].value,
+            let auth = new Authentication(arrayField[7].value, Permission.User);
+            let user = new User(arrayField[6].value, arrayField[0].value, new Date(arrayField[1].value), arrayField[2].value,
                 arrayField[3].value, arrayField[4].value, auth);
             // console.log(user);
             this.socketIo.emit('signUp', user);
@@ -123,7 +123,10 @@ export class UserManegement extends AppObject {
         arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement());
         let header = divisor.getHeader();
         (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
-        this.tempRegister = new Authentication(arrayField[0].value, arrayField[1].value);
+        this.tempRegister = <User>{
+            'username': arrayField[0].value,
+            'authentication': new Authentication(arrayField[1].value)
+        };
         this.goTo('signUp');
     }
 
@@ -175,7 +178,7 @@ export class UserManegement extends AppObject {
             // console.log(component);
             let divisor: Component = <Component>(<ComponentPageBody>component.getFather().getFather().getFather());
             (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[0].arrayAppObject[0]).getElement()).value = _self.tempRegister.username;
-            (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[1].arrayAppObject[0]).getElement()).value = _self.tempRegister.password;
+            (<HTMLInputElement>(<Component>divisor.arrayAppObject[4].arrayAppObject[1].arrayAppObject[0]).getElement()).value = _self.tempRegister.authentication.password;
         }
     }
 

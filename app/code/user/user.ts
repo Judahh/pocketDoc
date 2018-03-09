@@ -4,6 +4,7 @@ import { Authentication } from './authentication';
 
 export class User {
 
+    username: string;
     name: string;
     birth: Date;
     country: string;
@@ -25,12 +26,15 @@ export class User {
     arrayPhone: Array<Phone>;
     authentication: Authentication;
 
-    constructor(name: string,
+    constructor(
+        username: string,
+        name: string,
         birth: Date,
         country: string,
         state: string,
         city: string,
         authentication: Authentication) {
+        this.username = username;
         this.arrayAddress = new Array<Address>();
         this.arrayPhone = new Array<Phone>();
         this.name = name;

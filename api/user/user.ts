@@ -3,15 +3,16 @@ import { Phone } from './phone';
 import { Authentication } from './authentication';
 
 export class User {
-    
+
+    username: string;
     name: string;
     nickname: string;
     mother: string;
     father: string;
-    uId: number;//rg
+    uId: number; // rg
     uIdEmitter: string;
     uIdState: number;
-    nUId: number;//cpf
+    nUId: number; // cpf
     birth: Date;
     birthState: number;
     nationality: string;
@@ -21,7 +22,9 @@ export class User {
     arrayPhone: Array<Phone>;
     authentication: Authentication;
 
-    constructor(name: string,
+    constructor(
+        username: string,
+        name: string,
         nickname: string,
         mother: string,
         father: string,
@@ -37,6 +40,7 @@ export class User {
         authentication: Authentication) {
         this.arrayAddress = new Array<Address>();
         this.arrayPhone = new Array<Phone>();
+        this.username = username;
         this.name = name;
         this.nickname = nickname;
         this.mother = mother;
@@ -52,5 +56,4 @@ export class User {
         this.role = role;
         this.authentication = authentication
     }
-
 }

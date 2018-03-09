@@ -3,42 +3,40 @@ import * as  crypto from 'crypto';
 
 export class Authentication {
 
-    username: string;
     passwordHash: string;
     salt: string;
     permission: Permission;
 
+    public static generatePasswordHashFromSalt(password: string, salt: string) {
+        let size: number = parseInt(process.env.POCKET_DOC_HASH_SIZE, 10); // 32
+        let keyMultiplier: number = parseInt(process.env.POCKET_DOC_HASH_MULTIPLIER, 10); // 4
+        let iterations: number = parseInt(process.env.POCKET_DOC_HASH_ITERATIONS, 10); // 1024
+        let digest: string = process.env.POCKET_DOC_HASH_DIGEST; // 'sha512'
 
-    constructor(username: string,
-        password: string,
+        let key = crypto.pbkdf2Sync(password, salt, iterations, (size * keyMultiplier), digest);
+
+        return { passwordHash: key.toString('hex'), salt: salt };
+    }
+
+    constructor(password: string,
         permission: Permission) {
-        this.username = username;
         let generated = this.generatePasswordHash(password);
         this.passwordHash = generated.passwordHash;
         this.salt = generated.salt;
         this.permission = permission;
     }
 
+
+
     private generatePasswordHash(password: string) {
-        let size: number = parseInt(process.env.POCKET_DOC_HASH_SIZE, 10);//32
-        let keyMultiplier: number = parseInt(process.env.POCKET_DOC_HASH_MULTIPLIER, 10);//4
-        let iterations: number = parseInt(process.env.POCKET_DOC_HASH_ITERATIONS, 10);//1024
-        let digest: string = process.env.POCKET_DOC_HASH_DIGEST;//'sha512'
+        let size: number = parseInt(process.env.POCKET_DOC_HASH_SIZE, 10); // 32
+        let keyMultiplier: number = parseInt(process.env.POCKET_DOC_HASH_MULTIPLIER, 10); // 4
+        let iterations: number = parseInt(process.env.POCKET_DOC_HASH_ITERATIONS, 10); // 1024
+        let digest: string = process.env.POCKET_DOC_HASH_DIGEST; // 'sha512'
 
         let salt = crypto.randomBytes(size).toString('hex');
         let key = crypto.pbkdf2Sync(password, salt, iterations, (size * keyMultiplier), digest);
 
-        return { passwordHash: key.toString('hex'), salt: salt };
-    }
-
-    public static generatePasswordHashFromSalt(password: string, salt: string) {
-        let size: number = parseInt(process.env.POCKET_DOC_HASH_SIZE, 10);//32
-        let keyMultiplier: number = parseInt(process.env.POCKET_DOC_HASH_MULTIPLIER, 10);//4
-        let iterations: number = parseInt(process.env.POCKET_DOC_HASH_ITERATIONS, 10);//1024
-        let digest: string = process.env.POCKET_DOC_HASH_DIGEST;//'sha512'
-
-        let key = crypto.pbkdf2Sync(password, salt, iterations, (size * keyMultiplier), digest);
-        
         return { passwordHash: key.toString('hex'), salt: salt };
     }
 }

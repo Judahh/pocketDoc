@@ -2,14 +2,11 @@ import { Permission } from './permission';
 
 export class Authentication {
 
-    username: string;
     password: string;
     permission: Permission;
 
-    constructor(username: string,
-        password: string,
+    constructor(password: string,
         permission?: Permission) {
-        this.username = username;
         this.password = password;
         if (permission) {
             this.permission = permission;

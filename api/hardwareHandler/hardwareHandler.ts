@@ -44,40 +44,32 @@ export class HardwareHandler extends BasicHardwareHandler {
 
     public addUser(device, user) {
         let _self = this;
-        this.handler.readArray('user', {}, (error, data) => {
+        this.handler.readArray('user', { 'username': user }, (error, data) => {
             for (let index = 0; index < data.length; index++) {
                 let element: User = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
-                if (element.authentication.username === user) {
-                    _self.devicePublish(device, 'user', element);
-                }
+                _self.devicePublish(device, 'user', element);
             }
         });
     }
 
     public removeUser(device, user) {
         let _self = this;
-        this.handler.readArray('user', {}, (error, data) => {
+        this.handler.readArray('user', { 'username': user }, (error, data) => {
             for (let index = 0; index < data.length; index++) {
                 let element: User = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
                 // console.log('index', index);
-                if (element.authentication.username === user) {
-                    // console.log('element', element);
-                    // console.log('device', device);
-                    _self.devicePublish(device, 'removeUser', element);
-                }
+                _self.devicePublish(device, 'removeUser', element);
             }
         });
     }
 
     public setUsers(device, user) {
         let _self = this;
-        this.handler.readArray('user', {}, (error, data) => {
+        this.handler.readArray('user', { 'username': user }, (error, data) => {
             let arrayUsers: Array<any> = new Array<any>();
             for (let index = 0; index < data.length; index++) {
                 let element: User = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
-                if (element.authentication.username === user) {
-                    arrayUsers.push(element);
-                }
+                arrayUsers.push(element);
             }
             _self.devicePublish(device, 'users', arrayUsers);
         });
@@ -116,7 +108,9 @@ export class HardwareHandler extends BasicHardwareHandler {
             user.authentication.permission = Permission.User;
         }
 
-        let newUser = new User(user.name,
+        let newUser = new User(
+            user.username,
+            user.name,
             user.nickname,
             user.mother,
             user.father,
@@ -129,12 +123,12 @@ export class HardwareHandler extends BasicHardwareHandler {
             user.nationality,
             user.email,
             user.role,
-            new Authentication(user.authentication.username,
+            new Authentication(
                 user.authentication.password,
                 user.authentication.permission));
         newUser.arrayAddress = user.arrayAddress;
         newUser.arrayPhone = user.arrayPhone;
-        this.handler.readArray('user', { 'username': newUser.authentication.username }, (error, data) => {
+        this.handler.readArray('user', { 'username': newUser.username }, (error, data) => {
             _self.signUpCheck(newUser, data, socket);
         });
 
@@ -162,18 +156,17 @@ export class HardwareHandler extends BasicHardwareHandler {
     public signInCheck(user, data, socket) {
         console.log(user);
         for (let index = 0; index < data.length; index++) {
+            console.log(user);
             let element = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
-            if (user.username === element.authentication.username) {
-                let hash = Authentication.generatePasswordHashFromSalt(user.password, element.authentication.salt);
-                if (element.authentication.passwordHash === hash.passwordHash) {
-                    let logged = element;
-                    delete logged.authentication.passwordHash;
-                    delete logged.authentication.salt;
-                    socket.identification.user = logged;
-                    socket.identification.device = user.device;
-                    socket.emit('userManegement', { user: logged });
-                    return;
-                }
+            let hash = Authentication.generatePasswordHashFromSalt(user.password, element.authentication.salt);
+            if (element.authentication.passwordHash === hash.passwordHash) {
+                let logged = element;
+                delete logged.authentication.passwordHash;
+                delete logged.authentication.salt;
+                socket.identification.user = logged;
+                socket.identification.device = user.device;
+                socket.emit('userManegement', { user: logged });
+                return;
             }
         }
         // console.log('ERROR')
