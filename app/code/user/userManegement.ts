@@ -226,37 +226,26 @@ export class UserManegement extends AppObject {
     }
 
     public log(data) {
+        let userManegement;
+        if (this !== undefined) {
+            userManegement = this;
+        } else {
+            userManegement = UserManegement.getInstance();
+        }
         if (data.userManegement !== undefined) {
-            // console.log(this);
-            // console.log(UserManegement.getInstance());
-            if (!data.userManegement.user) {
-                let header = this.getHeader();
-                (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('wrongUser');
-            } else {
-                if (this !== undefined) {
-                    // console.log('A');
-                    let header = this.getHeader();
-                    (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
-                    this.goTo('home');
-                    this.refreshHeader();
-                    this.getInfo(data.userManegement.user);
-                } else {
-                    // console.log('B');
-                    let header = UserManegement.getInstance().getHeader();
-                    (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
-                    UserManegement.getInstance().goTo('home');
-                    UserManegement.getInstance().refreshHeader();
-                    UserManegement.getInstance().getInfo(data.userManegement.user);
-                }
-            }
-            if (this !== undefined) {
-                this.logged = data.userManegement.user;
-                this.publishSign(data.userManegement.user !== undefined);
-            } else {
-                UserManegement.getInstance().logged = data.userManegement.user;
-                UserManegement.getInstance().publishSign(data.userManegement.user !== undefined);
+            if (data.userManegement.user !== undefined) {
+                let header = userManegement.getHeader();
+                (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
+                userManegement.goTo('home');
+                userManegement.refreshHeader();
+                userManegement.getInfo(data.userManegement.user);
+            } else if (data.userManegement.error !== undefined) {
+                let header = userManegement.getHeader();
+                (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification(data.userManegement.error);
             }
 
+            userManegement.logged = data.userManegement.user;
+            userManegement.publishSign(data.userManegement.user !== undefined);
         }
     }
 

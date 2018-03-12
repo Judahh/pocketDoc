@@ -137,7 +137,7 @@ export class HardwareHandler extends BasicHardwareHandler {
     public signUpCheck(user, data, socket) {
         console.log(user);
         if (data.length > 0) {
-            socket.emit('userManegement', {});
+            socket.emit('userManegement', { error: 'userExists' });
         } else {
             let event = new Event(Operation.add, 'user', user);
             this.handler.addEvent(event);
@@ -170,7 +170,7 @@ export class HardwareHandler extends BasicHardwareHandler {
             }
         }
         // console.log('ERROR')
-        socket.emit('userManegement', {});
+        socket.emit('userManegement', { error: 'wrongUser' });
     }
 
     public getVideos() {
