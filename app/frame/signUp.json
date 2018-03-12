@@ -62,8 +62,7 @@
                         {
                             "type": "ComponentDivisor",
                             "element": {
-                                "style": {
-                                }
+                                "style": {}
                             },
                             "arrayAppObject": [
                                 {
@@ -95,8 +94,7 @@
                         {
                             "type": "ComponentDivisor",
                             "element": {
-                                "style": {
-                                }
+                                "style": {}
                             },
                             "arrayAppObject": [
                                 {
@@ -153,8 +151,7 @@
                         {
                             "type": "ComponentDivisor",
                             "element": {
-                                "style": {
-                                }
+                                "style": {}
                             },
                             "arrayAppObject": [
                                 {
@@ -210,8 +207,7 @@
                         {
                             "type": "ComponentDivisor",
                             "element": {
-                                "style": {
-                                }
+                                "style": {}
                             },
                             "arrayAppObject": [
                                 {
@@ -226,15 +222,42 @@
                                     },
                                     "arrayAppObject": [
                                         {
-                                            "type": "ComponentTextField",
+                                            "type": "ComponentComboBox",
                                             "element": {
                                                 "style": {
                                                     "color": "white",
-                                                    "border-bottom": "1px solid white",
+                                                    "width": "100%",
+                                                    "border": "1px solid white",
                                                     "opacity": 1
                                                 },
                                                 "placeholder": "role"
-                                            }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentOption",
+                                                    "element": {
+                                                        "value":"",
+                                                        "selected": true,
+                                                        "hidden": true,
+                                                        "disabled": true
+                                                    },
+                                                    "information": "role"
+                                                },
+                                                {
+                                                    "type": "ComponentOption",
+                                                    "element": {
+                                                        "value":"0"
+                                                    },
+                                                    "information": "user"
+                                                },
+                                                {
+                                                    "type": "ComponentOption",
+                                                    "element": {
+                                                        "value":"1"
+                                                    },
+                                                    "information": "operator"
+                                                }
+                                            ]
                                         }
                                     ]
                                 }
@@ -243,8 +266,7 @@
                         {
                             "type": "ComponentDivisor",
                             "element": {
-                                "style": {
-                                }
+                                "style": {}
                             },
                             "arrayAppObject": [
                                 {
@@ -291,8 +313,7 @@
                                                     "opacity": 1
                                                 },
                                                 "placeholder": "password",
-                                                "type":"password"
-
+                                                "type": "password"
                                             }
                                         }
                                     ]
@@ -317,7 +338,7 @@
                                                     "opacity": 1
                                                 },
                                                 "placeholder": "confirmPassword",
-                                                "type":"password"
+                                                "type": "password"
                                             }
                                         }
                                     ]
