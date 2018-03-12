@@ -2,21 +2,21 @@
     {
         "language":"en",
         "title":"PocketDoc",
-        "error":"Incorrect User or Password!"
+        "error":"User already exists!"
     },
     {
         "language":"en-US",
         "title":"PocketDoc",
-        "error":"Incorrect User or Password!"
+        "error":"User already exists!"
     },
     {
         "language":"pt-BR",
         "title":"PocketDoc",
-        "error":"Usuário ou Senha Incorreto!"
+        "error":"Usuário já existente!"
     },
     {
         "language":"pt",
         "title":"PocketDoc",
-        "error":"Usuário ou Senha Incorreto!"
+        "error":"Usuário já existente!"
     }
 ]
