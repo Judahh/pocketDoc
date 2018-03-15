@@ -26,6 +26,11 @@ Debian/Ubuntu:
 ```sh
 $ sudo apt-get install git git-all network-manager chromium-browser xinit mongodb
 ```
+If Raspberry Language Error:
+```sh
+$ export LC_ALL="en_GB.UTF-8"
+$ export LANGUAGE="en_GB.UTF-8"
+```
 
 ### Project
 [https://github.com/creationix/nvm]
