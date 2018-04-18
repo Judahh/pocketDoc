@@ -249,15 +249,44 @@ export class UserManegement extends AppObject {
         }
     }
 
+    public isNotLogged(component?) {
+        let userManegement;
+        if (this !== undefined) {
+            userManegement = this;
+        } else {
+            userManegement = UserManegement.getInstance();
+        }
+        return !userManegement.isLogged(component);
+    }
+
     public isLogged(component?) {
+        console.log('component:', component);
+        let userManegement;
+        let logged;
+        let link;
+        if (this !== undefined) {
+            userManegement = this;
+        } else {
+            userManegement = UserManegement.getInstance();
+        }
+
         if (component !== undefined) {
-            if (this !== undefined) {
-                this.menu = component;
+            if (userManegement.menu === undefined) {
+                userManegement.menu = component;
             } else {
-                UserManegement.getInstance().menu = component;
+                link = component;
             }
         }
-        return (UserManegement.getInstance().logged !== undefined);
+        // console.log('MENU:' + this.menu);
+        // console.log('MENU2:' + userManegement.menu);
+        // console.log('COMPONENT:' + component);
+        // console.log('LOGGED:' + userManegement.logged);
+        // console.log('userManegement:', userManegement);
+        // console.log('logged:', userManegement.logged);
+        // console.log('logged:', userManegement['logged']);
+
+        logged = (userManegement['logged'] !== undefined);
+        return logged;
     }
 
     public goToLogin() {
