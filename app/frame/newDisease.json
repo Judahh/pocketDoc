@@ -79,7 +79,8 @@
                                             "padding": "5px",
                                             "width": "100%",
                                             "height": "75vh",
-                                            "box-sizing": "border-box"
+                                            "box-sizing": "border-box",
+                                            "overflow": "auto"
                                         }
                                     },
                                     "arrayAppObject": [
@@ -110,7 +111,7 @@
                                                     "arrayAppObject": [
                                                         {
                                                             "type": "ComponentInformation",
-                                                            "information": "title",
+                                                            "information": "symptom",
                                                             "element": {
                                                                 "className": "ClassOpenSans",
                                                                 "style": {
@@ -141,8 +142,8 @@
                                                                 {
                                                                     "name": "click",
                                                                     "appObject": {},
-                                                                    "runFunction": "signUp(this)",
-                                                                    "code": "UserManegement"
+                                                                    "runFunction": "delete(this)",
+                                                                    "code": "Disease"
                                                                 }
                                                             ],
                                                             "element": {
@@ -188,8 +189,8 @@
                                                                 {
                                                                     "name": "click",
                                                                     "appObject": {},
-                                                                    "runFunction": "signUp(this)",
-                                                                    "code": "UserManegement"
+                                                                    "runFunction": "edit(this)",
+                                                                    "code": "Disease"
                                                                 }
                                                             ],
                                                             "element": {
@@ -227,7 +228,9 @@
                         {
                             "type": "ComponentDivisor",
                             "element": {
-                                "style": {}
+                                "style": {
+                                    "padding-top": "5px"
+                                }
                             },
                             "arrayAppObject": [
                                 {
@@ -235,9 +238,10 @@
                                     "element": {
                                         "style": {
                                             "display": "inline-flex",
-                                            "padding": "5px",
-                                            "width": "100%",
-                                            "box-sizing": "border-box"
+                                            "padding": "10px 5px 0px 0px",
+                                            "width": "calc(100% - 25px)",
+                                            "box-sizing": "border-box",
+                                            "float": "left"
                                         }
                                     },
                                     "arrayAppObject": [
@@ -260,14 +264,15 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "signUp(this)",
-                                            "code": "UserManegement"
+                                            "runFunction": "new(this)",
+                                            "code": "Disease"
                                         }
                                     ],
                                     "element": {
                                         "style": {
                                             "display": "inline-flex",
-                                            "box-sizing": "border-box"
+                                            "box-sizing": "border-box",
+                                            "float": "right"
                                         }
                                     },
                                     "arrayAppObject": [
@@ -275,10 +280,10 @@
                                             "type": "ComponentInformation",
                                             "information": "",
                                             "element": {
-                                                "className": "fas fa-plus",
+                                                "className": "far fa-plus-square",
                                                 "style": {
                                                     "width": "100%",
-                                                    "font-size": "20px",
+                                                    "font-size": "28px",
                                                     "text-align": "center",
                                                     "color": "white",
                                                     "box-sizing": "border-box"

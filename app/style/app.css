@@ -235,3 +235,17 @@ input[type="date"]:before {
 input[type="date"]:focus:before {
     content: '' !important;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(255,255,255,0);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0);
+}
+  
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,1);
+    border-radius:10px;
+}
