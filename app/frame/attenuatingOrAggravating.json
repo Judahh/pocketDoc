@@ -239,7 +239,7 @@
                                         "style": {
                                             "display": "inline-flex",
                                             "padding": "10px 5px 0px 0px",
-                                            "width": "calc(70% - 30px)",
+                                            "width": "calc(55% - 40px)",
                                             "box-sizing": "border-box",
                                             "float": "left"
                                         }
@@ -263,13 +263,76 @@
                                     "element": {
                                         "style": {
                                             "color": "white",
-                                            "width": "30%",
+                                            "width": "15%",
                                             "margin-right": "5px",
                                             "margin-top": "6px",
                                             "border": "1px solid white",
                                             "opacity": 1
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentOption",
+                                            "element": {
+                                                "value":"",
+                                                "selected": true,
+                                                "hidden": true,
+                                                "disabled": true
+                                            },
+                                            "information": "type"
                                         },
-                                        "placeholder": "role"
+                                        {
+                                            "type": "ComponentOption",
+                                            "element": {
+                                                "value":"-"
+                                            },
+                                            "information": "attenuating"
+                                        },
+                                        {
+                                            "type": "ComponentOption",
+                                            "element": {
+                                                "value":"+"
+                                            },
+                                            "information": "aggravating"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ComponentDataInput",
+                                    "element": {
+                                        "style": {
+                                            "display": "inline-flex",
+                                            "padding": "10px 5px 0px 0px",
+                                            "width": "calc(15%)",
+                                            "box-sizing": "border-box",
+                                            "float": "left"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentTextField",
+                                            "element": {
+                                                "style": {
+                                                    "color": "white",
+                                                    "border-bottom": "1px solid white",
+                                                    "opacity": 1
+                                                },
+                                                "placeholder": "intensity"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "ComponentComboBox",
+                                    "element": {
+                                        "style": {
+                                            "color": "white",
+                                            "width": "15%",
+                                            "margin-right": "5px",
+                                            "margin-top": "6px",
+                                            "border": "1px solid white",
+                                            "opacity": 1
+                                        }
                                     },
                                     "arrayAppObject": [
                                         {
