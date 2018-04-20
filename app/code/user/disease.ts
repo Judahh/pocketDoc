@@ -21,7 +21,6 @@ export class Disease extends AppObject {
     }
 
     public init(){
-
     }
 
     public subscribeSign(callback) {

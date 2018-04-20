@@ -1,0 +1,22 @@
+[
+    {
+        "language":"en",
+        "newSymptom":"New Symptom",
+        "symptom":"Symptom"
+    },
+    {
+        "language":"en-US",
+        "newSymptom":"New Symptom",
+        "symptom":"Symptom"
+    },
+    {
+        "language":"pt",
+        "newSymptom":"Novo Sintoma",
+        "symptom":"Sintoma"
+    },
+    {
+        "language":"pt-BR",
+        "newSymptom":"Novo Sintoma",
+        "symptom":"Sintoma"
+    }
+]
