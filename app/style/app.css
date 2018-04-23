@@ -249,3 +249,25 @@ input[type="date"]:focus:before {
     background-color: rgba(255,255,255,1);
     border-radius:10px;
 }
+
+input.ClassStar[type=checkbox] + label:before {
+    content: "\F005"; 
+    opacity: 0.5;
+} /* unchecked icon */
+
+input.ClassStar[type=checkbox] + label:before {
+    letter-spacing: 0px; 
+} /* space between checkbox and label */
+
+input.ClassStar[type=checkbox]:checked + label:before {
+    content: "\F005"; 
+    opacity: 1;
+} /* checked icon */
+
+input.ClassStar[type=checkbox]:checked + label:before {
+    letter-spacing: 0px; 
+} /* allow space for check mark */
+
+label{
+    color: white;
+}

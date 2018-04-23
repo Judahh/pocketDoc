@@ -448,7 +448,7 @@
                                     "arrayAppObjectEvent": [
                                         {
                                             "name": "router",
-                                            "link": "attenuatingOrAggravating",
+                                            "link": "trust",
                                             "runFunction": "isLogged",
                                             "code": "UserManegement"
                                         },

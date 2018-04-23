@@ -1,0 +1,310 @@
+{
+    "background": {
+        "element": {
+            "style": {
+                "background-color": "dodgerblue",
+                "opacity": 1,
+                "visibility": "visible",
+                "position": "fixed",
+                "filter": "brightness(100%) grayscale(0%) blur(0px)",
+                "zIndex": -1000,
+                "max-width": "inherit",
+                "max-height": "inherit",
+                "width": "100%",
+                "height": "100%",
+                "text-align": "center",
+                "justify-content": "center",
+                "display": "flex",
+                "align-items": "center",
+                "mix-blend-mode": "difference"
+            }
+        },
+        "arrayAppObject": [
+            {
+                "type": "ComponentFontAwesome",
+                "element": {
+                    "style": {
+                        "color": "rgba(0,0,0,0.3)",
+                        "color": "rgba(255,255,255,0.3)",
+                        "color": "rgba(0,0,0,0.1)",
+                        "color": "rgba(255,255,255,0.1)",
+                        "font-size": "70vw"
+                    },
+                    "className": "fas fa-user-md"
+                }
+            }
+        ]
+    },
+    "arrayAppObject": [
+        {
+            "type": "ComponentDivisor",
+            "element": {
+                "style": {
+                    "height": "100%",
+                    "text-align": "center",
+                    "justify-content": "center",
+                    "display": "flex",
+                    "align-items": "center",
+                    "margin-left": "-10px"
+                }
+            },
+            "arrayAppObject": [
+                {
+                    "type": "ComponentDivisor",
+                    "element": {
+                        "style": {
+                            "width": "85%",
+                            "border": "solid 1px white",
+                            "padding": "5px",
+                            "box-sizing": "border-box"
+                        }
+                    },
+                    "arrayAppObject": [
+                        {
+                            "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "padding-top": "5px"
+                                }
+                            },
+                            "arrayAppObject": [
+                                {
+                                    "type": "ComponentDivisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "inline-flex",
+                                            "box-sizing": "border-box",
+                                            "padding": "10px"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "trust",
+                                            "element": {
+                                                "className": "ClassOpenSans",
+                                                "style": {
+                                                    "width": "100%",
+                                                    "font-size": "28px",
+                                                    "text-align": "center",
+                                                    "color": "white",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "padding-top": "5px"
+                                }
+                            },
+                            "arrayAppObject": [
+                                {
+                                    "type": "ComponentDivisor",
+                                    "element": {
+                                        "style": {
+                                            "display": "inline-flex",
+                                            "box-sizing": "border-box",
+                                            "padding": "10px"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentDataInput",
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-flex",
+                                                    "padding": "5px",
+                                                    "width": "100%",
+                                                    "font-size": "30px",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentBox",
+                                                    "element": {
+                                                        "className": "ClassStar",
+                                                        "placeholder": "audio",
+                                                        "type":"checkbox"
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "information": "audio"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ComponentDataInput",
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-flex",
+                                                    "padding": "5px",
+                                                    "width": "100%",
+                                                    "font-size": "30px",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentBox",
+                                                    "element": {
+                                                        "className": "ClassStar",
+                                                        "placeholder": "audio",
+                                                        "type":"checkbox"
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "information": "audio"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ComponentDataInput",
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-flex",
+                                                    "padding": "5px",
+                                                    "width": "100%",
+                                                    "font-size": "30px",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentBox",
+                                                    "element": {
+                                                        "className": "ClassStar",
+                                                        "placeholder": "audio",
+                                                        "type":"checkbox"
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "information": "audio"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ComponentDataInput",
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-flex",
+                                                    "padding": "5px",
+                                                    "width": "100%",
+                                                    "font-size": "30px",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentBox",
+                                                    "element": {
+                                                        "className": "ClassStar",
+                                                        "placeholder": "audio",
+                                                        "type":"checkbox"
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "information": "audio"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ComponentDataInput",
+                                            "element": {
+                                                "style": {
+                                                    "display": "inline-flex",
+                                                    "padding": "5px",
+                                                    "width": "100%",
+                                                    "font-size": "30px",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentBox",
+                                                    "element": {
+                                                        "className": "ClassStar",
+                                                        "placeholder": "audio",
+                                                        "type":"checkbox"
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "information": "audio"
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "ComponentDivisor",
+                            "element": {
+                                "style": {
+                                    "padding-top": "5px"
+                                }
+                            },
+                            "arrayAppObject": [
+                                {
+                                    "type": "ComponentDivisor",
+                                    "arrayAppObjectEvent": [
+                                        {
+                                            "name": "click",
+                                            "appObject": {},
+                                            "runFunction": "next(this)",
+                                            "code": "Disease"
+                                        }
+                                    ],
+                                    "element": {
+                                        "style": {
+                                            "display": "inline-flex",
+                                            "box-sizing": "border-box",
+                                            "padding": "10px"
+                                        }
+                                    },
+                                    "arrayAppObject": [
+                                        {
+                                            "type": "ComponentInformation",
+                                            "information": "",
+                                            "element": {
+                                                "className": "fas fa-chevron-right",
+                                                "style": {
+                                                    "width": "100%",
+                                                    "font-size": "28px",
+                                                    "text-align": "center",
+                                                    "color": "white",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
