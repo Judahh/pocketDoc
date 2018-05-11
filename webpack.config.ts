@@ -44,10 +44,6 @@ const config: webpack.Configuration = {
             {
                 test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
                 use: ['url-loader']
-            },
-            {
-                test: /\.tsx?$/,
-                use: 'ts-loader'
             }
         ]
     },
