@@ -250,7 +250,12 @@ input[type="date"]:focus:before {
     border-radius:10px;
 }
 
+input.ClassStar[type=checkbox]{
+    font-family: Font Awesome\ 5 Free;
+}
+
 input.ClassStar[type=checkbox] + label:before {
+    font-family: Font Awesome\ 5 Free;
     content: "\F005"; 
     opacity: 0.5;
 } /* unchecked icon */
@@ -260,6 +265,7 @@ input.ClassStar[type=checkbox] + label:before {
 } /* space between checkbox and label */
 
 input.ClassStar[type=checkbox]:checked + label:before {
+    font-family: Font Awesome\ 5 Free;
     content: "\F005"; 
     opacity: 1;
 } /* checked icon */
