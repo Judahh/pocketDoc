@@ -448,7 +448,7 @@
                                     "arrayAppObjectEvent": [
                                         {
                                             "name": "router",
-                                            "link": "place",
+                                            "link": "how",
                                             "runFunction": "isLogged",
                                             "code": "UserManegement"
                                         },

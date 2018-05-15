@@ -214,8 +214,8 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "next(this)",
-                                            "code": "Disease"
+                                            "runFunction": "getQuantity(this)",
+                                            "code": "UserInterface"
                                         }
                                     ],
                                     "element": {
