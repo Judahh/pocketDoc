@@ -36,17 +36,43 @@ export class UserInterface extends AppObject {
         // console.log(element.checked);
     }
 
-    public getTrust(component: Component){
+    public getTrust(component: Component) {
         let fatherComponent = component.getFather().getFather().getFather().arrayAppObject[1].arrayAppObject[0];
         console.log(fatherComponent.arrayAppObject);
         let number = 0;
         for (let index = 0; index < fatherComponent.arrayAppObject.length; index++) {
             let element = fatherComponent.arrayAppObject[index].arrayAppObject[0].getElement();
-            if(element.checked){
+            if (element.checked) {
                 number++;
             }
         }
         number = number * 20;
+        //next
+    }
+
+    public getDisease(component: Component) {
+        let textComponent = component.getFather().getFather().arrayAppObject[0].arrayAppObject[0];
+        let textElement = textComponent.getElement();
+        // console.log(textElement.value);
+        let symptom = textElement.value;
+        //next
+    }
+
+    public getPlace(component: Component) {
+        console.log(component);
+        let fatherComponent = component.getFather().getFather().getFather();
+        let areaElement = fatherComponent.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0].getElement();
+        let referredElement = fatherComponent.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0].getElement();
+        let depthElement = fatherComponent.arrayAppObject[2].arrayAppObject[0].arrayAppObject[0].getElement();
+        let area = areaElement.value;
+        let referred = referredElement.value;
+        let depth = depthElement.value;
+
+        let place = {
+            area: area,
+            referred: referred,
+            depth: depth
+        }
         //next
     }
 }

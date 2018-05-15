@@ -264,8 +264,8 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "new(this)",
-                                            "code": "Disease"
+                                            "runFunction": "getDisease(this)",
+                                            "code": "UserInterface"
                                         }
                                     ],
                                     "element": {
