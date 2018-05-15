@@ -133,10 +133,12 @@
                                                         "placeholder": "audio",
                                                         "type":"checkbox"
                                                     },
-                                                    "arrayAppObject": [
+                                                    "arrayAppObjectEvent": [
                                                         {
-                                                            "type": "ComponentInformation",
-                                                            "information": "audio"
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "rating(this)",
+                                                            "code": "UserInterface"
                                                         }
                                                     ]
                                                 }
@@ -161,10 +163,12 @@
                                                         "placeholder": "audio",
                                                         "type":"checkbox"
                                                     },
-                                                    "arrayAppObject": [
+                                                    "arrayAppObjectEvent": [
                                                         {
-                                                            "type": "ComponentInformation",
-                                                            "information": "audio"
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "rating(this)",
+                                                            "code": "UserInterface"
                                                         }
                                                     ]
                                                 }
@@ -189,10 +193,12 @@
                                                         "placeholder": "audio",
                                                         "type":"checkbox"
                                                     },
-                                                    "arrayAppObject": [
+                                                    "arrayAppObjectEvent": [
                                                         {
-                                                            "type": "ComponentInformation",
-                                                            "information": "audio"
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "rating(this)",
+                                                            "code": "UserInterface"
                                                         }
                                                     ]
                                                 }
@@ -217,10 +223,12 @@
                                                         "placeholder": "audio",
                                                         "type":"checkbox"
                                                     },
-                                                    "arrayAppObject": [
+                                                    "arrayAppObjectEvent": [
                                                         {
-                                                            "type": "ComponentInformation",
-                                                            "information": "audio"
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "rating(this)",
+                                                            "code": "UserInterface"
                                                         }
                                                     ]
                                                 }
@@ -245,10 +253,12 @@
                                                         "placeholder": "audio",
                                                         "type":"checkbox"
                                                     },
-                                                    "arrayAppObject": [
+                                                    "arrayAppObjectEvent": [
                                                         {
-                                                            "type": "ComponentInformation",
-                                                            "information": "audio"
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "rating(this)",
+                                                            "code": "UserInterface"
                                                         }
                                                     ]
                                                 }

@@ -7,9 +7,9 @@ import { Wifi } from './../wifi/wifi';
 import { Disk } from './../disk/disk';
 import { UserManegement } from './../user/userManegement';
 import { Stream } from './../stream/stream';
-import { Languages } from './../languages/Languages';
+import { Languages } from './../languages/languages';
 import { Keyboard } from './../keyboard/keyboard';
-import { Operations } from './../operations/operations';
+import { UserInterface } from './../user/userInterface';
 import * as loader from './../onLoad/loader';
 // tslint:disable-next-line:no-empty
 try { require('./../../style/app.css'); } catch (e) { console.log('ERROR FONT'); };
@@ -29,7 +29,7 @@ export {
     Disk,
     Stream,
     Keyboard,
-    Operations,
+    UserInterface,
     Languages,
     UserManegement
 };
