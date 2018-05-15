@@ -122,4 +122,20 @@ export class UserInterface extends AppObject {
         console.log(type);
         //next
     }
+
+    public getCircumstance(component: Component) {
+        console.log(component);
+        let fatherComponent = component.getFather().getFather().getFather().getFather().arrayAppObject[1];
+        console.log(fatherComponent);
+        let circumstanceElement = fatherComponent.arrayAppObject[0].arrayAppObject[0].getElement();
+        let timeElement = fatherComponent.arrayAppObject[1].getElement();
+        let variable = circumstanceElement.value;//alias
+        let time = timeElement.selectedIndex;
+        let circumstance = {
+            variable: variable,
+            time: time
+        }
+        // console.log(circumstance);
+        //next
+    }
 }
