@@ -35,4 +35,18 @@ export class UserInterface extends AppObject {
         let element = (<HTMLInputElement>currentComponent.getElement());
         // console.log(element.checked);
     }
+
+    public getTrust(component: Component){
+        let fatherComponent = component.getFather().getFather().getFather().arrayAppObject[1].arrayAppObject[0];
+        console.log(fatherComponent.arrayAppObject);
+        let number = 0;
+        for (let index = 0; index < fatherComponent.arrayAppObject.length; index++) {
+            let element = fatherComponent.arrayAppObject[index].arrayAppObject[0].getElement();
+            if(element.checked){
+                number++;
+            }
+        }
+        number = number * 20;
+        //next
+    }
 }
