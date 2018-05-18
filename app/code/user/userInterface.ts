@@ -1,14 +1,13 @@
 import { ServiceModel, AppObject, Component, ComponentDataInput, ComponentOption, ComponentComboBox } from 'backappjh';
 
 export class UserInterface extends AppObject {
-    private static languages: Array<any>;
-
-    public static getLanguages() {
-        return this.languages;
-    }
+    private arrayAttenuatingOrAggravating: Array<any>;
+    private arrayCircumstance: Array<any>;
 
     constructor(father?: Component) {
         super(father);
+        this.arrayAttenuatingOrAggravating = new Array();
+        this.arrayCircumstance = new Array();
     }
 
     public run() {
@@ -123,10 +122,10 @@ export class UserInterface extends AppObject {
         //next
     }
 
-    public getCircumstance(component: Component) {
-        console.log(component);
+    public addCircumstance(component: Component) {
+        // console.log(component);
         let fatherComponent = component.getFather().getFather().getFather().getFather().arrayAppObject[1];
-        console.log(fatherComponent);
+        // console.log(fatherComponent);
         let circumstanceElement = fatherComponent.arrayAppObject[0].arrayAppObject[0].getElement();
         let timeElement = fatherComponent.arrayAppObject[1].getElement();
         let variable = circumstanceElement.value;//alias
@@ -136,6 +135,75 @@ export class UserInterface extends AppObject {
             time: time
         }
         // console.log(circumstance);
+        //next
+    }
+
+    public addAttenuatingOrAggravating(component: Component) {
+        // console.log(component);
+        let fatherComponent = component.getFather().getFather().getFather().arrayAppObject[1];
+        // console.log(fatherComponent);
+        let circumstanceElement = fatherComponent.arrayAppObject[0].arrayAppObject[0].getElement();
+        let intensityElement = fatherComponent.arrayAppObject[2].arrayAppObject[0].getElement();
+        let typeElement = fatherComponent.arrayAppObject[1].getElement();
+        let timeElement = fatherComponent.arrayAppObject[3].getElement();
+        let variable = circumstanceElement.value;//alias
+        let intensity = intensityElement.value;//alias
+        let time = timeElement.selectedIndex;
+        let type = typeElement.selectedIndex;
+        let circumstance = {
+            variable: variable,
+            intensity: intensity,
+            type: type,
+            time: time
+        }
+        this.arrayAttenuatingOrAggravating.push(circumstance);
+        // console.log(this.arrayAttenuatingOrAggravating);
+        this.updateAttenuatingOrAggravating(component);
+    }
+
+    private updateAttenuatingOrAggravating(component: Component){
+        console.log(component);
+        let fatherComponent = component.getFather().getFather().getFather().arrayAppObject[0].arrayAppObject[0];
+        console.log(fatherComponent);
+        let lineComponent = fatherComponent.arrayAppObject[0];
+        let cell0Component = lineComponent.arrayAppObject[0];
+        let cell1Component = lineComponent.arrayAppObject[1];
+        let cell2Component = lineComponent.arrayAppObject[2];
+        console.log(lineComponent);
+        let newLineComponent = new Component('tr', fatherComponent);
+        newLineComponent.getElement().style.color = lineComponent.getElement().style.color;
+        newLineComponent.getElement().style.border = lineComponent.getElement().style.border;
+        newLineComponent.getElement().style.opacity = lineComponent.getElement().style.opacity;
+        newLineComponent.getElement().style.height = lineComponent.getElement().style.height;
+        newLineComponent.getElement().style.width = lineComponent.getElement().style.width;
+        newLineComponent.getElement().style.boxSizing = lineComponent.getElement().style.boxSizing;
+
+        let newCell0Component = new Component('th', newLineComponent);
+        newCell0Component.getElement().style.color = cell0Component.getElement().style.color;
+        newCell0Component.getElement().style.opacity = cell0Component.getElement().style.opacity;
+        newCell0Component.getElement().style.padding = cell0Component.getElement().style.padding;
+        newCell0Component.getElement().style.cssFloat = cell0Component.getElement().style.cssFloat;
+        newCell0Component.getElement().style.boxSizing = cell0Component.getElement().style.boxSizing;
+        let componentInformation = new Component('a', newCell0Component);
+
+        let newCell1Component = new Component('th', newLineComponent);
+        newCell1Component.getElement().style.color = cell1Component.getElement().style.color;
+        newCell1Component.getElement().style.opacity = cell1Component.getElement().style.opacity;
+        newCell1Component.getElement().style.padding = cell1Component.getElement().style.padding;
+        newCell1Component.getElement().style.cssFloat = cell1Component.getElement().style.cssFloat;
+        newCell1Component.getElement().style.boxSizing = cell1Component.getElement().style.boxSizing;
+
+        let newCell2Component = new Component('th', newLineComponent);
+        newCell2Component.getElement().style.color = cell2Component.getElement().style.color;
+        newCell2Component.getElement().style.opacity = cell2Component.getElement().style.opacity;
+        newCell2Component.getElement().style.padding = cell2Component.getElement().style.padding;
+        newCell2Component.getElement().style.cssFloat = cell2Component.getElement().style.cssFloat;
+        newCell2Component.getElement().style.boxSizing = cell2Component.getElement().style.boxSizing;
+
+    }
+
+    public getAttenuatingOrAggravating(component: Component) {
+        console.log(this.arrayAttenuatingOrAggravating);
         //next
     }
 }

@@ -93,7 +93,8 @@
                                                     "opacity": 1,
                                                     "height": "fit-content",
                                                     "width": "100%",
-                                                    "box-sizing": "border-box"
+                                                    "box-sizing": "border-box",
+                                                    "visibility": "hidden"
                                                 }
                                             },
                                             "arrayAppObject": [
@@ -317,6 +318,7 @@
                                                     "border-bottom": "1px solid white",
                                                     "opacity": 1
                                                 },
+                                                "type": "number",
                                                 "placeholder": "intensity"
                                             }
                                         }
@@ -374,8 +376,8 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "new(this)",
-                                            "code": "Disease"
+                                            "runFunction": "addAttenuatingOrAggravating(this)",
+                                            "code": "UserInterface"
                                         }
                                     ],
                                     "element": {
@@ -426,8 +428,8 @@
                                                 {
                                                     "name": "click",
                                                     "appObject": {},
-                                                    "runFunction": "next(this)",
-                                                    "code": "Disease"
+                                                    "runFunction": "getAttenuatingOrAggravating(this)",
+                                                    "code": "UserInterface"
                                                 }
                                             ],
                                             "element": {
