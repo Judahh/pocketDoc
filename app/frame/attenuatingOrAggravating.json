@@ -72,7 +72,7 @@
                             },
                             "arrayAppObject": [
                                 {
-                                    "type": "ComponentTable",
+                                    "type": "ComponentList",
                                     "element": {
                                         "style": {
                                             "width": "100%",
@@ -82,7 +82,7 @@
                                     },
                                     "arrayAppObject": [
                                         {
-                                            "type": "ComponentTableLine",
+                                            "type": "ComponentListItem",
                                             "element": {
                                                 "style": {
                                                     "border": "1px solid white",
@@ -208,7 +208,7 @@
                                             ]
                                         },
                                         {
-                                            "type": "ComponentTableLine",
+                                            "type": "ComponentListItem",
                                             "element": {
                                                 "style": {
                                                     "border": "1px solid white",

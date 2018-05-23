@@ -7,7 +7,7 @@ import { Wifi } from './../wifi/wifi';
 import { Disk } from './../disk/disk';
 import { UserManegement } from './../user/userManegement';
 import { Stream } from './../stream/stream';
-import { Languages } from './../languages/languages';
+// import { Languages } from './../languages/languages';
 import { Keyboard } from './../keyboard/keyboard';
 import { UserInterface } from './../user/userInterface';
 import * as loader from './../onLoad/loader';
@@ -30,6 +30,6 @@ export {
     Stream,
     Keyboard,
     UserInterface,
-    Languages,
+    // Languages,
     UserManegement
 };
