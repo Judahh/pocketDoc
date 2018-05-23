@@ -170,7 +170,7 @@ export class UserInterface extends AppObject {
         let cell1Component = lineComponent.arrayAppObject[1];
         let cell2Component = lineComponent.arrayAppObject[2];
         console.log(lineComponent);
-        let newLineComponent = new Component('tr', fatherComponent);
+        let newLineComponent = new Component('li', fatherComponent);
         newLineComponent.getElement().style.color = lineComponent.getElement().style.color;
         newLineComponent.getElement().style.border = lineComponent.getElement().style.border;
         newLineComponent.getElement().style.opacity = lineComponent.getElement().style.opacity;
@@ -178,27 +178,44 @@ export class UserInterface extends AppObject {
         newLineComponent.getElement().style.width = lineComponent.getElement().style.width;
         newLineComponent.getElement().style.boxSizing = lineComponent.getElement().style.boxSizing;
 
-        let newCell0Component = new Component('th', newLineComponent);
+        let newCell0Component = new Component('div', newLineComponent);
         newCell0Component.getElement().style.color = cell0Component.getElement().style.color;
         newCell0Component.getElement().style.opacity = cell0Component.getElement().style.opacity;
         newCell0Component.getElement().style.padding = cell0Component.getElement().style.padding;
         newCell0Component.getElement().style.cssFloat = cell0Component.getElement().style.cssFloat;
         newCell0Component.getElement().style.boxSizing = cell0Component.getElement().style.boxSizing;
         let componentInformation = new Component('a', newCell0Component);
+        componentInformation.getElement().style.color = cell0Component.arrayAppObject[0].getElement().style.color;
+        componentInformation.getElement().style.opacity = cell0Component.arrayAppObject[0].getElement().style.opacity;
+        componentInformation.getElement().style.padding = cell0Component.arrayAppObject[0].getElement().style.padding;
+        componentInformation.getElement().style.cssFloat = cell0Component.arrayAppObject[0].getElement().style.cssFloat;
+        componentInformation.getElement().style.boxSizing = cell0Component.arrayAppObject[0].getElement().style.boxSizing;
 
-        let newCell1Component = new Component('th', newLineComponent);
+        let newCell1Component = new Component('div', newLineComponent);
         newCell1Component.getElement().style.color = cell1Component.getElement().style.color;
         newCell1Component.getElement().style.opacity = cell1Component.getElement().style.opacity;
         newCell1Component.getElement().style.padding = cell1Component.getElement().style.padding;
         newCell1Component.getElement().style.cssFloat = cell1Component.getElement().style.cssFloat;
         newCell1Component.getElement().style.boxSizing = cell1Component.getElement().style.boxSizing;
+        let component1Information = new Component('a', newCell1Component);
+        component1Information.getElement().style.color = cell0Component.arrayAppObject[1].getElement().style.color;
+        component1Information.getElement().style.opacity = cell0Component.arrayAppObject[1].getElement().style.opacity;
+        component1Information.getElement().style.padding = cell0Component.arrayAppObject[1].getElement().style.padding;
+        component1Information.getElement().style.cssFloat = cell0Component.arrayAppObject[1].getElement().style.cssFloat;
+        component1Information.getElement().style.boxSizing = cell0Component.arrayAppObject[1].getElement().style.boxSizing;
 
-        let newCell2Component = new Component('th', newLineComponent);
+        let newCell2Component = new Component('div', newLineComponent);
         newCell2Component.getElement().style.color = cell2Component.getElement().style.color;
         newCell2Component.getElement().style.opacity = cell2Component.getElement().style.opacity;
         newCell2Component.getElement().style.padding = cell2Component.getElement().style.padding;
         newCell2Component.getElement().style.cssFloat = cell2Component.getElement().style.cssFloat;
         newCell2Component.getElement().style.boxSizing = cell2Component.getElement().style.boxSizing;
+        let component2Information = new Component('a', newCell2Component);
+        component2Information.getElement().style.color = cell0Component.arrayAppObject[2].getElement().style.color;
+        component2Information.getElement().style.opacity = cell0Component.arrayAppObject[2].getElement().style.opacity;
+        component2Information.getElement().style.padding = cell0Component.arrayAppObject[2].getElement().style.padding;
+        component2Information.getElement().style.cssFloat = cell0Component.arrayAppObject[2].getElement().style.cssFloat;
+        component2Information.getElement().style.boxSizing = cell0Component.arrayAppObject[2].getElement().style.boxSizing;
 
     }
 
