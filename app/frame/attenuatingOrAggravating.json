@@ -76,6 +76,7 @@
                                     "element": {
                                         "style": {
                                             "width": "100%",
+                                            "height": "100%",
                                             "box-sizing": "border-box",
                                             "overflow": "auto"
                                         }
@@ -87,14 +88,17 @@
                                                 "style": {
                                                     "border": "1px solid white",
                                                     "width": "100%",
-                                                    "box-sizing": "border-box"
+                                                    "box-sizing": "border-box",
+                                                    "visibility": "hidden"
                                                 }
                                             },
                                             "arrayAppObject": [
                                                 {
-                                                    "type": "ComponentTableCell",
+                                                    "type": "ComponentDivisor",
                                                     "element": {
                                                         "style": {
+                                                            "vertical-align": "-webkit-baseline-middle",
+                                                            "display": "inline-flex",
                                                             "box-sizing": "border-box"
                                                         }
                                                     },
@@ -105,6 +109,7 @@
                                                             "element": {
                                                                 "className": "ClassOpenSans",
                                                                 "style": {
+                                                                    "box-sizing": "border-box",
                                                                     "color": "white",
                                                                     "width": "100%",
                                                                     "padding": [
@@ -116,218 +121,74 @@
                                                     ]
                                                 },
                                                 {
-                                                    "type": "ComponentTableCell",
-                                                    "element": {
-                                                        "style": {
-                                                            "width": "45px",
-                                                            "box-sizing": "border-box"
-                                                        }
-                                                    },
-                                                    "arrayAppObject": [
+                                                    "type": "ComponentDivisor",
+                                                    "arrayAppObjectEvent": [
                                                         {
-                                                            "type": "ComponentDivisor",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "click",
-                                                                    "appObject": {},
-                                                                    "runFunction": "edit(this)",
-                                                                    "code": "Disease"
-                                                                }
-                                                            ],
-                                                            "element": {
-                                                                "style": {
-                                                                    "display": "inline-flex",
-                                                                    "box-sizing": "border-box"
-                                                                }
-                                                            },
-                                                            "arrayAppObject": [
-                                                                {
-                                                                    "type": "ComponentInformation",
-                                                                    "information": "",
-                                                                    "element": {
-                                                                        "className": "fas fa-pen-square",
-                                                                        "style": {
-                                                                            "width": "100%",
-                                                                            "padding": "2px 2px 2px 2px",
-                                                                            "font-size": "30px",
-                                                                            "text-align": "center",
-                                                                            "color": "white",
-                                                                            "box-sizing": "border-box"
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ]
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "delete(this)",
+                                                            "code": "Disease"
                                                         }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "ComponentTableCell",
+                                                    ],
                                                     "element": {
                                                         "style": {
-                                                            "width": "45px",
-                                                            "box-sizing": "border-box"
-                                                        }
-                                                    },
-                                                    "arrayAppObject": [
-                                                        {
-                                                            "type": "ComponentDivisor",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "click",
-                                                                    "appObject": {},
-                                                                    "runFunction": "delete(this)",
-                                                                    "code": "Disease"
-                                                                }
-                                                            ],
-                                                            "element": {
-                                                                "style": {
-                                                                    "display": "inline-flex",
-                                                                    "box-sizing": "border-box"
-                                                                }
-                                                            },
-                                                            "arrayAppObject": [
-                                                                {
-                                                                    "type": "ComponentInformation",
-                                                                    "information": "",
-                                                                    "element": {
-                                                                        "className": "far fa-minus-square",
-                                                                        "style": {
-                                                                            "width": "100%",
-                                                                            "padding": "2px 2px 2px 10px",
-                                                                            "font-size": "30px",
-                                                                            "text-align": "center",
-                                                                            "color": "white",
-                                                                            "box-sizing": "border-box"
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        },
-                                        {
-                                            "type": "ComponentListItem",
-                                            "element": {
-                                                "style": {
-                                                    "border": "1px solid white",
-                                                    "width": "100%",
-                                                    "box-sizing": "border-box"
-                                                }
-                                            },
-                                            "arrayAppObject": [
-                                                {
-                                                    "type": "ComponentTableCell",
-                                                    "element": {
-                                                        "style": {
+                                                            "padding": "0px 10px",
+                                                            "float": "right",
+                                                            "display": "inline-flex",
                                                             "box-sizing": "border-box"
                                                         }
                                                     },
                                                     "arrayAppObject": [
                                                         {
                                                             "type": "ComponentInformation",
-                                                            "information": "circumstance",
+                                                            "information": "",
                                                             "element": {
-                                                                "className": "ClassOpenSans",
+                                                                "className": "far fa-minus-square",
                                                                 "style": {
-                                                                    "color": "white",
                                                                     "width": "100%",
-                                                                    "padding": [
-                                                                        0
-                                                                    ]
+                                                                    "padding": "2px 2px 2px 2px",
+                                                                    "font-size": "30px",
+                                                                    "text-align": "center",
+                                                                    "color": "white",
+                                                                    "box-sizing": "border-box"
                                                                 }
                                                             }
                                                         }
                                                     ]
                                                 },
                                                 {
-                                                    "type": "ComponentTableCell",
+                                                    "type": "ComponentDivisor",
+                                                    "arrayAppObjectEvent": [
+                                                        {
+                                                            "name": "click",
+                                                            "appObject": {},
+                                                            "runFunction": "edit(this)",
+                                                            "code": "Disease"
+                                                        }
+                                                    ],
                                                     "element": {
                                                         "style": {
-                                                            "width": "45px",
+                                                            "padding": "0px 10px",
+                                                            "float": "right",
+                                                            "display": "inline-flex",
                                                             "box-sizing": "border-box"
                                                         }
                                                     },
                                                     "arrayAppObject": [
                                                         {
-                                                            "type": "ComponentDivisor",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "click",
-                                                                    "appObject": {},
-                                                                    "runFunction": "edit(this)",
-                                                                    "code": "Disease"
-                                                                }
-                                                            ],
+                                                            "type": "ComponentInformation",
+                                                            "information": "",
                                                             "element": {
+                                                                "className": "fas fa-pen-square",
                                                                 "style": {
-                                                                    "display": "inline-flex",
+                                                                    "width": "100%",
+                                                                    "padding": "2px 2px 2px 2px",
+                                                                    "font-size": "30px",
+                                                                    "text-align": "center",
+                                                                    "color": "white",
                                                                     "box-sizing": "border-box"
                                                                 }
-                                                            },
-                                                            "arrayAppObject": [
-                                                                {
-                                                                    "type": "ComponentInformation",
-                                                                    "information": "",
-                                                                    "element": {
-                                                                        "className": "fas fa-pen-square",
-                                                                        "style": {
-                                                                            "width": "100%",
-                                                                            "padding": "2px 2px 2px 2px",
-                                                                            "font-size": "30px",
-                                                                            "text-align": "center",
-                                                                            "color": "white",
-                                                                            "box-sizing": "border-box"
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ]
-                                                        }
-                                                    ]
-                                                },
-                                                {
-                                                    "type": "ComponentTableCell",
-                                                    "element": {
-                                                        "style": {
-                                                            "width": "45px",
-                                                            "box-sizing": "border-box"
-                                                        }
-                                                    },
-                                                    "arrayAppObject": [
-                                                        {
-                                                            "type": "ComponentDivisor",
-                                                            "arrayAppObjectEvent": [
-                                                                {
-                                                                    "name": "click",
-                                                                    "appObject": {},
-                                                                    "runFunction": "delete(this)",
-                                                                    "code": "Disease"
-                                                                }
-                                                            ],
-                                                            "element": {
-                                                                "style": {
-                                                                    "display": "inline-flex",
-                                                                    "box-sizing": "border-box"
-                                                                }
-                                                            },
-                                                            "arrayAppObject": [
-                                                                {
-                                                                    "type": "ComponentInformation",
-                                                                    "information": "",
-                                                                    "element": {
-                                                                        "className": "far fa-minus-square",
-                                                                        "style": {
-                                                                            "width": "100%",
-                                                                            "padding": "2px 2px 2px 10px",
-                                                                            "font-size": "30px",
-                                                                            "text-align": "center",
-                                                                            "color": "white",
-                                                                            "box-sizing": "border-box"
-                                                                        }
-                                                                    }
-                                                                }
-                                                            ]
+                                                            }
                                                         }
                                                     ]
                                                 }
@@ -386,7 +247,7 @@
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"",
+                                                "value": "",
                                                 "selected": true,
                                                 "hidden": true,
                                                 "disabled": true
@@ -396,14 +257,14 @@
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"-"
+                                                "value": "-"
                                             },
                                             "information": "attenuating"
                                         },
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"+"
+                                                "value": "+"
                                             },
                                             "information": "aggravating"
                                         }
@@ -451,7 +312,7 @@
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"",
+                                                "value": "",
                                                 "selected": true,
                                                 "hidden": true,
                                                 "disabled": true
@@ -461,21 +322,21 @@
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"0"
+                                                "value": "0"
                                             },
                                             "information": "before"
                                         },
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"1"
+                                                "value": "1"
                                             },
                                             "information": "same"
                                         },
                                         {
                                             "type": "ComponentOption",
                                             "element": {
-                                                "value":"2"
+                                                "value": "2"
                                             },
                                             "information": "after"
                                         }
