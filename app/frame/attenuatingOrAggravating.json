@@ -64,9 +64,10 @@
                             "type": "ComponentDivisor",
                             "element": {
                                 "style": {
+                                    "border": "1px solid white",
                                     "box-sizing": "border-box",
                                     "width": "100%",
-                                    "height": "75%"
+                                    "height": "75vh"
                                 }
                             },
                             "arrayAppObject": [
@@ -74,11 +75,7 @@
                                     "type": "ComponentTable",
                                     "element": {
                                         "style": {
-                                            "border": "1px solid white",
-                                            "display": "inline-flex",
-                                            "padding": "5px",
                                             "width": "100%",
-                                            "height": "75vh",
                                             "box-sizing": "border-box",
                                             "overflow": "auto"
                                         }
@@ -88,13 +85,9 @@
                                             "type": "ComponentTableLine",
                                             "element": {
                                                 "style": {
-                                                    "color": "white",
                                                     "border": "1px solid white",
-                                                    "opacity": 1,
-                                                    "height": "fit-content",
                                                     "width": "100%",
-                                                    "box-sizing": "border-box",
-                                                    "visibility": "hidden"
+                                                    "box-sizing": "border-box"
                                                 }
                                             },
                                             "arrayAppObject": [
@@ -102,10 +95,6 @@
                                                     "type": "ComponentTableCell",
                                                     "element": {
                                                         "style": {
-                                                            "color": "white",
-                                                            "opacity": 1,
-                                                            "padding": "5px",
-                                                            "float": "left",
                                                             "box-sizing": "border-box"
                                                         }
                                                     },
@@ -130,9 +119,52 @@
                                                     "type": "ComponentTableCell",
                                                     "element": {
                                                         "style": {
-                                                            "color": "white",
-                                                            "float": "right",
-                                                            "opacity": 1,
+                                                            "width": "45px",
+                                                            "box-sizing": "border-box"
+                                                        }
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentDivisor",
+                                                            "arrayAppObjectEvent": [
+                                                                {
+                                                                    "name": "click",
+                                                                    "appObject": {},
+                                                                    "runFunction": "edit(this)",
+                                                                    "code": "Disease"
+                                                                }
+                                                            ],
+                                                            "element": {
+                                                                "style": {
+                                                                    "display": "inline-flex",
+                                                                    "box-sizing": "border-box"
+                                                                }
+                                                            },
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentInformation",
+                                                                    "information": "",
+                                                                    "element": {
+                                                                        "className": "fas fa-pen-square",
+                                                                        "style": {
+                                                                            "width": "100%",
+                                                                            "padding": "2px 2px 2px 2px",
+                                                                            "font-size": "30px",
+                                                                            "text-align": "center",
+                                                                            "color": "white",
+                                                                            "box-sizing": "border-box"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "ComponentTableCell",
+                                                    "element": {
+                                                        "style": {
+                                                            "width": "45px",
                                                             "box-sizing": "border-box"
                                                         }
                                                     },
@@ -172,14 +204,48 @@
                                                             ]
                                                         }
                                                     ]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "type": "ComponentTableLine",
+                                            "element": {
+                                                "style": {
+                                                    "border": "1px solid white",
+                                                    "width": "100%",
+                                                    "box-sizing": "border-box"
+                                                }
+                                            },
+                                            "arrayAppObject": [
+                                                {
+                                                    "type": "ComponentTableCell",
+                                                    "element": {
+                                                        "style": {
+                                                            "box-sizing": "border-box"
+                                                        }
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentInformation",
+                                                            "information": "circumstance",
+                                                            "element": {
+                                                                "className": "ClassOpenSans",
+                                                                "style": {
+                                                                    "color": "white",
+                                                                    "width": "100%",
+                                                                    "padding": [
+                                                                        0
+                                                                    ]
+                                                                }
+                                                            }
+                                                        }
+                                                    ]
                                                 },
                                                 {
                                                     "type": "ComponentTableCell",
                                                     "element": {
                                                         "style": {
-                                                            "color": "white",
-                                                            "opacity": 1,
-                                                            "float": "right",
+                                                            "width": "45px",
                                                             "box-sizing": "border-box"
                                                         }
                                                     },
@@ -209,6 +275,51 @@
                                                                         "style": {
                                                                             "width": "100%",
                                                                             "padding": "2px 2px 2px 2px",
+                                                                            "font-size": "30px",
+                                                                            "text-align": "center",
+                                                                            "color": "white",
+                                                                            "box-sizing": "border-box"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                },
+                                                {
+                                                    "type": "ComponentTableCell",
+                                                    "element": {
+                                                        "style": {
+                                                            "width": "45px",
+                                                            "box-sizing": "border-box"
+                                                        }
+                                                    },
+                                                    "arrayAppObject": [
+                                                        {
+                                                            "type": "ComponentDivisor",
+                                                            "arrayAppObjectEvent": [
+                                                                {
+                                                                    "name": "click",
+                                                                    "appObject": {},
+                                                                    "runFunction": "delete(this)",
+                                                                    "code": "Disease"
+                                                                }
+                                                            ],
+                                                            "element": {
+                                                                "style": {
+                                                                    "display": "inline-flex",
+                                                                    "box-sizing": "border-box"
+                                                                }
+                                                            },
+                                                            "arrayAppObject": [
+                                                                {
+                                                                    "type": "ComponentInformation",
+                                                                    "information": "",
+                                                                    "element": {
+                                                                        "className": "far fa-minus-square",
+                                                                        "style": {
+                                                                            "width": "100%",
+                                                                            "padding": "2px 2px 2px 10px",
                                                                             "font-size": "30px",
                                                                             "text-align": "center",
                                                                             "color": "white",
