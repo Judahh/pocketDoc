@@ -165,11 +165,13 @@ export class UserInterface extends AppObject {
         console.log(component);
         let fatherComponent = component.getFather().getFather().getFather().arrayAppObject[0].arrayAppObject[0];
         console.log(fatherComponent);
+
         let lineComponent = fatherComponent.arrayAppObject[0];
         let cell0Component = lineComponent.arrayAppObject[0];
         let cell1Component = lineComponent.arrayAppObject[1];
         let cell2Component = lineComponent.arrayAppObject[2];
         console.log(lineComponent);
+
         let newLineComponent = new Component('li', fatherComponent);
         newLineComponent.getElement().style.color = lineComponent.getElement().style.color;
         newLineComponent.getElement().style.border = lineComponent.getElement().style.border;
@@ -190,6 +192,10 @@ export class UserInterface extends AppObject {
         componentInformation.getElement().style.padding = cell0Component.arrayAppObject[0].getElement().style.padding;
         componentInformation.getElement().style.cssFloat = cell0Component.arrayAppObject[0].getElement().style.cssFloat;
         componentInformation.getElement().style.boxSizing = cell0Component.arrayAppObject[0].getElement().style.boxSizing;
+        componentInformation.getElement().style.width = cell0Component.arrayAppObject[0].getElement().style.width;
+        componentInformation.getElement().style.fontSize = cell0Component.arrayAppObject[0].getElement().style.fontSize;
+        componentInformation.getElement().style.textAlign = cell0Component.arrayAppObject[0].getElement().style.textAlign;
+        componentInformation.getElement().setAttribute("class", cell0Component.arrayAppObject[0].getElement().className);
 
         let newCell1Component = new Component('div', newLineComponent);
         newCell1Component.getElement().style.color = cell1Component.getElement().style.color;
@@ -198,11 +204,15 @@ export class UserInterface extends AppObject {
         newCell1Component.getElement().style.cssFloat = cell1Component.getElement().style.cssFloat;
         newCell1Component.getElement().style.boxSizing = cell1Component.getElement().style.boxSizing;
         let component1Information = new Component('a', newCell1Component);
-        component1Information.getElement().style.color = cell0Component.arrayAppObject[1].getElement().style.color;
-        component1Information.getElement().style.opacity = cell0Component.arrayAppObject[1].getElement().style.opacity;
-        component1Information.getElement().style.padding = cell0Component.arrayAppObject[1].getElement().style.padding;
-        component1Information.getElement().style.cssFloat = cell0Component.arrayAppObject[1].getElement().style.cssFloat;
-        component1Information.getElement().style.boxSizing = cell0Component.arrayAppObject[1].getElement().style.boxSizing;
+        component1Information.getElement().style.color = cell1Component.arrayAppObject[0].getElement().style.color;
+        component1Information.getElement().style.opacity = cell1Component.arrayAppObject[0].getElement().style.opacity;
+        component1Information.getElement().style.padding = cell1Component.arrayAppObject[0].getElement().style.padding;
+        component1Information.getElement().style.cssFloat = cell1Component.arrayAppObject[0].getElement().style.cssFloat;
+        component1Information.getElement().style.boxSizing = cell1Component.arrayAppObject[0].getElement().style.boxSizing;
+        component1Information.getElement().style.width = cell1Component.arrayAppObject[0].getElement().style.width;
+        component1Information.getElement().style.fontSize = cell1Component.arrayAppObject[0].getElement().style.fontSize;
+        component1Information.getElement().style.textAlign = cell1Component.arrayAppObject[0].getElement().style.textAlign;
+        component1Information.getElement().setAttribute("class", cell1Component.arrayAppObject[0].getElement().className);
 
         let newCell2Component = new Component('div', newLineComponent);
         newCell2Component.getElement().style.color = cell2Component.getElement().style.color;
@@ -211,12 +221,15 @@ export class UserInterface extends AppObject {
         newCell2Component.getElement().style.cssFloat = cell2Component.getElement().style.cssFloat;
         newCell2Component.getElement().style.boxSizing = cell2Component.getElement().style.boxSizing;
         let component2Information = new Component('a', newCell2Component);
-        component2Information.getElement().style.color = cell0Component.arrayAppObject[2].getElement().style.color;
-        component2Information.getElement().style.opacity = cell0Component.arrayAppObject[2].getElement().style.opacity;
-        component2Information.getElement().style.padding = cell0Component.arrayAppObject[2].getElement().style.padding;
-        component2Information.getElement().style.cssFloat = cell0Component.arrayAppObject[2].getElement().style.cssFloat;
-        component2Information.getElement().style.boxSizing = cell0Component.arrayAppObject[2].getElement().style.boxSizing;
-
+        component2Information.getElement().style.color = cell2Component.arrayAppObject[0].getElement().style.color;
+        component2Information.getElement().style.opacity = cell2Component.arrayAppObject[0].getElement().style.opacity;
+        component2Information.getElement().style.padding = cell2Component.arrayAppObject[0].getElement().style.padding;
+        component2Information.getElement().style.cssFloat = cell2Component.arrayAppObject[0].getElement().style.cssFloat;
+        component2Information.getElement().style.boxSizing = cell2Component.arrayAppObject[0].getElement().style.boxSizing;
+        component2Information.getElement().style.width = cell2Component.arrayAppObject[0].getElement().style.width;
+        component2Information.getElement().style.fontSize = cell2Component.arrayAppObject[0].getElement().style.fontSize;
+        component2Information.getElement().style.textAlign = cell2Component.arrayAppObject[0].getElement().style.textAlign;
+        component2Information.getElement().setAttribute("class", cell2Component.arrayAppObject[0].getElement().className);
     }
 
     public getAttenuatingOrAggravating(component: Component) {
