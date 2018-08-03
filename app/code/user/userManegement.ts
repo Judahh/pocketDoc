@@ -324,15 +324,19 @@ export class UserManegement extends AppObject {
             UserManegement.getInstance().refreshHeader();
         }
         if (component !== undefined) {
-            if (this !== undefined) {
-                this.menu = component.getFather().getFather().getFather().getFather();
-                console.log('this.menu', this.menu);
-                this.menu.destroyElement();
-            } else {
-                UserManegement.getInstance().menu = component.getFather().getFather().getFather().getFather();
-                console.log('UserManegement.menu', UserManegement.getInstance().menu);
-                UserManegement.getInstance().menu.destroyElement();
-            }
+            // if (this !== undefined) {
+            //     this.menu = component.getHeader();//getFather().getFather().getFather().getFather().getFather().getFather().getFather();
+                
+            //     console.log('this.menu', this.menu);
+            //     this.menu.destroyElement();
+            //     component.getView().resetHeader();
+            // } else {
+            //     UserManegement.getInstance().menu = component.getFather().getFather().getFather().getFather().getFather().getFather().getFather();
+            //     console.log('UserManegement.menu', UserManegement.getInstance().menu);
+            //     UserManegement.getInstance().menu.destroyElement();
+            //     component.getView().resetHeader();
+            // }
+            component.getView().resetHeader();
         }
     }
 
