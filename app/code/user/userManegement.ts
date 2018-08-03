@@ -325,11 +325,11 @@ export class UserManegement extends AppObject {
         }
         if (component !== undefined) {
             if (this !== undefined) {
-                this.menu = component.getFather().getFather();
+                this.menu = component.getFather().getFather().getFather().getFather();
                 console.log('this.menu', this.menu);
                 this.menu.destroyElement();
             } else {
-                UserManegement.getInstance().menu = component.getFather().getFather();
+                UserManegement.getInstance().menu = component.getFather().getFather().getFather().getFather();
                 console.log('UserManegement.menu', UserManegement.getInstance().menu);
                 UserManegement.getInstance().menu.destroyElement();
             }
