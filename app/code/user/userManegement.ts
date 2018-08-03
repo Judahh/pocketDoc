@@ -301,8 +301,19 @@ export class UserManegement extends AppObject {
         }
     }
 
+    private static getCurrentUserManegement(){
+        let userManegement;
+        if (this !== undefined) {
+            userManegement = this;
+        } else {
+            userManegement = UserManegement.getInstance();
+        }
+        return userManegement;
+    }
+
     public logout(component?) {
         this.socketIo.emit('logoff', {});
+        let userManegement = UserManegement.getCurrentUserManegement();
         if (this !== undefined) {
             this.logged = undefined;
             this.goTo('login');
@@ -315,9 +326,11 @@ export class UserManegement extends AppObject {
         if (component !== undefined) {
             if (this !== undefined) {
                 this.menu = component.getFather().getFather();
+                console.log('this.menu', this.menu);
                 this.menu.destroyElement();
             } else {
                 UserManegement.getInstance().menu = component.getFather().getFather();
+                console.log('UserManegement.menu', UserManegement.getInstance().menu);
                 UserManegement.getInstance().menu.destroyElement();
             }
         }
