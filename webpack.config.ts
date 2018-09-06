@@ -1,9 +1,13 @@
-import * as  path from 'path';
+import * as path from 'path';
 import * as webpack from 'webpack';
 import * as UglifyJSPlugin from 'uglifyjs-webpack-plugin';
-import * as  CompressionPlugin from 'compression-webpack-plugin';
-import * as  ExtractTextPlugin from 'extract-text-webpack-plugin';
+import * as CompressionPlugin from 'compression-webpack-plugin';
+import * as ExtractTextPlugin from 'extract-text-webpack-plugin';
 require('dotenv').config();
+
+if (process.env.WEBPACK_PRODUCTION === undefined) {
+    process.env.WEBPACK_PRODUCTION = '0';
+}
 
 const config: webpack.Configuration = {
     entry: './app/code/imports/imports.js',
@@ -14,7 +18,15 @@ const config: webpack.Configuration = {
         publicPath: '/dist/'
     },
     resolve: {
-        extensions: ['.webpack.js', '.webpack.ts', '.web.js', '.web.ts', '.js', '.ts', '.tsx']
+        extensions: [
+            '.webpack.js',
+            '.webpack.ts',
+            '.web.js',
+            '.web.ts',
+            '.js',
+            '.ts',
+            '.tsx'
+        ]
     },
     module: {
         rules: [
@@ -27,30 +39,18 @@ const config: webpack.Configuration = {
                     path.resolve(__dirname, 'app/style/fonts')
                 ]
             },
-            // {
-            //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
-            //     use: ['file-loader', 'url-loader']
-            // } // ,
-            // {
-            //     test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
-            //     loader: 'file-loader',
-            //     options: {
-            //         publicPath: '/',
-            //         // name: '[name].[ext]',
-            //         // outputPath: '/[path]/',
-            //         // useRelativePath: true
-            //     }
-            // },
             {
                 test: /\.(png|woff|woff2|eot|otf|ttf|svg)$/,
                 use: ['url-loader']
             }
         ]
     },
-    plugins: [
-        // new ExtractTextPlugin('app/style/app.css?[contenthash]')
-    ]
+    plugins: []
 };
+
+if (config.plugins === undefined) {
+    config.plugins = [];
+}
 
 if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
     console.log('Production');
@@ -66,10 +66,10 @@ if (JSON.parse(process.env.WEBPACK_PRODUCTION)) {
     );
 } else {
     console.log('Development');
-    config.devtool = 'inline-source-map'
+    config.devtool = 'inline-source-map';
     config.plugins.push(
         new webpack.HotModuleReplacementPlugin()
-    );
+    )
 }
 
 export default config;

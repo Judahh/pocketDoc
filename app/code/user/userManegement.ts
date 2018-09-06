@@ -1,4 +1,4 @@
-import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentPageBody, ComponentView, ComponentComboBox, ComponentInformation, AppObjectEvent, ComponentNotification } from 'backappjh';
+import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentPageBody, ComponentView, ComponentComboBox, ComponentInformation, AppObjectEvent/*, ComponentNotification */} from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 import { User } from './user';
 import { Authentication } from './authentication';
@@ -83,7 +83,7 @@ export class UserManegement extends AppObject {
 
         if (this.checkEquals(arrayField[7], arrayField[8]) && !this.checkArrayEmpty(arrayField)) {
             let header = divisor.getHeader();
-            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
+            // (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
             let auth = new Authentication(arrayField[7].value, Permission.User);
             let user = new User(arrayField[6].value, arrayField[0].value, new Date(arrayField[1].value), arrayField[2].value,
                 arrayField[3].value, arrayField[4].value, auth);
@@ -91,7 +91,7 @@ export class UserManegement extends AppObject {
             this.socketIo.emit('signUp', user);
         } else {
             let header = divisor.getHeader();
-            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');
+            // (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');
         }
     }
 
@@ -108,11 +108,11 @@ export class UserManegement extends AppObject {
         console.log(divisor, arrayField[0].value, arrayField[1].value);
         if (!this.checkArrayEmpty(arrayField)) {
             let header = divisor.getHeader();
-            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
+            // (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
             this.socketIo.emit('signIn', { username: arrayField[0].value, password: arrayField[1].value });
         } else {
             let header = divisor.getHeader();
-            (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');
+            // (<ComponentNotification>header.arrayAppObject[1]).goToNotification('missingFields');
         }
     }
 
@@ -122,7 +122,7 @@ export class UserManegement extends AppObject {
         arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[0].arrayAppObject[0].arrayAppObject[0]).getElement());
         arrayField.push(<HTMLInputElement>(<Component>divisor.arrayAppObject[1].arrayAppObject[0].arrayAppObject[0]).getElement());
         let header = divisor.getHeader();
-        (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
+        // (<ComponentNotification>header.arrayAppObject[1]).goToNotification('none');
         this.tempRegister = <User>{
             'username': arrayField[0].value,
             'authentication': new Authentication(arrayField[1].value)
@@ -199,13 +199,13 @@ export class UserManegement extends AppObject {
             while (arrayOption.length < _self.logged.authentication.permission + 1) {
                 let option = new ComponentOption(component);
                 option.information = Permission[arrayOption.length];
-                option.renderAfterUpdateJSON();
+                option.renderAfterUpdate();
                 arrayOption.push(option);
             }
         } else {
             let option = new ComponentOption(component);
             option.information = Permission[arrayOption.length];
-            option.renderAfterUpdateJSON();
+            option.renderAfterUpdate();
             arrayOption.push(option);
         }
     }
@@ -235,13 +235,13 @@ export class UserManegement extends AppObject {
         if (data.userManegement !== undefined) {
             if (data.userManegement.user !== undefined) {
                 let header = userManegement.getHeader();
-                (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
+                // (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification('none');
                 userManegement.goTo('home');
                 userManegement.refreshHeader();
                 userManegement.getInfo(data.userManegement.user);
             } else if (data.userManegement.error !== undefined) {
                 let header = userManegement.getHeader();
-                (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification(data.userManegement.error);
+                // (<ComponentNotification>header.getAppObject('ComponentNotification')).goToNotification(data.userManegement.error);
             }
 
             userManegement.logged = data.userManegement.user;
@@ -541,7 +541,7 @@ export class UserManegement extends AppObject {
         event.runFunction = 'drag(this,event,"" + currentType + "")';
         console.log('new line:', currentType);
         line.arrayAppObjectEvent.push(event);
-        line.renderAfterUpdateJSON();
+        line.renderAfterUpdate();
         let cell = new Component('tr', line);
         cell.getElement().setAttribute('style', 'width: 100%;height: 100%;display: block;float: left;box-sizing: border-box;');
         let divisor = new Component('th', cell);
@@ -580,7 +580,7 @@ export class UserManegement extends AppObject {
         console.log('new table:', currentType);
         table.arrayAppObjectEvent.push(event1);
         table.arrayAppObjectEvent.push(event2);
-        table.renderAfterUpdateJSON();
+        table.renderAfterUpdate();
         table.getElement().setAttribute('style', 'width: 100%;height: 100%;');
 
         fatherDivisor.arrayAppObject.push(table);

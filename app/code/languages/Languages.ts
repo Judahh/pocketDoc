@@ -16,7 +16,7 @@ export class Languages extends AppObject {
 
     public run() {
         let _self = this;
-        this.getLanguage();
+        // this.getLanguage();
     }
 
     protected updateLanguage(jSON) {
@@ -76,7 +76,7 @@ export class Languages extends AppObject {
             let language = languages[index];
             if (language.name === languageName) {
                 (<ComponentDataInput>component).setCurrentLanguage(language.code);
-                this.getPageBody().refreshPage();
+                // this.getPageBody().refreshPage();
                 // (<ComponentDataInput>component).getJSONPromise((<ComponentDataInput>component).getPage());
                 return;
             }
