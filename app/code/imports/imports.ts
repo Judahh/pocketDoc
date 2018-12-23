@@ -1,7 +1,6 @@
 import * as loader from 'backappjh';
 import { SVG } from './../view/sVG/sVG';
 import { ControlSign } from '../control/sign/ControlSign';
-// import { Languages } from './../languages/languages';
 import { Keyboard } from './../view/keyboard/keyboard';
 import { UserInterface } from './../view/user/userInterface';
 
