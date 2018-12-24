@@ -11,7 +11,7 @@
                 {
                     "name": "build",
                     "appObject": {},
-                    "runFunction": "goToSignIn()",
+                    "runFunction": "goToSignIn(this)",
                     "code": "Util"
                 },
                 {
@@ -515,7 +515,7 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "goToSignIn()",
+                                            "runFunction": "goToSignIn(this)",
                                             "code": "Util"
                                         }
                                     ],
