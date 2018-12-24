@@ -3,7 +3,7 @@ import { SVG } from './../view/sVG/sVG';
 import { Sign } from '../control/sign/sign';
 import { Keyboard } from './../view/keyboard/keyboard';
 import { UserInterface } from './../view/user/userInterface';
-import { Util } from '../view/util';
+import { Util } from '../view/util/util';
 // tslint:disable-next-line:no-empty
 try { require('./../../style/app.css'); } catch (e) { console.log('ERROR FONT'); };
 
