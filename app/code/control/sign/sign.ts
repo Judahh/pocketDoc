@@ -3,8 +3,8 @@ import { BasicSocket, UniqueSocket } from 'basicsocket';
 import { User } from '../user/user';
 import { Util } from '../../view/util/util';
 
-export class ControlSign extends AppObject {
-    private static instance: ControlSign;
+export class Sign extends AppObject {
+    private static instance: Sign;
     private socketIo: BasicSocket;
     private subscribers: Array<any>;
     private subscribersSign: Array<any>;
@@ -12,11 +12,11 @@ export class ControlSign extends AppObject {
     private tempUser: User;
     private signed;
 
-    public static getInstance(father?: Component): ControlSign {
-        if (!ControlSign.instance) {
-            ControlSign.instance = new ControlSign(father);
+    public static getInstance(father?: Component): Sign {
+        if (!Sign.instance) {
+            Sign.instance = new Sign(father);
         }
-        return ControlSign.instance;
+        return Sign.instance;
     }
 
     constructor(father?: Component) {
@@ -113,12 +113,12 @@ export class ControlSign extends AppObject {
     }
 
     public sign(data) {
-        let controlSign;
+        let sign;
         console.log('data:', data);
         if (this !== undefined) {
-            controlSign = this;
+            sign = this;
         } else {
-            controlSign = ControlSign.getInstance();
+            sign = Sign.getInstance();
         }
         if (data.sign !== undefined) {
             if (data.sign.user !== undefined) {
@@ -129,8 +129,8 @@ export class ControlSign extends AppObject {
             } else if (data.sign.error !== undefined) {
                 Util.getInstance().notificationCustom(data.sign.error);
             }
-            controlSign.setSigned(data.sign.user)
-            controlSign.publishSign(data.sign.user !== undefined);
+            sign.setSigned(data.sign.user)
+            sign.publishSign(data.sign.user !== undefined);
         }
     }
 
@@ -145,13 +145,13 @@ export class ControlSign extends AppObject {
     }
 
     public isSigned() {
-        return ((ControlSign.getInstance().getSigned() !== undefined) && (ControlSign.getInstance().getSigned() !== null));
+        return ((Sign.getInstance().getSigned() !== undefined) && (Sign.getInstance().getSigned() !== null));
     }
 
     public signOut() {
         // this.socketIo.emit('signOut', {});
-        ControlSign.getInstance().setSigned(undefined);
-        ControlSign.getInstance().publishSignOut(((ControlSign.getInstance().getSigned() === undefined)||(ControlSign.getInstance().getSigned() === null)));
+        Sign.getInstance().setSigned(undefined);
+        Sign.getInstance().publishSignOut(((Sign.getInstance().getSigned() === undefined)||(Sign.getInstance().getSigned() === null)));
         console.log('signOut');
     }
 }

@@ -11,15 +11,15 @@
                 {
                     "name": "build",
                     "appObject": {},
-                    "runFunction": "goToLogin()",
-                    "code": "UserManegement"
+                    "runFunction": "goToSignIn()",
+                    "code": "Util"
                 },
                 {
                     "name": "authorization",
                     "appObject": {},
                     "subscribeFunction": "subscribeSign",
-                    "runFunction": "isLogged(this)",
-                    "code": "UserManegement"
+                    "runFunction": "isSigned(this)",
+                    "code": "Sign"
                 }
             ],
             "arrayAppObject": [
@@ -82,8 +82,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "hospitals",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "signUp"
                                                         },
                                                         {
                                                             "name": "router",
@@ -110,8 +110,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "docs",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -138,8 +138,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "medicines",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -166,8 +166,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "symptoms",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -194,8 +194,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "diseases",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "is Signed",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -222,8 +222,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "vectors",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -250,8 +250,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "pathogens",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -329,8 +329,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "contacts",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -357,8 +357,8 @@
                                                         {
                                                             "name": "router",
                                                             "link": "addContact",
-                                                            "runFunction": "isLogged",
-                                                            "code": "UserManegement"
+                                                            "runFunction": "isSigned",
+                                                            "code": "Sign"
                                                         },
                                                         {
                                                             "name": "router",
@@ -404,8 +404,8 @@
                                         {
                                             "name": "router",
                                             "link": "messages",
-                                            "runFunction": "isLogged",
-                                            "code": "UserManegement"
+                                            "runFunction": "isSigned",
+                                            "code": "Sign"
                                         },
                                         {
                                             "name": "router",
@@ -449,14 +449,14 @@
                                         {
                                             "name": "router",
                                             "link": "attenuatingOrAggravating",
-                                            "runFunction": "isLogged",
-                                            "code": "UserManegement"
+                                            "runFunction": "isSigned",
+                                            "code": "Sign"
                                         },
                                         {
                                             "name": "router",
                                             "link": "login",
-                                            "runFunction": "isNotLogged",
-                                            "code": "UserManegement"
+                                            "runFunction": "!isSigned",
+                                            "code": "Sign"
                                         }
                                     ],
                                     "arrayAppObject": [
@@ -515,8 +515,8 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "goToLogin()",
-                                            "code": "UserManegement"
+                                            "runFunction": "goToSignIn()",
+                                            "code": "Util"
                                         }
                                     ],
                                     "arrayAppObject": [
@@ -563,8 +563,8 @@
                                                                 {
                                                                     "name": "router",
                                                                     "link": "profile",
-                                                                    "runFunction": "isLogged",
-                                                                    "code": "UserManegement"
+                                                                    "runFunction": "isSigned",
+                                                                    "code": "Sign"
                                                                 },
                                                                 {
                                                                     "name": "router",
@@ -591,8 +591,8 @@
                                                                 {
                                                                     "name": "router",
                                                                     "link": "historical",
-                                                                    "runFunction": "isLogged",
-                                                                    "code": "UserManegement"
+                                                                    "runFunction": "isSigned",
+                                                                    "code": "Sign"
                                                                 },
                                                                 {
                                                                     "name": "router",
@@ -618,8 +618,8 @@
                                                             "arrayAppObjectEvent": [
                                                                 {
                                                                     "name": "click",
-                                                                    "runFunction": "logout(this)",
-                                                                    "code": "UserManegement"
+                                                                    "runFunction": "signOut(this)",
+                                                                    "code": "Sign"
                                                                 }
                                                             ],
                                                             "element": {

@@ -391,8 +391,8 @@
                                         {
                                             "name": "click",
                                             "appObject": {},
-                                            "runFunction": "createUser(this)",
-                                            "code": "UserManegement"
+                                            "runFunction": "signUp(this)",
+                                            "code": "Sign"
                                         },
                                         {
                                             "name": "build",

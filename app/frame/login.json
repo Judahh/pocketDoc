@@ -137,7 +137,7 @@
                                             "name": "click",
                                             "appObject": {},
                                             "runFunction": "signIn(this)",
-                                            "code": "UserManegement"
+                                            "code": "Sign"
                                         }
                                     ],
                                     "element": {
@@ -176,7 +176,7 @@
                                             "name": "click",
                                             "appObject": {},
                                             "runFunction": "signUp(this)",
-                                            "code": "UserManegement"
+                                            "code": "Sign"
                                         }
                                     ],
                                     "element": {
