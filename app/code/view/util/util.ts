@@ -27,6 +27,7 @@ export class Util extends AppObject {
     }
 
     public setCurrentPageBody(pageBody){
+        console.log('setCurrentPageBody');
         Util.getInstance().currentPageBody = pageBody;
     }
 
@@ -71,6 +72,7 @@ export class Util extends AppObject {
     }
 
     public goToSignIn(){
+        console.log('goToSignInA');
         Util.getInstance().goTo('signIn');
     }
 

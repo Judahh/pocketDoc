@@ -11,14 +11,14 @@
                 {
                     "name": "build",
                     "appObject": {},
-                    "runFunction": "goToSignIn(this)",
+                    "runFunction": "goToSignIn()",
                     "code": "Header"
                 },
                 {
                     "name": "authorization",
                     "appObject": {},
                     "subscribeFunction": "subscribeSign",
-                    "runFunction": "isSigned(this)",
+                    "runFunction": "isSigned()",
                     "code": "Sign"
                 }
             ],

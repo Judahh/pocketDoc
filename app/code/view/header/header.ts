@@ -14,7 +14,9 @@ export class Header extends AppObject {
     }
 
     public goToSignIn(){
-        Util.getInstance().setCurrentPageBody(this.getPageBody());
+        console.log('goToSignIn');
+        // console.log();
+        Util.getInstance().setCurrentPageBody(this.getFather().getFather().getFather().fullPage.father.father.pageBody);
         Util.getInstance().goToSignIn();
     }
 
