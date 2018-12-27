@@ -81,10 +81,15 @@ export class Util extends AppObject {
     }
 
     public notificationNone() {
-        Util.getInstance().notificationCustom('none');
+        Util.getInstance().notificationCustom('noneNotification');
     }
 
     public notificationCustom(message) {
+        console.log('nC');
+        console.log(Util.getInstance().getCurrentPageBody().getNotification());
+        console.log(message);
+        console.log(Util.getInstance().getCurrentPageBody().getNotification().pages);
+        console.log(Util.getInstance().getCurrentPageBody().getNotification().pages[message]);
         Util.getInstance().getCurrentPageBody().getNotification().goTo(message);
     }
 
@@ -109,13 +114,13 @@ export class Util extends AppObject {
 
     public goTo(page: string) {
         let pageBody;
-        console.log('0');
+        // console.log('0');
         pageBody = Util.getInstance().getCurrentPageBody();
-        console.log(pageBody);
+        // console.log(pageBody);
         pageBody.goTo(page);
-        console.log('A');
+        // console.log('A');
         //TODO
-        // Util.getInstance().notificationNone();
+        Util.getInstance().notificationNone();
         console.log('B');
     }
 
