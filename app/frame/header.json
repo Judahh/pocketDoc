@@ -87,7 +87,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -115,7 +115,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -143,7 +143,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -171,7 +171,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -199,7 +199,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -227,7 +227,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -255,7 +255,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -334,7 +334,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -362,7 +362,7 @@
                                                         },
                                                         {
                                                             "name": "router",
-                                                            "link": "login"
+                                                            "link": "signIn"
                                                         }
                                                     ],
                                                     "element": {
@@ -409,7 +409,7 @@
                                         },
                                         {
                                             "name": "router",
-                                            "link": "login"
+                                            "link": "signIn"
                                         }
                                     ],
                                     "arrayAppObject": [
@@ -454,7 +454,7 @@
                                         },
                                         {
                                             "name": "router",
-                                            "link": "login",
+                                            "link": "signIn",
                                             "runFunction": "!isSigned",
                                             "code": "Sign"
                                         }
@@ -568,7 +568,7 @@
                                                                 },
                                                                 {
                                                                     "name": "router",
-                                                                    "link": "login"
+                                                                    "link": "signIn"
                                                                 }
                                                             ],
                                                             "element": {
@@ -596,7 +596,7 @@
                                                                 },
                                                                 {
                                                                     "name": "router",
-                                                                    "link": "login"
+                                                                    "link": "signIn"
                                                                 }
                                                             ],
                                                             "element": {

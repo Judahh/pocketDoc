@@ -72,7 +72,7 @@ export class Util extends AppObject {
     }
 
     public goToSignIn(){
-        console.log('goToSignInA');
+        // console.log('goToSignInA');
         Util.getInstance().goTo('signIn');
     }
 
@@ -85,11 +85,11 @@ export class Util extends AppObject {
     }
 
     public notificationCustom(message) {
-        console.log('nC');
-        console.log(Util.getInstance().getCurrentPageBody().getNotification());
-        console.log(message);
-        console.log(Util.getInstance().getCurrentPageBody().getNotification().pages);
-        console.log(Util.getInstance().getCurrentPageBody().getNotification().pages[message]);
+        // console.log('nC');
+        // console.log(Util.getInstance().getCurrentPageBody().getNotification());
+        // console.log(message);
+        // console.log(Util.getInstance().getCurrentPageBody().getNotification().pages);
+        // console.log(Util.getInstance().getCurrentPageBody().getNotification().pages[message]);
         Util.getInstance().getCurrentPageBody().getNotification().goTo(message);
     }
 
@@ -121,7 +121,7 @@ export class Util extends AppObject {
         // console.log('A');
         //TODO
         Util.getInstance().notificationNone();
-        console.log('B');
+        // console.log('B');
     }
 
     public getInfo(user/*: User*/) {
