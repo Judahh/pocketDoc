@@ -81,7 +81,7 @@ export class Util extends AppObject {
     }
 
     public notificationNone() {
-        Util.getInstance().notificationCustom('noneNotification');
+        Util.getInstance().notificationCustom('none');
     }
 
     public notificationCustom(message) {
