@@ -136,6 +136,8 @@ export class Sign extends AppObject {
 
     public signIn(log) {
         Util.getInstance().notificationNone();
+        console.log('log');
+        console.log(log);
         this.socketIo.emit('signIn', log);
     }
 

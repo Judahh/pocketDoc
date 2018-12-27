@@ -5,6 +5,8 @@ import { Keyboard } from './../view/keyboard/keyboard';
 import { UserInterface } from './../view/user/userInterface';
 import { Util } from '../view/util/util';
 import { Header } from '../view/header/header'
+import { SignIn } from '../view/sign/signIn'
+import { SignUp } from '../view/sign/signUp'
 
 // tslint:disable-next-line:no-empty
 try { require('./../../style/app.css'); } catch (e) { console.log('ERROR FONT'); };
@@ -21,5 +23,7 @@ export {
     Keyboard,
     UserInterface,
     Sign,
+    SignIn,
+    SignUp,
     Header
 };

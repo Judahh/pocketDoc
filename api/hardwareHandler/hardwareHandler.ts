@@ -154,9 +154,9 @@ export class HardwareHandler extends BasicHardwareHandler {
     }
 
     public signInCheck(user, data, socket) {
-        console.log(user);
+        // console.log(user);
         for (let index = 0; index < data.length; index++) {
-            console.log(user);
+            // console.log(user);
             let element = JSON.parse(JSON.stringify(data[index])); // JSON.parse(data[index])
             let hash = Authentication.generatePasswordHashFromSalt(user.password, element.authentication.salt);
             if (element.authentication.passwordHash === hash.passwordHash) {
@@ -166,6 +166,7 @@ export class HardwareHandler extends BasicHardwareHandler {
                 socket.identification.user = logged;
                 socket.identification.device = user.device;
                 socket.emit('userManegement', { user: logged });
+                console.log(logged)
                 return;
             }
         }
