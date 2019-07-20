@@ -1,14 +1,12 @@
-import { AppObject, Component, ComponentItem, ComponentDataInput, ComponentOption, ComponentPageBody, ComponentView, ComponentComboBox, ComponentInformation, AppObjectEvent/*, ComponentNotification*/ } from 'backappjh';
+import { AppObject, Component, /*, ComponentNotification*/ } from 'backappjh';
 import { BasicSocket, UniqueSocket } from 'basicsocket';
 import { User } from '../user/user';
 import { Util } from '../../view/util/util';
+import { Journaly } from 'journaly';
 
 export class Sign extends AppObject {
     private static instance: Sign;
-    private socketIo: BasicSocket;
-    private subscribers: Array<any>;
-    private subscribersSign: Array<any>;
-    private subscribersSignOut: Array<any>;
+    private journaly: Journaly; //TO JOURNAL
     private tempUser: User;
     private signed;
 
@@ -27,11 +25,8 @@ export class Sign extends AppObject {
     private init() {
         let _self = this;
         // _self.tempObjectArray = new Array<any>();
-        _self.subscribers = new Array<any>();
-        _self.subscribersSign = new Array<any>();
-        _self.subscribersSignOut = new Array<any>();
-        _self.socketIo = UniqueSocket.getInstance().getBasicSocket();
-        _self.socketIo.on('sign', (data) => { _self.publish({ sign: data }); });
+        _self.journaly = new Journaly(true);
+        UniqueSocket.getInstance().subscribe('sign', (data) => { _self.publish({ sign: data }); });
         _self.subscribe((data) => { _self.sign(data); });
         // _self.headerView = divisor.getHeader();
     }
@@ -54,62 +49,46 @@ export class Sign extends AppObject {
 
     public subscribeSign(callback) {
         // we could check to see if it is already subscribed
-        this.subscribersSign.push(callback);
+        this.journaly.subscribe('sign', callback);
         console.log(callback.name, 'has been subscribed to Sign');
     }
 
     public unsubscribeSign(callback) {
-        this.subscribersSign = this.subscribersSign.filter((element) => {
-            return element !== callback;
-        });
+        this.journaly.unsubscribe('sign', callback);
     }
 
     public publishSign(data) {
-        this.subscribersSign.forEach((subscriber) => {
-            subscriber(data);
-        });
-        this.subscribersSignOut.forEach((subscriber) => {
-            subscriber(!data);
-        });
+        this.journaly.publish("sign", data);
+        this.journaly.publish("signOut", !data);
     }
 
     public subscribeSignOut(callback) {
         // we could check to see if it is already subscribed
-        this.subscribersSignOut.push(callback);
+        this.journaly.subscribe('signOut', callback);
         console.log(callback.name, 'has been subscribed to Sign');
     }
 
     public unsubscribeSignOut(callback) {
-        this.subscribersSignOut = this.subscribersSignOut.filter((element) => {
-            return element !== callback;
-        });
+        this.journaly.unsubscribe('signOut', callback);
     }
 
     public publishSignOut(data) {
-        this.subscribersSignOut.forEach((subscriber) => {
-            subscriber(data);
-        });
-        this.subscribersSign.forEach((subscriber) => {
-            subscriber(!data);
-        });
+        this.journaly.publish("sign", !data);
+        this.journaly.publish("signOut", data);
     }
 
     public subscribe(callback) {
         // we could check to see if it is already subscribed
-        this.subscribers.push(callback);
+        this.journaly.subscribe('regular', callback);
         console.log(callback.name, 'has been subscribed to Sign');
     }
 
     public unsubscribe(callback) {
-        this.subscribers = this.subscribers.filter((element) => {
-            return element !== callback;
-        });
+        this.journaly.unsubscribe('regular', callback);
     }
 
     public publish(data) {
-        this.subscribers.forEach((subscriber) => {
-            subscriber(data);
-        });
+        this.journaly.publish('regular', data);
     }
 
     public sign(data) {
@@ -138,12 +117,12 @@ export class Sign extends AppObject {
         Util.getInstance().notificationNone();
         console.log('log');
         console.log(log);
-        this.socketIo.emit('signIn', log);
+        UniqueSocket.getInstance().emit('signIn', log);
     }
 
     public signUp(log) {
         Util.getInstance().notificationNone();
-        this.socketIo.emit('signUp', log);
+        UniqueSocket.getInstance().emit('signUp', log);
     }
 
     public isSigned() {

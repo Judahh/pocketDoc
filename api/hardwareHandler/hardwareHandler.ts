@@ -100,9 +100,9 @@ export class HardwareHandler extends BasicHardwareHandler {
 
     public signUp(user, socket) {
         let _self = this;
-        if (socket.identification.user !== undefined) {
-            if (user.authentication.permission > socket.identification.user.authentication.permission) {
-                user.authentication.permission = socket.identification.user.authentication.permission
+        if (socket.getBasicSocket().getIdentification().user !== undefined) {
+            if (user.authentication.permission > socket.getBasicSocket().getIdentification().user.authentication.permission) {
+                user.authentication.permission = socket.getBasicSocket().getIdentification().user.authentication.permission
             }
         } else {
             user.authentication.permission = Permission.User;
@@ -163,8 +163,8 @@ export class HardwareHandler extends BasicHardwareHandler {
                 let logged = element;
                 delete logged.authentication.passwordHash;
                 delete logged.authentication.salt;
-                socket.identification.user = logged;
-                socket.identification.device = user.device;
+                socket.getBasicSocket().getIdentification().user = logged;
+                socket.getBasicSocket().getIdentification().device = user.device;
                 socket.emit('sign', { user: logged });
                 console.log(logged)
                 return;
@@ -269,11 +269,11 @@ export class HardwareHandler extends BasicHardwareHandler {
     }
 
     private isOperator(socket) {
-        return (socket.identification.user.authentication.permission >= Permission.Operator);
+        return (socket.getBasicSocket().getIdentification().user.authentication.permission >= Permission.Operator);
     }
 
     private isAdministator(socket) {
-        return (socket.identification.user.authentication.permission >= Permission.Administrator);
+        return (socket.getBasicSocket().getIdentification().user.authentication.permission >= Permission.Administrator);
     }
 
     private checkExternalSubscribers(subscribers) {

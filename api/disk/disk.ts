@@ -1,4 +1,4 @@
-import { Observer } from 'backapijh';
+import { Observer } from 'journaly';
 import * as childProcess from 'child_process';
 import * as os from 'os';
 import * as fs from 'fs';

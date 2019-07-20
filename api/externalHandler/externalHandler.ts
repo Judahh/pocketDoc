@@ -1,4 +1,4 @@
-import { path, BasicApi, BasicExternalHandler, BasicSocket } from 'backapijh';
+import { path, BasicApi, BasicExternalHandler, Socket } from 'backapijh';
 import { HardwareHandler } from '../hardwareHandler/hardwareHandler';
 
 export class ExternalHandler extends BasicExternalHandler {
@@ -40,66 +40,66 @@ export class ExternalHandler extends BasicExternalHandler {
 
     public getDevices() {
         for (let index = 0; index < this.arraySocket.length; index++) {
-            let socketBasic = this.arraySocket[index];
-            socketBasic.emit('getUsers', {});
+            let socket = this.arraySocket[index];
+            socket.emit('getUsers', {});
         }
     }
 
-    public users(socketBasic, users) {
-        let identification = socketBasic.getIdentification();
+    public users(socket, users) {
+        let identification = socket.getIdentification();
         this.externalPublish('newDevice', { identification: identification, users: users });
     }
 
-    protected serverConnected(socketBasic) {
-        console.log('ID:', socketBasic.getIdentification());
-        socketBasic.emit('subscribeGPS', {});
-        socketBasic.emit('subscribeGSM', {});
-        socketBasic.emit('subscribeWifi', {});
-        socketBasic.emit('subscribeStream', {});
-        socketBasic.emit('subscribeDisk', {});
-        socketBasic.emit('getUsers', {});
+    protected serverConnected(socket) {
+        console.log('ID:', socket.getIdentification());
+        socket.emit('subscribeGPS', {});
+        socket.emit('subscribeGSM', {});
+        socket.emit('subscribeWifi', {});
+        socket.emit('subscribeStream', {});
+        socket.emit('subscribeDisk', {});
+        socket.emit('getUsers', {});
     }
 
-    public configSocket(socketBasic: BasicSocket) {
+    public configSocket(socket: Socket) {
         let _self = this;
-        socketBasic.on('online', (online) => {
+        socket.subscribe('online', (online) => {
             _self.externalPublish('online', online);
         });
-        socketBasic.on('gSM', (data) => {
+        socket.subscribe('gSM', (data) => {
             _self.externalPublish('gSM', data);
         });
-        socketBasic.on('gPS', (data) => {
+        socket.subscribe('gPS', (data) => {
             _self.externalPublish('gPS', data);
         });
-        socketBasic.on('wifi', (data) => {
+        socket.subscribe('wifi', (data) => {
             _self.externalPublish('wifi', data);
         });
-        socketBasic.on('stream', (data) => {
+        socket.subscribe('stream', (data) => {
             _self.externalPublish('streamOut', data);
         });
-        socketBasic.on('subscribeStream', () => {
-            _self.externalSubscribe('streamIn', socketBasic);
+        socket.subscribe('subscribeStream', () => {
+            _self.externalSubscribe('streamIn', socket);
         });
-        socketBasic.on('subscribeUser', () => {
-            _self.deviceSubscribe(socketBasic.getIdentification().serialNumber, 'user', socketBasic);
+        socket.subscribe('subscribeUser', () => {
+            _self.deviceSubscribe(socket.getBasicSocket().getIdentification().serialNumber, 'user', socket);
         });
-        socketBasic.on('subscribeRemoveUser', () => {
-            _self.deviceSubscribe(socketBasic.getIdentification().serialNumber, 'removeUser', socketBasic);
+        socket.subscribe('subscribeRemoveUser', () => {
+            _self.deviceSubscribe(socket.getBasicSocket().getIdentification().serialNumber, 'removeUser', socket);
         });
-        socketBasic.on('subscribeUsers', () => {
-            _self.deviceSubscribe(socketBasic.getIdentification().serialNumber, 'users', socketBasic);
+        socket.subscribe('subscribeUsers', () => {
+            _self.deviceSubscribe(socket.getBasicSocket().getIdentification().serialNumber, 'users', socket);
         });
 
-        socketBasic.on('disk', (data) => {
+        socket.subscribe('disk', (data) => {
             _self.uploadVideo(data.upload);
         });
 
-        socketBasic.on('users', (users) => {
-            _self.users(socketBasic, users);
+        socket.subscribe('users', (users) => {
+            _self.users(socket, users);
         });
 
-        // console.log(socketBasic.getIdentification());
-        // _self.externalPublish('newDevice', _self.getFullIdentification(socketBasic));
+        // console.log(socket.getIdentification());
+        // _self.externalPublish('newDevice', _self.getFullIdentification(socket));
         // this.io.on()
     }
 }

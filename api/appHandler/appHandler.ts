@@ -1,4 +1,4 @@
-import { BasicAppHandler, BasicSocket } from 'backapijh';
+import { BasicAppHandler, Socket } from 'backapijh';
 import { HardwareHandler } from '../hardwareHandler/hardwareHandler';
 
 export class AppHandler extends BasicAppHandler {
@@ -76,31 +76,31 @@ export class AppHandler extends BasicAppHandler {
         });
     }
 
-    public configSocket(socketBasic: BasicSocket) {
+    public configSocket(socket: Socket) {
         let _self = this;
 
-        socketBasic.on('getVideos', () => { _self.getVideos(); });
-        socketBasic.on('subscribeGPS', () => { _self.subscribeGPS(socketBasic); });
-        socketBasic.on('subscribeGSM', () => { _self.subscribeGSM(socketBasic); });
-        socketBasic.on('subscribeWifi', () => { _self.subscribeWifi(socketBasic); });
-        socketBasic.on('subscribe', () => { _self.subscribeWifi(socketBasic); });
+        socket.subscribe('getVideos', () => { _self.getVideos(); });
+        socket.subscribe('subscribeGPS', () => { _self.subscribeGPS(socket); });
+        socket.subscribe('subscribeGSM', () => { _self.subscribeGSM(socket); });
+        socket.subscribe('subscribeWifi', () => { _self.subscribeWifi(socket); });
+        socket.subscribe('subscribe', () => { _self.subscribeWifi(socket); });
 
-        socketBasic.on('signUp', (user) => { _self.hardwareHandler.signUp(user, socketBasic); });
-        socketBasic.on('signIn', (user) => { _self.hardwareHandler.signIn(user, socketBasic); });
+        socket.subscribe('signUp', (user) => { _self.hardwareHandler.signUp(user, socket); });
+        socket.subscribe('signIn', (user) => { _self.hardwareHandler.signIn(user, socket); });
 
-        socketBasic.on('subscribeStream', () => { _self.externalSubscribeStream('streamOut', socketBasic); });
-        socketBasic.on('stream', (stream) => { _self.externalPublish('streamIn', stream); });
+        socket.subscribe('subscribeStream', () => { _self.externalSubscribeStream('streamOut', socket); });
+        socket.subscribe('stream', (stream) => { _self.externalPublish('streamIn', stream); });
 
-        socketBasic.on('subscribeDisk', () => { _self.subscribeDisk(socketBasic); });
+        socket.subscribe('subscribeDisk', () => { _self.subscribeDisk(socket); });
 
-        socketBasic.on('subscribeNewDevice', () => { _self.subscribeNewDevice(socketBasic); });
-        socketBasic.on('getUsers', () => { _self.hardwareHandler.getUsers(socketBasic); });
+        socket.subscribe('subscribeNewDevice', () => { _self.subscribeNewDevice(socket); });
+        socket.subscribe('getUsers', () => { _self.hardwareHandler.getUsers(socket); });
 
-        socketBasic.on('setUsers', (data) => { _self.hardwareHandler.setUsers(data.device, data.users); });
-        socketBasic.on('addUser', (data) => { _self.hardwareHandler.addUser(data.device, data.user); });
-        socketBasic.on('removeUser', (data) => { _self.hardwareHandler.removeUser(data.device, data.user); });
+        socket.subscribe('setUsers', (data) => { _self.hardwareHandler.setUsers(data.device, data.users); });
+        socket.subscribe('addUser', (data) => { _self.hardwareHandler.addUser(data.device, data.user); });
+        socket.subscribe('removeUser', (data) => { _self.hardwareHandler.removeUser(data.device, data.user); });
 
-        socketBasic.on('getDevices', () => { _self.hardwareHandler.getDevices(); });
+        socket.subscribe('getDevices', () => { _self.hardwareHandler.getDevices(); });
     }
 
 }
