@@ -55,7 +55,7 @@
     "backappjh": "0.2.76",
     "chai": "4.2.0",
     "d3": "5.9.7",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.2.0",
     "flexiblepersistence": "1.0.25",
     "freeice": "2.2.2",
     "mocha": "6.2.0",
