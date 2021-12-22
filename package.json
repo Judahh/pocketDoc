@@ -52,7 +52,7 @@
   "dependencies": {
     "async": "3.1.0",
     "backapijh": "0.2.69",
-    "backappjh": "0.2.76",
+    "backappjh": "0.3.90",
     "chai": "4.2.0",
     "d3": "5.9.7",
     "dotenv": "^8.0.0",
